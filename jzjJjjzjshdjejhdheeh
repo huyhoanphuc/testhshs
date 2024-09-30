@@ -383,6 +383,8 @@ while true do wait(73)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait()
 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(212, 255, 0)
 game.Lighting.MainColorCorrection.Contrast = 0.3
 local tween = game:GetService("TweenService")
@@ -504,6 +506,8 @@ coroutine.wrap(function()
 while true do wait(213)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
+wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
 
@@ -2048,7 +2052,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -2057,7 +2062,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 5,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -2094,7 +2099,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -2103,7 +2109,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -2319,7 +2325,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -2328,7 +2335,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -2365,7 +2372,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -2374,7 +2382,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -2709,7 +2717,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -2718,7 +2727,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -2755,7 +2764,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -2764,7 +2774,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -2982,7 +2992,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -2991,7 +3002,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -3028,7 +3039,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -3037,7 +3049,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -3266,7 +3278,8 @@ achievementGiver({
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -3275,7 +3288,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
@@ -3312,7 +3325,8 @@ entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
+wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -3321,7 +3335,7 @@ local entity = Spawner.createEntity({
     CustomName = "Nightmare rebound",
     Model = "rbxassetid://12686137428", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 600,
-    MoveDelay = 0.8,
+    MoveDelay = 3,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 40,
