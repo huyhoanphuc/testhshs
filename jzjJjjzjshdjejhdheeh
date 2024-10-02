@@ -5,7 +5,7 @@ local intro = shut:Clone()
 intro.Parent = game.Players.LocalPlayer.PlayerGui.MainUI
 intro.Name = "IntroTextPleaseThankYou"
 intro.Visible = true
-intro.Text = "Extreme Mode v6.513"
+intro.Text = "Extreme Mode v6.514"
 intro.TextTransparency = 0
 local underline = UDim2.new(1.1, 0, 0.015, 6)
 game.TweenService:Create(intro.Underline, TweenInfo.new(3), {Size = underline}):Play()
@@ -156,6 +156,55 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
         end 
     end)
 end)
+
+--NEWPAINTINGYOOOOO
+local painters = 1
+local paints = {
+ [1] = {"rbxassetid://11881132074", "Despair"},
+ [2] = {"rbxassetid://11881132745", "Old Creator"},
+ [3] = {"rbxassetid://11881654771", "A tryhard..."},
+ [4] = {"rbxassetid://7084794697", "him."}
+}
+
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function()
+ local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+ if room:FindFirstChild("Assets") then
+  local paintings = {}
+  for i, painting in next, room:FindFirstChild("Assets"):GetChildren() do
+   if painting.Name:find("Painting") then
+    table.insert(paintings, painting)
+   end
+  end
+  if #paintings > 0 then
+   local currentpainting
+   if paintings[#paintings] then
+    painters = painters + 1
+    currentpainting = paintings[#paintings]
+   else
+    currentpainting = paintings[1]
+   end
+   if currentpainting then
+    if currentpainting:FindFirstChild("Canvas") then
+     local selected = paints[math.random(1, #paints)]
+     if currentpainting:FindFirstChild("InteractPrompt") then
+local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
+      cloning.Name = "fakeInteract"
+      cloning.Parent = currentpainting
+      currentpainting:FindFirstChild("InteractPrompt"):Destroy()
+      local t = cloning.Triggered:Connect(function()
+       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("", true)
+       local paintingTitle = selected[2]
+       local captionText = string.gsub("This painting is titled \"NAMEOFTHING\"", "NAMEOFTHING", paintingTitle)
+       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption(captionText, true)
+      end)
+     end
+     currentpainting:FindFirstChild("Canvas"):FindFirstChildOfClass("SurfaceGui"):FindFirstChildOfClass("ImageLabel").Image = selected[1]
+    end
+   end
+  end
+ end
+end)
+--
 
 --Ambiencea
 coroutine.wrap(function()
@@ -379,7 +428,7 @@ end)()
 
 --Matcher
 coroutine.wrap(function()
-while true do wait(73)
+while true do wait(89)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -866,7 +915,7 @@ end)()
 
 --Aml
 coroutine.wrap(function()
-while true do wait(89)
+while true do wait(129)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -1078,7 +1127,7 @@ end)()
 
 --Ripper
 coroutine.wrap(function() 
-while true do wait(121)
+while true do wait(131)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -1743,7 +1792,7 @@ end)()
 
 --Fostbite
 coroutine.wrap(function()
-while true do wait(126)
+while true do wait(136)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -2055,7 +2104,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -2102,7 +2151,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -2328,7 +2377,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -2375,7 +2424,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -2491,7 +2540,7 @@ entity.Debug.OnEntityStartMoving = function()
     print("Entity has started moving:")
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
@@ -2608,7 +2657,7 @@ entity.Debug.OnEntityStartMoving = function()
     print("Entity has started moving:")
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
@@ -2720,7 +2769,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -2767,7 +2816,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -2995,7 +3044,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -3042,7 +3091,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -3281,7 +3330,7 @@ achievementGiver({
 })
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -3328,7 +3377,7 @@ end
 entity.Debug.OnEntityDespawned = function()
     local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
+wait(5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Again",true)
 wait()
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -4013,7 +4062,7 @@ end)()
 
 --Trauma
 coroutine.wrap(function()
-while true do wait(369)
+while true do wait(569)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -4109,7 +4158,7 @@ end)()
 
 --Gcl
 coroutine.wrap(function()
-while true do wait(436)
+while true do wait(636)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -4206,7 +4255,7 @@ end)()
 --Mka
 coroutine.wrap(function()
 while true do
-wait(math.random(20,340))
+wait(math.random(170,340))
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -4288,21 +4337,6 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
-end
-end
-end)()
---
-
---Mkr
-coroutine.wrap(function()
-while true do
-wait(math.random(20,340))
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait(2)
-loadstring(game:HttpGet('https://pastefy.app/fImnoc9F'))()
 end
 end
 end)()
