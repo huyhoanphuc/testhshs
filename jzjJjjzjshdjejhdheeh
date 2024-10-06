@@ -34,7 +34,6 @@ game.Workspace.Ambience_Dark.SoundId = "rbxassetid://8132494511"
 game.Workspace.Ambience_Dark.PlaybackSpeed = 1
 end
 end)()
---
 
 --Ambience
 coroutine.wrap(function()
@@ -48,7 +47,6 @@ game.Workspace.SeekMoving.Ambience.Volume = "0.7"
 end
 end)
 end)()
---
  
 -- New Seek music and animation loader
 coroutine.wrap(function()
@@ -79,10 +77,10 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
     end 
     local RealSeek = workspace:FindFirstChild("SeekMovingNewClone") 
     local RealSeekRig = RealSeek:FindFirstChild("SeekRig") 
-    local SeekNew = game:GetObjects("rbxassetid://16893141009")[1]  
-    SeekNew.Name = "seek2" 
+    local seekNew = game:GetObjects("rbxassetid://16893141009")[1]  
+    seekNew.Name = "seek2" 
 
-    for _, v in pairs(SeekNew.Figure:GetChildren()) do 
+    for _, v in pairs(seekNew.Figure:GetChildren()) do 
         if v:IsA("Sound") then 
             v:Stop() 
         end 
@@ -90,7 +88,7 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
 
     RealSeekRig.Head.Eye:Destroy() 
     RealSeekRig.Head.Black:Destroy() 
-    SeekNew.Parent = workspace 
+    seekNew.Parent = workspace 
     local SeekRig = SeekNew:FindFirstChild("SeekRig") 
     SeekRig:FindFirstChild("Root").Anchored = true 
 
@@ -204,7 +202,6 @@ local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
   end
  end
 end)
---
 
 --Ambiencea
 coroutine.wrap(function()
@@ -216,7 +213,6 @@ game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceEnd.SoundId = "rbxassetid:
 game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceEnd.Volume = "0.5"
 end)
 end)()
---
 
 pcall(function()
 spawn(function()
@@ -286,20 +282,17 @@ LoadCustomInstance("rbxassetid://15717047029").Parent = game:GetService("Players
 
 -- echo sound
 game.SoundService.AmbientReverb = "ConcertHall"
---
 
 --ambient fog and horror sound
 local Workspace = game:GetService("Workspace")
 local Lighting = game:GetService("Lighting")
 local SoundService = game:GetService("SoundService")
---
 
 -- new the lights bulb sounds
 game.ReplicatedStorage.Sounds.BulbCharge.SoundId = "rbxassetid://9125973034"
 game.ReplicatedStorage.Sounds.BulbZap.SoundId = "rbxassetid://4288784832"
 game.ReplicatedStorage.Sounds.BulbZap.Volume = 2
 game.ReplicatedStorage.Sounds.BulbBreak.SoundId = "rbxassetid://260496290"
---
 
 --Set up horror sound
 local horrorSound = Instance.new("Sound", Workspace)
@@ -309,12 +302,11 @@ horrorSound.Looped = true
 
 --Play the sound
 horrorSound:Play()
---
 
 --Shocker
 coroutine.wrap(function()
 while true do
-wait(math.random(20, 30))
+wait(math.random(40, 50))
 local Players = game:GetService("Players")
 local Workspace = game:GetService("Workspace")
 
@@ -424,11 +416,10 @@ end
 spawnShocker()
 end
 end)()
---
 
 --Matcher
 coroutine.wrap(function()
-while true do wait(89)
+while true do wait(126)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -548,7 +539,6 @@ entity:Run()
 end
 end
 end)()
---
 
 --Demonim
 coroutine.wrap(function()
@@ -680,11 +670,10 @@ end)
 entity:Run()
 end
 end)()
---
 
 --Blitz
 coroutine.wrap(function()
-while true do wait(213)
+while true do wait(313)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -788,7 +777,6 @@ entity:Run()
 end
 end
 end)()
---
 
 --AmbushKk
 coroutine.wrap(function()
@@ -927,7 +915,6 @@ end)
 
 entity:Run()
 end)() 
---
 
 --Barrage
 coroutine.wrap(function()
@@ -969,9 +956,9 @@ local entity = spawner.Create({
 		Reversed = false
 	},
 	Rebounding = {
-		Enabled = true,
+		Enabled = false,
 		Type = "Ambush",
-		Min = 4,
+		Min = 1,
 		Max = 5,
 		Delay = 2.5
 	},
@@ -1068,8 +1055,6 @@ entity:Run()
 end
 end
 end)() 
---
-
 
 --A120
 coroutine.wrap(function()
@@ -1209,7 +1194,6 @@ end)
 
 entity:Run()
 end)()
---
 
 --Aml
 coroutine.wrap(function()
@@ -1421,11 +1405,10 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Ripper
 coroutine.wrap(function() 
-while true do wait(131)
+while true do wait(211)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -1668,11 +1651,10 @@ entity:Run()
 end
 end
 end)()
---
 
 --Depth
 coroutine.wrap(function()
-while true do wait(512)
+while true do wait(612)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -1805,7 +1787,6 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --HardcoreMultiMonster
 coroutine.wrap(function()
@@ -2086,11 +2067,10 @@ end
 -- Run the created entity
 Spawner.runEntity(entity)
 end)()
---
 
 --Fostbite
 coroutine.wrap(function()
-while true do wait(136)
+while true do wait(336)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -4162,11 +4142,10 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Deergod
 coroutine.wrap(function()
-while true do wait(198)
+while true do wait(319)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -4356,7 +4335,6 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Trauma
 coroutine.wrap(function()
@@ -4452,7 +4430,6 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Gcl
 coroutine.wrap(function()
@@ -4548,12 +4525,11 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Mka
 coroutine.wrap(function()
 while true do
-wait(math.random(170,340))
+wait(math.random(310,650))
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -4638,11 +4614,10 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Dread
 coroutine.wrap(function()
-while true do wait(720)
+while true do wait(620)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -4781,7 +4756,6 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Silence
 coroutine.wrap(function()
@@ -4793,7 +4767,6 @@ loadstring(game:HttpGet("https://pastefy.app/9cBLkVId/raw"))()
 end
 end
 end)()
---
 
 --Cease
 coroutine.wrap(function()
@@ -4805,7 +4778,6 @@ loadstring(game:HttpGet("https://pastefy.app/9cBLkVId/raw"))()
 end
 end
 end)()
---
 
 --Tiker
 coroutine.wrap(function()
@@ -4912,11 +4884,10 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Wh1t3
 coroutine.wrap(function()
-while true do wait(460)
+while true do wait(760)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -5053,7 +5024,6 @@ Spawner.runEntity(entity)
 end
 end
 end)()
---
 
 --Admin
 coroutine.wrap(function ()
@@ -6725,4 +6695,3 @@ Spawner.runEntity(entity)
 	end
 
 end)()
---
