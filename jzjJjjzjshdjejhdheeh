@@ -290,7 +290,7 @@ game.ReplicatedStorage.Sounds.BulbZap.Volume = 2
 game.ReplicatedStorage.Sounds.BulbBreak.SoundId = "rbxassetid://260496290"
 
 --LightStand Model
-local LightReplaceModel = game:GetObjects("rbxassetid://153534107")[1] or nil
+local LightReplaceModel = game:GetObjects("rbxassetid://12543866876")[1] or nil
 
 --Change Light Model
 coroutine.wrap(function()
