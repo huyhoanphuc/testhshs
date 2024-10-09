@@ -228,10 +228,53 @@ end)()
 wait(2)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
--- current candle
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
-LoadCustomInstance("rbxassetid://15717047029").Parent = game:GetService("Players").LocalPlayer.Backpack
+--NEWPAINTINGYOOOOO
+local painters = 1
+local paints = {
+ [1] = {"rbxassetid://12309073114", "Primes A-60 The Boss"},
+ [2] = {"rbxassetid://104009837806204", "A-90 The Glitch"},
+ [3] = {"rbxassetid://11881654771", "A tryhard..."},
+ [4] = {"rbxassetid://7084794697", "him."}
+}
 
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function()
+ local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+ if room:FindFirstChild("Assets") then
+  local paintings = {}
+  for i, painting in next, room:FindFirstChild("Assets"):GetChildren() do
+   if painting.Name:find("Painting") then
+    table.insert(paintings, painting)
+   end
+  end
+  if #paintings > 0 then
+   local currentpainting
+   if paintings[#paintings] then
+    painters = painters + 1
+    currentpainting = paintings[#paintings]
+   else
+    currentpainting = paintings[1]
+   end
+   if currentpainting then
+    if currentpainting:FindFirstChild("Canvas") then
+     local selected = paints[math.random(1, #paints)]
+     if currentpainting:FindFirstChild("InteractPrompt") then
+local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
+      cloning.Name = "fakeInteract"
+      cloning.Parent = currentpainting
+      currentpainting:FindFirstChild("InteractPrompt"):Destroy()
+      local t = cloning.Triggered:Connect(function()
+       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("", true)
+       local paintingTitle = selected[2]
+       local captionText = string.gsub("This painting is titled \"NAMEOFTHING\"", "NAMEOFTHING", paintingTitle)
+       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption(captionText, true)
+      end)
+     end
+     currentpainting:FindFirstChild("Canvas"):FindFirstChildOfClass("SurfaceGui"):FindFirstChildOfClass("ImageLabel").Image = selected[1]
+    end
+   end
+  end
+ end
+end)
 -- echo sound
 game.SoundService.AmbientReverb = "ConcertHall"
 
@@ -245,6 +288,53 @@ game.ReplicatedStorage.Sounds.BulbCharge.SoundId = "rbxassetid://9125973034"
 game.ReplicatedStorage.Sounds.BulbZap.SoundId = "rbxassetid://4288784832"
 game.ReplicatedStorage.Sounds.BulbZap.Volume = 2
 game.ReplicatedStorage.Sounds.BulbBreak.SoundId = "rbxassetid://260496290"
+
+--LightStand Model
+local LightReplaceModel = game:GetObjects("rbxassetid://12329772281")[1] or nil
+
+--Change Light Model
+coroutine.wrap(function()
+    while true do   
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures:GetDescendants()) do
+	if v.Name == "LightStand" then
+		if game.ReplicatedStorage.GameData.LatestRoom.Value < 53 then
+			local torch = LightReplaceModel:Clone()
+			torch.Parent = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures
+			torch.LightFixture.Changed:Connect(function()
+				torch.LightFixture.Neon.atachm["Ok you cannot tell me this isnt good"].Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture.Neon["Bright sh idfk"].ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture:WaitForChild('Dust').ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled 
+			end)
+			torch:PivotTo(v:GetPivot())
+			v:Destroy()
+
+		else
+			v:Destroy()
+		end
+	  end
+   end
+  end
+end)()
+
+for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures:GetDescendants()) do
+	if v.Name == "LightStand" then
+		if game.ReplicatedStorage.GameData.LatestRoom.Value < 53 then
+			local torch = LightReplaceModel:Clone()
+			torch.Parent = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures
+			torch.LightFixture.Changed:Connect(function()
+				torch.LightFixture.Neon.atachm["Ok you cannot tell me this isnt good"].Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture.Neon["Bright sh idfk"].ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture:WaitForChild('Dust').ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled 
+			end)
+			torch:PivotTo(v:GetPivot())
+			v:Destroy()
+
+		else
+			v:Destroy()
+		end
+	  end
+   end
 
 --Set up horror sound
 local horrorSound = Instance.new("Sound", Workspace)
