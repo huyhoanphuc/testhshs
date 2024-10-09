@@ -1239,7 +1239,7 @@ end)()
 
 --Aml
 coroutine.wrap(function()
-while true do wait(129)
+while true do wait(329)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -1324,7 +1324,7 @@ end)()
 
 --abl
 coroutine.wrap(function()
-while true do wait(169)
+while true do wait(569)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -2372,7 +2372,7 @@ loadstring(game:HttpGet("https://pastefy.app/WDMmxSYs/raw"))()
 end
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait(2.4)
+wait(25)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Spawner",true)
 loadstring(game:HttpGet("https://pastefy.app/LrVoQ1S1/raw"))()
 end
@@ -2385,7 +2385,7 @@ loadstring(game:HttpGet("https://pastefy.app/WDMmxSYs/raw"))()
 end
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait(2.4)
+wait(25)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Spawner",true)
 loadstring(game:HttpGet("https://pastefy.app/LrVoQ1S1/raw"))()
 end
@@ -2393,12 +2393,12 @@ local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
+wait(25)
 loadstring(game:HttpGet("https://pastefy.app/WDMmxSYs/raw"))()
 end
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait(2.4)
+wait(25)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Spawner",true)
 loadstring(game:HttpGet("https://pastefy.app/LrVoQ1S1/raw"))()
 end
@@ -2406,12 +2406,12 @@ local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
+wait(2.4)
 loadstring(game:HttpGet("https://pastefy.app/WDMmxSYs/raw"))()
 end
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait(2.4)
+wait(25)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Nightmare rebound Spawner",true)
 loadstring(game:HttpGet("https://pastefy.app/LrVoQ1S1/raw"))()
 end
