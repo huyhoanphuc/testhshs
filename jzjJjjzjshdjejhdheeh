@@ -290,7 +290,7 @@ game.ReplicatedStorage.Sounds.BulbZap.Volume = 2
 game.ReplicatedStorage.Sounds.BulbBreak.SoundId = "rbxassetid://260496290"
 
 --LightStand Model
-local LightReplaceModel = game:GetObjects("rbxassetid://12329772281")[1] or nil
+local LightReplaceModel = game:GetObjects("rbxassetid://153534107")[1] or nil
 
 --Change Light Model
 coroutine.wrap(function()
@@ -2613,7 +2613,7 @@ function CustomGitSound(soundlink, vol, filename)
     Folloed:Play()
 end
 
-CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20241010_360p_12f_20241010_010658.mp3", 1, "Folloed")
+CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20241010_360p_12f_20241010_010658.mp3?raw=true", 1, "Folloed")
 end
 
 entity.Debug.OnEntityFinishedRebound = function()
@@ -4972,7 +4972,7 @@ function CustomGitSound(soundlink, vol, filename)
     Folloed:Play()
 end
 
-CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20241010_360p_12f_20241010_010658.mp3", 1, "Folloed")
+CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20241010_360p_12f_20241010_010658.mp3?raw=true", 1, "Folloed")
 end
 
 entity.Debug.OnEntityFinishedRebound = function()
