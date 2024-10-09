@@ -1952,7 +1952,7 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait(60)
+wait(230)
 
 ---====== Create entity ======---
 
@@ -5047,10 +5047,7 @@ if msg == '/flashlight_purple' or msg == '/Flashlight_purple' or msg == '/PFlash
 
 if msg == '/a60h' or msg == '/a-60h' or msg == '/A-60h' then
 					coroutine.wrap(function ()
-						--HardcoreMultiMonster
-coroutine.wrap(function()
-wait()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+                    local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait(2)
 
