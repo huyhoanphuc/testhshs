@@ -584,7 +584,7 @@ end)()
 
 --Twister
 coroutine.wrap(function()
-wait(math.random(32, 130))
+wait(100)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -594,7 +594,7 @@ end)()
 
 --Twisters
 coroutine.wrap(function()
-wait(math.random(522, 530))
+wait(321)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -604,7 +604,7 @@ end)()
 
 --Twisterss
 coroutine.wrap(function()
-wait(math.random(52, 160))
+wait(160)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if ((roomValue >= 52 and roomValue <= 70)) then
 wait()
