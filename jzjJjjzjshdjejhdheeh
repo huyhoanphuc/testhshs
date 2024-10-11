@@ -2377,7 +2377,7 @@ game.workspace.FrostBite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
 game.workspace.FrostBite.FrostyNew.Ambience:Stop()
 game.workspace.FrostBite.FrostyNew.AmbienceFar:Stop()
 wait(5)
-workspace.FrostBite:Destroy()
+game.workspace.FrostBite:Destroy()
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
