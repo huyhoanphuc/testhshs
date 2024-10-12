@@ -1,0 +1,796 @@
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Threat", -- Custom name of your entity
+    Model = "rbxassetid://13237461766", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 50,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1.5,
+        Max = 1.5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18891331154", -- Image1 url
+            Image2 = "rbxassetid://18891331154", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "5263560566", -- SoundId Link or Roblox ID
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(220, 181, 166), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = true,
+    CustomDialog = {  
+        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+    local Cldak = GetGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/lv_0_20241012010534.mp3?raw=true","Cldak")
+				Cldak.Parent = workspace
+				Cldak.Volume = 3
+				Cldak:Play()
+				 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Threat", -- Custom name of your entity
+    Model = "rbxassetid://13237461766", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 50,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1.5,
+        Max = 1.5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18891331154", -- Image1 url
+            Image2 = "rbxassetid://18891331154", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "5263560566", -- SoundId Link or Roblox ID
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(220, 181, 166), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = true,
+    CustomDialog = {  
+        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+				 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Threat", -- Custom name of your entity
+    Model = "rbxassetid://13237461766", -- Can be GitHub file or rbxassetid
+    Speed = 500, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 50,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1.5,
+        Max = 1.5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18891331154", -- Image1 url
+            Image2 = "rbxassetid://18891331154", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "5263560566", -- SoundId Link or Roblox ID
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(220, 181, 166), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = true,
+    CustomDialog = {  
+        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+				 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Threat", -- Custom name of your entity
+    Model = "rbxassetid://13237461766", -- Can be GitHub file or rbxassetid
+    Speed = 800, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 50,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1.5,
+        Max = 1.5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18891331154", -- Image1 url
+            Image2 = "rbxassetid://18891331154", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "5263560566", -- SoundId Link or Roblox ID
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(220, 181, 166), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = true,
+    CustomDialog = {  
+        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+				 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Threat", -- Custom name of your entity
+    Model = "rbxassetid://13237461766", -- Can be GitHub file or rbxassetid
+    Speed = 900, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 50,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1.5,
+        Max = 1.5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18891331154", -- Image1 url
+            Image2 = "rbxassetid://18891331154", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "5263560566", -- SoundId Link or Roblox ID
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(220, 181, 166), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = true,
+    CustomDialog = {  
+        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+				 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Threat", -- Custom name of your entity
+    Model = "rbxassetid://13237461766", -- Can be GitHub file or rbxassetid
+    Speed = 1200, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 50,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1.5,
+        Max = 1.5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18891331154", -- Image1 url
+            Image2 = "rbxassetid://18891331154", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "5263560566", -- SoundId Link or Roblox ID
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(220, 181, 166), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = true,
+    CustomDialog = {  
+        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+				 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 22, 10)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(7, 148, 19)
+game.Lighting.MainColorCorrection.Contrast = 0.3
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+        local Cldk = GetGitSound("https://github.com/Jahani-john/mayhem-mode/blob/main/mayhemmode-main/death_jumpscare.mp3?raw=true","Cldk")
+				Cldk.Parent = workspace
+				Cldk.Volume = 3
+				Cldk:Play()
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+        local Cldk = GetGitSound("https://github.com/Jahani-john/mayhem-mode/blob/main/mayhemmode-main/death_jumpscare.mp3?raw=true","Cldk")
+				Cldk.Parent = workspace
+				Cldk.Volume = 3
+				Cldk:Play()
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+        local Cldk = GetGitSound("https://github.com/Jahani-john/mayhem-mode/blob/main/mayhemmode-main/death_jumpscare.mp3?raw=true","Cldk")
+				Cldk.Parent = workspace
+				Cldk.Volume = 3
+				Cldk:Play()
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+        local Cldk = GetGitSound("https://github.com/Jahani-john/mayhem-mode/blob/main/mayhemmode-main/death_jumpscare.mp3?raw=true","Cldk")
+				Cldk.Parent = workspace
+				Cldk.Volume = 3
+				Cldk:Play()
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+        local Cldk = GetGitSound("https://github.com/Jahani-john/mayhem-mode/blob/main/mayhemmode-main/death_jumpscare.mp3?raw=true","Cldk")
+				Cldk.Parent = workspace
+				Cldk.Volume = 3
+				Cldk:Play()
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+        local Cldk = GetGitSound("https://github.com/Jahani-john/mayhem-mode/blob/main/mayhemmode-main/death_jumpscare.mp3?raw=true","Cldk")
+				Cldk.Parent = workspace
+				Cldk.Volume = 3
+				Cldk:Play()
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
