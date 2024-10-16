@@ -3240,7 +3240,7 @@ local ReSt = game:GetService("ReplicatedStorage")
 }, "Yellow")
 end)
 wait(1)
-game.Players.LocalPlayer.Character.Humanoid:TakeDamage(78)
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(99)
 end
 end
 end)()
