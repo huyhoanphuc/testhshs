@@ -11,7 +11,7 @@ TW:Play()
 local entity = Spawner.createEntity({
     CustomName = "Rebound", -- Custom name of your entity
     Model = "rbxassetid://12847684107", -- Can be GitHub file or rbxassetid
-    Speed = 220, -- Percentage, 100 = default Rush speed
+    Speed = 920, -- Percentage, 100 = default Rush speed
     DelayTime = 3, -- Time before starting cycles (seconds)
     HeightOffset = 0,
     CanKill = true,
@@ -121,51 +121,59 @@ end
 entity.Debug.OnEntityStartMoving = function()
     print("Entity has started moving:")
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
     game.workspace.Rebound.RushNew.Anchored = false
     wait(2)
     game.workspace.Rebound.RushNew.Anchored = true
