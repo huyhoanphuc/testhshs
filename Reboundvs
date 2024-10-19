@@ -58,6 +58,14 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
+    local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
+if not ((roomValue >= 50 and roomValue <= 55) or (roomValue >= 96 and roomValue <= 109)) then
+wait()
+if not workspace:FindFirstChild("SeekMovingNewClone") or workspace:FindFirstChild("FigureSetup") then
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/Reboundvs"))()
+end
+end
     game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(65, 138, 255)
 game.Lighting.MainColorCorrection.Contrast = 1
 local tween = game:GetService("TweenService")
@@ -82,14 +90,6 @@ sare.SoundId = "rbxassetid://5567523008"
 sare.PlaybackSpeed = 3
 sare.Volume = 3
 wait()
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 50 and roomValue <= 55) or (roomValue >= 96 and roomValue <= 109)) then
-wait()
-if not workspace:FindFirstChild("SeekMovingNewClone") or workspace:FindFirstChild("FigureSetup") then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/Reboundvs"))()
-end
-end
 end)
 
 entity:SetCallback("OnStartMoving", function()
