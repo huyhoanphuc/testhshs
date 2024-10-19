@@ -1,5 +1,30 @@
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(65, 138, 255)
+game.Lighting.MainColorCorrection.Contrast = 1
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.8), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.8),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+function GetGitSound(GithubSnd,SoundName)
+ local url=GithubSnd
+ if not isfile(SoundName..".mp3") then
+  writefile(SoundName..".mp3", game:HttpGet(url))
+ end
+ local sound=Instance.new("Sound")
+ sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+ return sound
+end
+
+local sare = Instance.new("Sound")
+sare.Parent = game.Workspace
+sare.Name = "MyEarsBurn"
+sare.SoundId = "rbxassetid://5567523008"
+sare.PlaybackSpeed = 3
+sare.Volume = 3
+wait()
+
 ---====== Create entity ======---
 
 local entity = spawner.Create({
@@ -58,38 +83,14 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
-    local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 50 and roomValue <= 55) or (roomValue >= 96 and roomValue <= 109)) then
+    
+local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
+if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 49 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
-if not workspace:FindFirstChild("SeekMovingNewClone") or workspace:FindFirstChild("FigureSetup") then
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/Reboundvs"))()
 end
-end
-    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(65, 138, 255)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.8), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.8),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-function GetGitSound(GithubSnd,SoundName)
- local url=GithubSnd
- if not isfile(SoundName..".mp3") then
-  writefile(SoundName..".mp3", game:HttpGet(url))
- end
- local sound=Instance.new("Sound")
- sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
- return sound
-end
-
-local sare = Instance.new("Sound")
-sare.Parent = game.Workspace
-sare.Name = "MyEarsBurn"
-sare.SoundId = "rbxassetid://5567523008"
-sare.PlaybackSpeed = 3
-sare.Volume = 3
-wait()
 end)
 
 entity:SetCallback("OnStartMoving", function()
