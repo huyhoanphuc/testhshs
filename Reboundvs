@@ -166,6 +166,7 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 end
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/Reboundvs"))()
 end)
 
