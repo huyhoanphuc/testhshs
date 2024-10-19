@@ -25,7 +25,7 @@ local entity = spawner.Create({
 		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 950,
+		Speed = 1150,
 		Delay = math.random(3, 3.5),
 		Reversed = true
 	},
@@ -81,6 +81,7 @@ sare.Name = "MyEarsBurn"
 sare.SoundId = "rbxassetid://5567523008"
 sare.PlaybackSpeed = 3
 sare.Volume = 3
+wait()
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 50 and roomValue <= 55) or (roomValue >= 96 and roomValue <= 109)) then
 wait()
@@ -96,63 +97,63 @@ entity:SetCallback("OnStartMoving", function()
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
     wait()
     game.workspace.Rebound.RushNew.Anchored = false
-    wait(2)
+    wait(1)
     game.workspace.Rebound.RushNew.Anchored = true
 end)
 
