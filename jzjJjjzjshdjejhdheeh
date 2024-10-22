@@ -1,11 +1,9 @@
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Wait font Loading Done",true)
-wait()
 local shut = game.Players.LocalPlayer.PlayerGui.MainUI.MainFrame.IntroText
 local intro = shut:Clone()
 intro.Parent = game.Players.LocalPlayer.PlayerGui.MainUI
 intro.Name = "IntroTextPleaseThankYou"
 intro.Visible = true
-intro.Text = "Extreme Mode v6.515"
+intro.Text = "Extreme Mode Hotel v6.516"
 intro.TextTransparency = 0
 local underline = UDim2.new(1.1, 0, 0.015, 6)
 game.TweenService:Create(intro.Underline, TweenInfo.new(3), {Size = underline}):Play()
@@ -17,10 +15,65 @@ game.TweenService:Create(intro, TweenInfo.new(2), {TextTransparency = 1}):Play()
 game.TweenService:Create(intro.Underline, TweenInfo.new(7), {Size = UDim2.new(0, 0, 0.015, 6)}):Play()
 wait(2.3)
 intro.Visible = false
-wait(9)
+wait(2)
 intro:Destroy()
 
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Loading Done",true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Loading Menu",true)
+
+--Rooms
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/Models/refs/heads/main/tythfhgifgif76756656hote"))()
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local PersonToggle = nil
+
+local Window = Rayfield:CreateWindow({
+	Name = "Mode",
+	LoadingTitle = "Mode",
+	LoadingSubtitle = "By: The Uner",
+})
+
+local Tab = Window:CreateTab("Mode", 4483362458)
+
+local ModeText = Tab:CreateSection("Mode")
+
+local Mode = Tab:CreateButton({
+	Name = "All Entity Speed",
+	Callback = function()
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/huyhoangphuc/refs/heads/none/Extreme%20Mode%20bur%20entity%20Speed%20x2"))()
+	end,
+})
+
+local Mode = Tab:CreateButton({
+	Name = "Add Crucifix [Random Room But 1] ",
+	Callback = function()
+	  wait(math.random(3, 457))
+	    loadstring(game:HttpGet("https://pastefy.app/nOEH2tmm/raw"))()
+	end,
+})
+
+local Mode = Tab:CreateButton({
+	Name = "Add Entity Hunger [Dont's Not Impossible] ",
+	Callback = function()
+		 loadstring(game:HttpGet("https://pastefy.app/4KBPtpxQ/raw"))()
+	end,
+})
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Will Are You See",true)
+
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Entity") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Entity"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
 
 --Asitsitsit
 coroutine.wrap(function()
