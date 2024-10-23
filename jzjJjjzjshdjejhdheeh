@@ -23,8 +23,6 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("
 --Rooms
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/Models/refs/heads/main/tythfhgifgif76756656hote"))()
 
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Pr!me A-60! Hub v2", HidePremium = false, SaveConfig = true, ConfigFolder = "Script loading"})
 
