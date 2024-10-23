@@ -58,6 +58,14 @@ local Mode = Tab:CreateButton({
 	end,
 })
 
+local Mode = Tab:CreateButton({
+    Name = "Off Menu [Menu Destroy] ",
+    Callback = function()
+         Rayfield:Destroy()
+         PersonToggle:Destroy()
+    end,
+})
+
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Will Are You See",true)
