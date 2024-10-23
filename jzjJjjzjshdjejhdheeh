@@ -24,47 +24,52 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/Models/refs/heads/main/tythfhgifgif76756656hote"))()
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-local PersonToggle = nil
 
-local Window = Rayfield:CreateWindow({
-	Name = "Mode",
-	LoadingTitle = "Mode",
-	LoadingSubtitle = "By: The Uner",
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Pr!me A-60! Hub v2", HidePremium = false, SaveConfig = true, ConfigFolder = "Script loading"})
+
+local Tab = Window:MakeTab({
+    Name = "Mode Menu",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
-local Tab = Window:CreateTab("Mode", 4483362458)
-
-local ModeText = Tab:CreateSection("Mode")
-
-local Mode = Tab:CreateButton({
-	Name = "All entity speed ",
-	Callback = function()
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/huyhoangphuc/refs/heads/none/Extreme%20Mode%20bur%20entity%20Speed%20x2"))()
-	end,
+local credits = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
+credits:AddParagraph("Credits to pr!me A-60", "https://discord.com/invite/W2RwK25S")
+credits:AddParagraph("https://www.roblox.com/users/2885184472/profile")
 
-local Mode = Tab:CreateButton({
-	Name = "Add Crucifix [Random Room But 1] ",
-	Callback = function()
-	  wait(math.random(3, 457))
-	    loadstring(game:HttpGet("https://pastefy.app/nOEH2tmm/raw"))()
-	end,
-})
-
-local Mode = Tab:CreateButton({
-	Name = "Add Entity Hunger [Dont's Not Impossible] ",
-	Callback = function()
-		 loadstring(game:HttpGet("https://pastefy.app/4KBPtpxQ/raw"))()
-	end,
-})
-
-local Mode = Tab:CreateButton({
-    Name = "Off Menu [Menu Destroy] ",
+Tab:AddButton({
+    Name = "All Entity Speed",
     Callback = function()
-         Rayfield:Destroy()
-         PersonToggle:Destroy()
-    end,
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/huyhoangphuc/refs/heads/none/Extreme%20Mode%20bur%20entity%20Speed%20x2"))()
+      end    
 })
+
+Tab:AddButton({
+    Name = "add Crucifix 1 crucifix Random",
+    Callback = function()
+              loadstring(game:HttpGet("https://pastefy.app/nOEH2tmm/raw"))()
+      end    
+})
+
+Tab:AddButton({
+    Name = "add hunger",
+    Callback = function()
+              loadstring(game:HttpGet("https://pastefy.app/4KBPtpxQ/raw"))()
+      end    
+})
+
+Tab:AddButton({
+    Name = "Destroy Menu",
+    Callback = function()
+              OrionLib:Destroy()
+      end    
+})
+
 
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
