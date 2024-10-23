@@ -37,7 +37,7 @@ local Tab = Window:CreateTab("Mode", 4483362458)
 local ModeText = Tab:CreateSection("Mode")
 
 local Mode = Tab:CreateButton({
-	Name = "All Entity Speed",
+	Name = "All entity speed ",
 	Callback = function()
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/huyhoangphuc/refs/heads/none/Extreme%20Mode%20bur%20entity%20Speed%20x2"))()
 	end,
