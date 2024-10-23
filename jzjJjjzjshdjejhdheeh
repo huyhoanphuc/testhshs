@@ -23,51 +23,22 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("
 --Rooms
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/Models/refs/heads/main/tythfhgifgif76756656hote"))()
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Pr!me A-60! Hub v2", HidePremium = false, SaveConfig = true, ConfigFolder = "Script loading"})
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Doors hub", "GrapeTheme")
+local Tab = Window:NewTab("Menu Mode")
+local Section = Tab:NewSection("spawner")
 
-local Tab = Window:MakeTab({
-    Name = "Mode Menu",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
+Section:NewButton("All Entity Speed X2", "rare", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/huyhoangphuc/refs/heads/none/Extreme%20Mode%20bur%20entity%20Speed%20x2"))()
+end)
 
-local credits = Window:MakeTab({
-	Name = "Credits",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-credits:AddParagraph("Credits to pr!me A-60", "https://discord.com/invite/W2RwK25S")
-credits:AddParagraph("https://www.roblox.com/users/2885184472/profile")
+Section:NewButton("Add Crucifix Random but 1", "rare", function()
+    loadstring(game:HttpGet("https://pastefy.app/nOEH2tmm/raw"))()
+end)
 
-Tab:AddButton({
-    Name = "All Entity Speed",
-    Callback = function()
-              loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/huyhoangphuc/refs/heads/none/Extreme%20Mode%20bur%20entity%20Speed%20x2"))()
-      end    
-})
-
-Tab:AddButton({
-    Name = "add Crucifix 1 crucifix Random",
-    Callback = function()
-              loadstring(game:HttpGet("https://pastefy.app/nOEH2tmm/raw"))()
-      end    
-})
-
-Tab:AddButton({
-    Name = "add hunger",
-    Callback = function()
-              loadstring(game:HttpGet("https://pastefy.app/4KBPtpxQ/raw"))()
-      end    
-})
-
-Tab:AddButton({
-    Name = "Destroy Menu",
-    Callback = function()
-              OrionLib:Destroy()
-      end    
-})
-
+Section:NewButton("Add Hunger", "rare", function()
+    loadstring(game:HttpGet("https://pastefy.app/4KBPtpxQ/raw"))()
+end)
 
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
