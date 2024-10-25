@@ -28,11 +28,6 @@ coroutine.wrap(function()
 loadstring(game:HttpGet("https://pastefy.app/nOEH2tmm/raw"))()
 end)()
 
---Hunger
-coroutine.wrap(function()
-loadstring(game:HttpGet("https://pastefy.app/4KBPtpxQ/raw"))()
-end)()
-
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Will Are You See",true)
