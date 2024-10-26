@@ -1820,7 +1820,7 @@ local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd
 local entity = Spawner.createEntity({
     CustomName = "Dread", -- Custom name of your entity
     Model = "rbxassetid://12653092543", -- Can be GitHub file or rbxassetid
-    Speed = 0, -- Percentage, 100 = default Rush speed
+    Speed = 120, -- Percentage, 100 = default Rush speed
     DelayTime = 1, -- Time before starting cycles (seconds)
     HeightOffset = 1,
     CanKill = false,
@@ -1828,7 +1828,7 @@ local entity = Spawner.createEntity({
     NoHiding = false,
     AntiCrucifix = false,
     KillRange = 30,
-    OneRoom = true,
+    OneRoom = false,
     DieOnLook = false,
     BreakLights = false,
     BackwardsMovement = false,
@@ -1897,8 +1897,8 @@ end
        
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned:")
-    game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
+     require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Dread Has Spawner",true)
+    wait(45)
 game.workspace.Dread:Destroy()
 end
 
@@ -6240,7 +6240,7 @@ if msg == '/dreads' or msg == '/Dreads' then
 local entity = Spawner.createEntity({
     CustomName = "Dread", -- Custom name of your entity
     Model = "rbxassetid://12653092543", -- Can be GitHub file or rbxassetid
-    Speed = 0, -- Percentage, 100 = default Rush speed
+    Speed = 150, -- Percentage, 100 = default Rush speed
     DelayTime = 1, -- Time before starting cycles (seconds)
     HeightOffset = 1,
     CanKill = false,
@@ -6248,7 +6248,7 @@ local entity = Spawner.createEntity({
     NoHiding = false,
     AntiCrucifix = false,
     KillRange = 30,
-    OneRoom = true,
+    OneRoom = false,
     DieOnLook = false,
     BreakLights = false,
     BackwardsMovement = false,
@@ -6317,8 +6317,8 @@ end
        
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned:")
-    game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
+    require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Dread Has Spawner",true)
+    wait(45)
 game.workspace.Dread:Destroy()
 end
 
