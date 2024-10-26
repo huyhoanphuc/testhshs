@@ -1,0 +1,413 @@
+--Junp face1
+coroutine.wrap(function()
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Exttefa") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Exttefa"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+ end)()
+ 
+ --Junp face2
+coroutine.wrap(function()
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Exttefa") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Exttefa"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+ end)()
+ 
+ --Junp face3
+coroutine.wrap(function()
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Exttefa") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Exttefa"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+ end)()
+ 
+ --Junp face4
+coroutine.wrap(function()
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Exttefa") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Exttefa"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+ end)()
+ 
+ --Junp face5
+coroutine.wrap(function()
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Exttefa") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Exttefa"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+ end)()
+ 
+ --Junp face6
+coroutine.wrap(function()
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Exttefa") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Exttefa"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+ end)()
