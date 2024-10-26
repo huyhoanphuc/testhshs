@@ -1,3 +1,20 @@
+if game.Workspace:FindFirstChild("Asitty") then
+wait()
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
 wait()
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
