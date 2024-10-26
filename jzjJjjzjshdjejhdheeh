@@ -3794,7 +3794,7 @@ local entity = spawner.Create({
 	Entity = {
 		Name = "Asitty",
 		Asset = "rbxassetid://12797548771",
-		HeightOffset = 5
+		HeightOffset = 0.5
 	},
 	Lights = {
 		Flicker = {
@@ -3865,17 +3865,17 @@ function GitPNG(GithubImg, ImageName)
     return (getcustomasset or getsynasset)(ImageName .. ".png")
 end
 
-while true do wait(1.2)
+while true do wait(0.6)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
 end
 end
@@ -7150,7 +7150,7 @@ local entity = spawner.Create({
 	Entity = {
 		Name = "Asitty",
 		Asset = "rbxassetid://12797548771",
-		HeightOffset = 5
+		HeightOffset = 0.5
 	},
 	Lights = {
 		Flicker = {
@@ -7221,17 +7221,17 @@ function GitPNG(GithubImg, ImageName)
     return (getcustomasset or getsynasset)(ImageName .. ".png")
 end
 
-while true do wait(1.2)
+while true do wait(0.6)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.2)
+wait(0.1)
 game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
 end
 end
