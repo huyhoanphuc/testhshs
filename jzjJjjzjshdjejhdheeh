@@ -3,7 +3,7 @@ local intro = shut:Clone()
 intro.Parent = game.Players.LocalPlayer.PlayerGui.MainUI
 intro.Name = "IntroTextPleaseThankYou"
 intro.Visible = true
-intro.Text = "Extreme Mode Hotel v6.516"
+intro.Text = "E̷̵͔͇͙͖͔̠̫̪ͤ͐͐͒x̷̸̡̡̘͕̺̦̝̫ͯ̈́̾ᴛ̷̵͖̦̼͚͇͔̦͕͕ⷮ̓͑r̷̴̢͚̺͕̘͕͙͎͍ͬ͒̈́̕e̷̴̡̻͇̼͓͔̙̻ͤ̈́̽͜m̷̵̘̼̞͕͙̝ͫ̈́̽͜͠e̷̸͍̠͉͍̟͖͍ͤ͊́͘͜ M̷̸̢͔̫̘͇͚̼̘ⷨ͑͝͠o̷̵̡̠̦͔͙͕̘͓ͦ̈́̓͠d̷̸͉͚̦ͩ̈́͘͜͜e̷̴̡̫̠͙̫͔͓ͤ́͆͊͜͜ v6.516"
 intro.TextTransparency = 0
 local underline = UDim2.new(1.1, 0, 0.015, 6)
 game.TweenService:Create(intro.Underline, TweenInfo.new(3), {Size = underline}):Play()
@@ -1674,7 +1674,7 @@ for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").Gam
 --Set up horror sound
 local horrorSound = Instance.new("Sound", Workspace)
 horrorSound.SoundId = "rbxassetid://1846999385" -- replace with your own sound id
-horrorSound.Volume = 0.4
+horrorSound.Volume = 0
 horrorSound.Looped = true
 
 --Play the sound
@@ -1813,114 +1813,120 @@ if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue 
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
+---====== Create entity ======---
 
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Dread", -- Custom name of your entity
-    Model = "rbxassetid://12653092543", -- Can be GitHub file or rbxassetid
-    Speed = 120, -- Percentage, 100 = default Rush speed
-    DelayTime = 1, -- Time before starting cycles (seconds)
-    HeightOffset = 1,
-    CanKill = false,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 30,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        80 -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1.5,
-        Max = 2.5,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11394027278", -- Image1 url
-            Image2 = "rbxassetid://11394027278", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "10483837590", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(48, 25, 52), -- Color
-            },
-            Tease = {
-                false, -- Enabled/Disabled
-                Min = 1,
-                Max = 1,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+local entity = spawner.Create({
+	Entity = {
+		Name = "Dread",
+		Asset = "rbxassetid://12653092543",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = true,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 120,
+		Delay = math.random(2, 2),
+		Reversed = false
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 1
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-     require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Dread Has Spawner",true)
-    wait(45)
-game.workspace.Dread:Destroy()
-end
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Dread Has Spawner",true)
+end)
 
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-end
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-end
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-    local Player = game.Players.LocalPlayer.Character
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Die Or Survival",
+    Desc = "Survival Dread",
+    Reason = "",
+    Image = "rbxassetid://17818670913"
+})
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+	else
+		print("Entity has damaged the player")
+		local Player = game.Players.LocalPlayer.Character
 Player:FindFirstChild("HumanoidRootPart").Anchored = true
     game.workspace.Dread.RushNew.Anchored = false
     wait(1)
@@ -1936,16 +1942,23 @@ Player:FindFirstChild("HumanoidRootPart").Anchored = true
          game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
          game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
     end)()
-end
+	end
+end)
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-end
+--[[
 
-------------------------
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
 
--- Run the created entity
-Spawner.runEntity(entity)
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
 end
 end
 end)()
@@ -2623,7 +2636,7 @@ end)()
 --A120
 coroutine.wrap(function()
 wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
@@ -2644,87 +2657,64 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-120 Has Spawner",true)
 wait(2)
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "A120", -- Custom name of your entity
-    Model = "rbxassetid://12761009640", -- Can be GitHub file or rbxassetid
-    Speed = 30, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 1,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = true,
-    AntiCrucifix = false,
-    KillRange = 30,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = true,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        80 -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1.5,
-        Max = 2.5,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11394027278", -- Image1 url
-            Image2 = "rbxassetid://11394027278", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "10483837590", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(48, 25, 52), -- Color
-            },
-            Tease = {
-                false, -- Enabled/Disabled
-                Min = 1,
-                Max = 1,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "A-120",
+		Asset = "rbxassetid://12761009640",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 40,
+		Delay = math.random(3, 3),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 2.5,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 30,
+		Amount = 100
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
     wait(5)
 local Speed = 12
 
@@ -2846,20 +2836,33 @@ game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency 
 end
 
 game.workspace.insidea:Destroy()
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-end
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-end
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-    wait(5)
-    local Speed = 32
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+        wait(5)
+local Speed = 12
 
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
@@ -2979,19 +2982,23 @@ game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency 
 end
 
 game.workspace.insidea:Destroy()
-end
+	else
+        print("Entity has finished rebounding")
+	end
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-    function GitAud(soundgit,filename)
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
     local FileName = filename
@@ -3063,12 +3070,25 @@ end
 game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
     task.wait(8)
     JumpscareGui:Destroy()
-end
+	else
+		print("Entity has damaged the player")
+	end
+end)
 
-------------------------
+--[[
 
--- Run the created entity
-Spawner.runEntity(entity)
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
 end)()
 
 --Aml
@@ -6233,114 +6253,120 @@ game.Players.LocalPlayer.Character.Humanoid:TakeDamage(78)
 
 if msg == '/dreads' or msg == '/Dreads' then
 					coroutine.wrap(function ()
-						 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+						 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
+---====== Create entity ======---
 
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Dread", -- Custom name of your entity
-    Model = "rbxassetid://12653092543", -- Can be GitHub file or rbxassetid
-    Speed = 150, -- Percentage, 100 = default Rush speed
-    DelayTime = 1, -- Time before starting cycles (seconds)
-    HeightOffset = 1,
-    CanKill = false,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 30,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        80 -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1.5,
-        Max = 2.5,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11394027278", -- Image1 url
-            Image2 = "rbxassetid://11394027278", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "10483837590", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(48, 25, 52), -- Color
-            },
-            Tease = {
-                false, -- Enabled/Disabled
-                Min = 1,
-                Max = 1,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+local entity = spawner.Create({
+	Entity = {
+		Name = "Dread",
+		Asset = "rbxassetid://12653092543",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = true,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 120,
+		Delay = math.random(2, 2),
+		Reversed = false
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 1
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
     require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Dread Has Spawner",true)
-    wait(45)
-game.workspace.Dread:Destroy()
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-end
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-end
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-    local Player = game.Players.LocalPlayer.Character
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Die Or Survival",
+    Desc = "Survival Dread",
+    Reason = "",
+    Image = "rbxassetid://17818670913"
+})
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+	else
+		print("Entity has damaged the player")
+		local Player = game.Players.LocalPlayer.Character
 Player:FindFirstChild("HumanoidRootPart").Anchored = true
     game.workspace.Dread.RushNew.Anchored = false
     wait(1)
@@ -6356,16 +6382,23 @@ Player:FindFirstChild("HumanoidRootPart").Anchored = true
          game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
          game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
     end)()
-end
+	end
+end)
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-end
+--[[
 
-------------------------
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
 
--- Run the created entity
-Spawner.runEntity(entity)
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
 					end)()
 
 				end				
@@ -6494,7 +6527,440 @@ if msg == '/monoxide' or msg == '/Monoxide' or msg == '/Clash' then
 
 if msg == '/120' or msg == '/A120' or msg == '/A-120' then
 					coroutine.wrap(function ()
-						 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoangphuc/hehhe/main/insidea"))()
+						 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "A-120",
+		Asset = "rbxassetid://12761009640",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 40,
+		Delay = math.random(3, 3),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 2.5,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 30,
+		Amount = 100
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    wait(5)
+local Speed = 12
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Debris = game:GetService("Debris")
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
+local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
+Dumy.Parent = workspace
+Matchers.Parent = workspace
+
+local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
+
+game.workspace.insidea.Main.Anchored = true
+
+Dumy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, -126)
+
+local function followPlayer()
+    local Direction = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).unit
+    Dumy.HumanoidRootPart.Velocity = Direction * Speed
+    Dumy.HumanoidRootPart.CFrame = CFrame.new(Dumy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
+end
+
+RunService.RenderStepped:Connect(function()
+if Matchers:IsDescendantOf(workspace) and Dumy:IsDescendantOf(workspace) and Dumy:FindFirstChild("HumanoidRootPart") and Dumy:FindFirstChild("Humanoid").Health > 0 then
+local Distance = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).magnitude
+
+if Distance <= math.huge then
+followPlayer()
+end
+
+Matchers:PivotTo(Dumy.HumanoidRootPart.CFrame)
+end
+end)
+
+wait(10)
+game.workspace.insidea.Main.CanCollide = true
+wait(0.1)
+if not game.Players.LocalPlayer.Character:GetAttribute("Hiding") then
+
+wait()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+end
+
+game.workspace.insidea:Destroy()
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+        wait(5)
+local Speed = 12
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Debris = game:GetService("Debris")
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
+local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
+Dumy.Parent = workspace
+Matchers.Parent = workspace
+
+local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
+
+game.workspace.insidea.Main.Anchored = true
+
+Dumy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, -126)
+
+local function followPlayer()
+    local Direction = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).unit
+    Dumy.HumanoidRootPart.Velocity = Direction * Speed
+    Dumy.HumanoidRootPart.CFrame = CFrame.new(Dumy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
+end
+
+RunService.RenderStepped:Connect(function()
+if Matchers:IsDescendantOf(workspace) and Dumy:IsDescendantOf(workspace) and Dumy:FindFirstChild("HumanoidRootPart") and Dumy:FindFirstChild("Humanoid").Health > 0 then
+local Distance = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).magnitude
+
+if Distance <= math.huge then
+followPlayer()
+end
+
+Matchers:PivotTo(Dumy.HumanoidRootPart.CFrame)
+end
+end)
+
+wait(10)
+game.workspace.insidea.Main.CanCollide = true
+wait(0.1)
+if not game.Players.LocalPlayer.Character:GetAttribute("Hiding") then
+
+wait()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+end
+
+game.workspace.insidea:Destroy()
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+-- UI Construction
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+	else
+		print("Entity has damaged the player")
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
 					end)()
 
 				end				
