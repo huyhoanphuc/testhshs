@@ -2688,7 +2688,7 @@ local entity = spawner.Create({
 		Enabled = true,
 		Type = "Ambush",
 		Min = 1,
-		Max = 2.5,
+		Max = 1,
 		Delay = 0
 	},
 	Damage = {
