@@ -105,49 +105,10 @@ for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").Gam
 -- Sprint, if u wanna change keybind pls follow (default is Q)
 loadstring(game:HttpGet("https://pastefy.app/Pg1NtMoz/raw"))()
 
-------------        ripper
+------------ ripper
 coroutine.wrap(function()
     while true do
-    if game.Workspace:FindFirstChild("Dread")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Asitty")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Cease")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Rebound")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("SeekMovingNewClone")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if (workspace.CurrentRooms:FindFirstChild("49")) then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("DeerGod")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("FrostBite")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-wait(179)
-        
+        wait(179)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
@@ -301,7 +262,7 @@ end
 
 entity.Debug.OnLookAtEntity = function()
     print("Player has looked at entity:")
-   game.workspace.Ripper:Destroy()
+    game.workspace.Ripper:Destroy()
 
 local player = game.Players.LocalPlayer
 
@@ -398,46 +359,11 @@ end
 -- Run the created entity
 Spawner.runEntity(entity)
     end
-end)()l
+end)()
 
 ---------- Dread
 coroutine.wrap(function()
 while true do
-if game.Workspace:FindFirstChild("Ripper")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Asitty")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Rebound")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("DeerGod")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("SeekMovingNewClone")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if (workspace.CurrentRooms:FindFirstChild("49")) then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("FrostBite")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
 wait(321)
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 
@@ -579,44 +505,6 @@ end)()
 
 -- scawy
 coroutine.wrap(function()
-if game.Workspace:FindFirstChild("Dread")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("DeerGod")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Ripper")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Asitty")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Rebound")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("SeekMovingNewClone")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if (workspace.CurrentRooms:FindFirstChild("49")) then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("FrostBite")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
     while true do
         wait(150)
         
@@ -774,228 +662,9 @@ end)()
  ------------------------------ The Deer God
 coroutine.wrap(function()
     while true do
-    if game.Workspace:FindFirstChild("Cease")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Dread")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Ripper")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Asitty")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Rebound")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("SeekMovingNewClone")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if (workspace.CurrentRooms:FindFirstChild("49")) then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("FrostBite")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
         wait(385)
        
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-
-
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "DeerGod", -- Custom name of your entity
-    Model = "rbxassetid://12805689281", -- Can be GitHub file or rbxassetid
-    Speed = 25, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 5,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 100,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = true,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        true, -- Enabled/Disabled
-        80 -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 5,
-    },
-    CamShake = {
-        false, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11394027278", -- Image1 url
-            Image2 = "rbxassetid://11394027278", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "10483837590", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(48, 25, 52), -- Color
-            },
-            Tease = {
-                false, -- Enabled/Disabled
-                Min = 1,
-                Max = 1,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-end
-
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 1
-match.SoundId = "rbxassetid://9043357758"
-match.Volume = 1
-match.Name = "DeerGodEscape"
-match.Parent = workspace
-match:Play()
-
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 0.1
-match.SoundId = "rbxassetid://635822826"
-match.Volume = 0.8
-match.Name = "DeerGodEnd"
-match.Parent = workspace
-match:Play()
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "Last Chance To Look Away",
-    Desc = "Why You Are Running?",
-    Reason = "Survive the rare Entity Called Deer God",
-    Image = "rbxassetid://11395249132"
-})
-Followed:Destroy()
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Followed = Instance.new("Sound")
-    Followed.SoundId = GitAud(soundlink, filename)
-    Followed.Parent = workspace
-    Followed.Volume = 2
-    Followed:Play()
-end
-
-CustomGitSound("https://github.com/FranciscoNeto5123/DoorsHardcoreScripts/raw/main/DeerGodChaseTheme.mp3", 1, "Followed")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-    local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
-
-for i,v in next, getgc(false) do
-    if typeof(v) == "function" then
-        local info = getinfo(v)
-        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
-            func = v
-            break
-        end
-    end
-end
-
-local function DeathHint(hints, type: string)
-    setupval(func, 1, hints)
-    if type ~= nil then
-        setupval(func, 2, type)
-    end
-end
-
-DeathHint({
-    "You died to whom you Call Deer God",
-    "Closets Wont work! So try running",
-    "Its form is incomprehensible to a human upclose...",
-    "..-so avoid Eye Contact"
-}, "Blue") -- "Blue" or "Yellow"
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
+loadstring(game:HttpGet("https://pastefy.app/blDgT925/raw"))()
     end
 end)()
 
@@ -1337,39 +1006,6 @@ end)()
 --------------------------- REBOUND
 coroutine.wrap(function()
         wait(250)
-        if game.Workspace:FindFirstChild("DeerGod")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Cease")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Dread")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Ripper")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("Asitty")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("SeekMovingNewClone")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if (workspace.CurrentRooms:FindFirstChild("49")) then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
-if game.Workspace:FindFirstChild("FrostBite")then
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-end
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
         local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
@@ -1432,91 +1068,67 @@ scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
 scare.Volume = 1
 
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
+---====== Create entity ======---
 
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Rebound", -- Custom name of your entity
-    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 5.35, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 10000,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = true,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 2,
-    },
-    CamShake = {
-        false, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://18331472022", -- Image1 url
-            Image2 = "rbxassetid://18331472022", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Sound2 = {
-                "5567523008", -- SoundId Link or Roblox ID
-                { Volume = 1 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(100, 200, 100), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+local entity = spawner.Create({
+	Entity = {
+		Name = "Rebound",
+		Asset = "rbxassetid://12254145022",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = false,
+		Range = 100,
+		Values = {5.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 120,
+		Delay = math.random(2, 2),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 1
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 130
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You die to Reboud", "It appears at the next door Has Rebound.", "He will come back many times after his initial spawn", "so hide every next door until it is safe.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-wait(3.45)
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    wait(3.45)
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -1534,97 +1146,100 @@ function CustomGitSound(soundlink, vol, filename)
 end
 
 CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
-wait(30)
-game.workspace.Rebound:Destroy()
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Rebound", -- Custom name of your entity
-    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 5.35, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 10000,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = true,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 2,
-    },
-    CamShake = {
-        false, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://18331472022", -- Image1 url
-            Image2 = "rbxassetid://18331472022", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Sound2 = {
-                "5567523008", -- SoundId Link or Roblox ID
-                { Volume = 1 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(100, 200, 100), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+    local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Rebound",
+		Asset = "rbxassetid://12254145022",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = false,
+		Range = 100,
+		Values = {5.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 120,
+		Delay = math.random(2, 2),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 1
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 130
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You die to Reboud", "It appears at the next door Has Rebound.", "He will come back many times after his initial spawn", "so hide every next door until it is safe.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-wait(3.45)
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    wait(3.45)
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -1642,97 +1257,100 @@ function CustomGitSound(soundlink, vol, filename)
 end
 
 CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
-wait(30)
-game.workspace.Rebound:Destroy()
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Rebound", -- Custom name of your entity
-    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 5.35, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 10000,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = true,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 2,
-    },
-    CamShake = {
-        false, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://18331472022", -- Image1 url
-            Image2 = "rbxassetid://18331472022", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Sound2 = {
-                "5567523008", -- SoundId Link or Roblox ID
-                { Volume = 1 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(100, 200, 100), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+    local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Rebound",
+		Asset = "rbxassetid://12254145022",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = false,
+		Range = 100,
+		Values = {5.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 120,
+		Delay = math.random(2, 2),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 1
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 130
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You die to Reboud", "It appears at the next door Has Rebound.", "He will come back many times after his initial spawn", "so hide every next door until it is safe.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-wait(3.45)
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    wait(3.45)
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -1750,97 +1368,100 @@ function CustomGitSound(soundlink, vol, filename)
 end
 
 CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
-wait(30)
-game.workspace.Rebound:Destroy()
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Rebound", -- Custom name of your entity
-    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 5.35, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 10000,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = true,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 2,
-    },
-    CamShake = {
-        false, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://18331472022", -- Image1 url
-            Image2 = "rbxassetid://18331472022", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Sound2 = {
-                "5567523008", -- SoundId Link or Roblox ID
-                { Volume = 1 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(100, 200, 100), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+    local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Rebound",
+		Asset = "rbxassetid://12254145022",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = false,
+		Range = 100,
+		Values = {5.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 120,
+		Delay = math.random(2, 2),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 1
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 130
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You die to Reboud", "It appears at the next door Has Rebound.", "He will come back many times after his initial spawn", "so hide every next door until it is safe.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-wait(3.45)
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    wait(3.45)
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -1858,97 +1479,100 @@ function CustomGitSound(soundlink, vol, filename)
 end
 
 CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
-wait(30)
-game.workspace.Rebound:Destroy()
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Rebound", -- Custom name of your entity
-    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 5.35, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 10000,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = true,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 2,
-    },
-    CamShake = {
-        false, -- Enabled/Disabled
-        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://18331472022", -- Image1 url
-            Image2 = "rbxassetid://18331472022", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Sound2 = {
-                "5567523008", -- SoundId Link or Roblox ID
-                { Volume = 1 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(100, 200, 100), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+    local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Rebound",
+		Asset = "rbxassetid://12254145022",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = false,
+		Range = 100,
+		Values = {5.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 120,
+		Delay = math.random(2, 2),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 1
+	},
+	Damage = {
+		Enabled = true,
+		Range = 100,
+		Amount = 130
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You die to Reboud", "It appears at the next door Has Rebound.", "He will come back many times after his initial spawn", "so hide every next door until it is safe.."},
+		Cause = ""
+	}
 })
 
------[[ Advanced Sctipting ]]-----
+---====== Debug entity ======---
 
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-wait(3.45)
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    wait(3.45)
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -1966,33 +1590,57 @@ function CustomGitSound(soundlink, vol, filename)
 end
 
 CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
-wait(30)
-game.workspace.Rebound:Destroy()
-end
+end)
 
-entity.Debug.OnEntityDespawned = function()
-end
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-Speed = 120
-wait(1)
-Speed = 170
-wait(1)
-Speed = 200
-end
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-wait(-290)
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Jus Many Rebounds",
+    Desc = "Encounter Rebound.",
+    Reason = "",
+    Image = "rbxassetid://10914800940"
+})
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		wait(-290)
 loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
 local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
 
@@ -2018,34 +1666,35 @@ DeathHint({
     "He makes his presence known and keeps coming back...",
     "Hide when this happens!"
 }, "Blue") -- "Blue" or "Yellow"
-end
+	else
+		print("Entity has damaged the player")
+	end
+end)
 
-------------------------
+--[[
 
--- Run the created entity
-Spawner.runEntity(entity)
-end
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-Speed = 120
-wait(1)
-Speed = 170
-wait(1)
-Speed = 200
-end
+]]--
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
+---====== Run entity ======---
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-wait(-290)
+entity:Run()
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		wait(-290)
 loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
 local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
 
@@ -2071,34 +1720,35 @@ DeathHint({
     "He makes his presence known and keeps coming back...",
     "Hide when this happens!"
 }, "Blue") -- "Blue" or "Yellow"
-end
+	else
+		print("Entity has damaged the player")
+	end
+end)
 
-------------------------
+--[[
 
--- Run the created entity
-Spawner.runEntity(entity)
-end
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-Speed = 120
-wait(1)
-Speed = 170
-wait(1)
-Speed = 200
-end
+]]--
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
+---====== Run entity ======---
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-wait(-290)
+entity:Run()
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		wait(-290)
 loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
 local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
 
@@ -2124,34 +1774,35 @@ DeathHint({
     "He makes his presence known and keeps coming back...",
     "Hide when this happens!"
 }, "Blue") -- "Blue" or "Yellow"
-end
+	else
+		print("Entity has damaged the player")
+	end
+end)
 
-------------------------
+--[[
 
--- Run the created entity
-Spawner.runEntity(entity)
-end
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-Speed = 120
-wait(1)
-Speed = 170
-wait(1)
-Speed = 200
-end
+]]--
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
+---====== Run entity ======---
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-wait(-290)
+entity:Run()
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		wait(-290)
 loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
 local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
 
@@ -2177,34 +1828,35 @@ DeathHint({
     "He makes his presence known and keeps coming back...",
     "Hide when this happens!"
 }, "Blue") -- "Blue" or "Yellow"
-end
+	else
+		print("Entity has damaged the player")
+	end
+end)
 
-------------------------
+--[[
 
--- Run the created entity
-Spawner.runEntity(entity)
-end
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
 
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-Speed = 120
-wait(1)
-Speed = 170
-wait(1)
-Speed = 200
-end
+]]--
 
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
+---====== Run entity ======---
 
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-wait(-290)
+entity:Run()
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		wait(-290)
 loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
 local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
 
@@ -2230,18 +1882,30 @@ DeathHint({
     "He makes his presence known and keeps coming back...",
     "Hide when this happens!"
 }, "Blue") -- "Blue" or "Yellow"
-end
+	else
+		print("Entity has damaged the player")
+	end
+end)
 
-------------------------
+--[[
 
--- Run the created entity
-Spawner.runEntity(entity)
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
 end)()
 
  --------------------------- FROSTBITE
 coroutine.wrap(function()
-    while true do
-        wait(230)
+        wait(200)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
         local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
@@ -2328,13 +1992,7 @@ end
        
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned:")
-    coroutine.wrap(function()
-game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
-wait(10)
-game.workspace.Frostbite:Destroy()
-end)()
 
-coroutine.wrap(function()
 game.workspace.FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = false
 game.workspace.FrostBite.FrostyNew.Attachment.smoke.Enabled = true
 function GitAud(soundgit,filename)
@@ -2386,11 +2044,11 @@ game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = false
 game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
 game.workspace.Frostbite.FrostyNew.Ambience:Stop()
 game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
-end)()
+
 
 game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
 wait(8)
-game.workspace.Frostbite:Destroy()
+workspace.FrostBite:Destroy()
 end
 
 entity.Debug.OnEntityDespawned = function()
@@ -2445,12 +2103,114 @@ end
 
 -- Run the created entity
 Spawner.runEntity(entity)
-    end
 end)()
 
--------------------- NEW SEEK
-loadstring(game:HttpGet('https://pastefy.app/RsMZdWA9/raw'))()
+-- New Seek music and animation loader
+coroutine.wrap(function()
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+        wait(0.0005)
+        if game.Workspace:FindFirstChild("SeekMovingNewClone") then
 
+            function ReplaceAudGit(GithubSnd, SoundName)
+                local url = GithubSnd
+                if not isfile(SoundName .. ".mp3") then
+                    writefile(SoundName .. ".mp3", game:HttpGet(url))
+                end
+                return (getcustomasset or getsynasset)(SoundName .. ".mp3")
+            end
+
+            local a = game.Workspace.SeekMovingNewClone
+            a.SeekMusic.SoundId = ReplaceAudGit("https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true", "NewSeek")
+        end
+    end)
+end)()
+
+-- NEW SEEK 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function() 
+    wait(3.5) 
+    if not workspace:FindFirstChild("SeekMovingNewClone") then 
+        return  
+    end 
+    
+    local RealSeek = workspace:FindFirstChild("SeekMovingNewClone") 
+    local RealSeekRig = RealSeek:FindFirstChild("SeekRig") 
+    local seekNew = game:GetObjects("rbxassetid://11664451634")[1]  
+    seekNew.Name = "seek2" 
+
+    for _, v in pairs(seekNew.Figure:GetChildren()) do 
+        if v:IsA("Sound") then 
+            v:Stop() 
+        end 
+    end 
+
+    RealSeekRig.Head.Eye:Destroy() 
+    RealSeekRig.Head.Black:Destroy() 
+    seekNew.Parent = workspace 
+    local SeekRig = seekNew:FindFirstChild("SeekRig") 
+    SeekRig:FindFirstChild("Root").Anchored = true 
+
+    spawn(function() 
+        while game:GetService("RunService").Heartbeat:Wait() and RealSeek do 
+            if RealSeekRig:FindFirstChild("Root") then 
+                SeekRig:FindFirstChild("Root").CFrame = RealSeekRig:FindFirstChild("Root").CFrame 
+            end 
+            for _, v in pairs(RealSeek.Figure:GetChildren()) do 
+                RealSeek.Figure.Footsteps:Stop() 
+                RealSeek.Figure.FootstepsFar:Stop() 
+            end 
+            for _, v in pairs(RealSeekRig:GetChildren()) do 
+                if v:IsA("BasePart") then 
+                    v.Transparency = 1 
+                    
+                    local sound = a.Ambience
+
+            if sound:IsA("Sound") then
+                sound.Played:Connect(function()
+                    print("YEEEEE WORKING!!!!") 
+                    local model = workspace:WaitForChild("seek2")
+                    local seekRig = model:WaitForChild("SeekRig")
+                    local animationController = seekRig:FindFirstChildOfClass("AnimationController")
+
+                    if animationController then
+                        local anim = seekRig:FindFirstChild("AnimRaise")
+                        
+                        if anim and anim:IsA("Animation") then
+                            local animationTrack = animationController:LoadAnimation(anim)
+                            animationTrack:Play()
+                        else
+                            warn("AnimRaise not found or is not an animation.")
+                        end
+                    else
+                        warn("AnimationController not found in SeekRig.")
+                    end
+                    
+                    wait(8.20)
+
+                    local model = workspace:WaitForChild("seek2")
+                    local seekRig = model:WaitForChild("SeekRig")
+                    local animationController = seekRig:FindFirstChildOfClass("AnimationController")
+
+                    if animationController then
+                        local anim = seekRig:FindFirstChild("AnimRun")
+                        
+                        if anim and anim:IsA("Animation") then
+                            local animationTrack = animationController:LoadAnimation(anim)
+                            animationTrack:Play()
+                        else
+                            warn("AnimRun not found or is not an animation.")
+                        end
+                    else
+                        warn("AnimationController not found in SeekRig.")
+                    end
+                end)
+            else
+                warn("Sound not found or is not an instance of Sound.")
+            end
+                end 
+            end 
+        end 
+    end)
+end)
 
 
 ----------------------- NEW PAINTING YOOOOO
