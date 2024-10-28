@@ -1,0 +1,2145 @@
+-- I Love Cats!!!!!!!!!
+
+
+-- oi oi oi I am on vacation 
+
+
+local blackListeds = {"Yarik9847"}
+
+if table.find(blackListeds, game.Players.LocalPlayer.Name) then
+
+game.Players.LocalPlayer:Kick("You been kicked from Hardcore: You are shared script to others people. ")
+
+end
+
+-------- goober
+coroutine.wrap(function()
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function(v)
+   L = game:GetService("Workspace").CurrentRooms[v].PathfindNodes:Clone()
+L.Parent = game:GetService("Workspace").CurrentRooms[v]
+L.Name = 'Nodes'
+
+end)
+end)()
+
+print("Loade") 
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.SoundId = "rbxassetid://10472612727" 
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Pitch = 0.55 
+ 
+game.Lighting.FogColor = Color3.fromRGB(0, 0, 0) 
+game.Lighting.FogStart = 5 
+game.Lighting.FogEnd = 800 
+ 
+game.ReplicatedStorage.Sounds.BulbZap.SoundId = "rbxassetid://4398878054"  
+ 
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function msg(message)
+    
+    local mainGame = require(LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+    
+    
+    mainGame.caption(message, true)
+end
+
+if game.ReplicatedStorage.GameData.LatestRoom.Value > 1 then 
+	game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Error"
+	firesignal(game.ReplicatedStorage.RemoteEvents.DeathHint.OnClientEvent, {"You need to execute the script at door 0!", "Remember this!"}, "Blue")
+	game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)  
+	return
+end
+
+if workspace:FindFirstChild("hardcoreInit") then msg("Executed 2 times! Returning...") return end
+
+local EnabledBool = Instance.new("BoolValue",workspace)
+EnabledBool.Name = "hardcoreInit"
+
+local LightReplaceModel = game:GetObjects("rbxassetid://12543866876")[1] or nil
+
+--Change Light Model
+coroutine.wrap(function()
+    while true do   
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures:GetDescendants()) do
+	if v.Name == "LightStand" then
+		if game.ReplicatedStorage.GameData.LatestRoom.Value < 53 then
+			local torch = LightReplaceModel:Clone()
+			torch.Parent = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures
+			torch.LightFixture.Changed:Connect(function()
+				torch.LightFixture.Neon.atachm["Ok you cannot tell me this isnt good"].Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture.Neon["Bright sh idfk"].ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture:WaitForChild('Dust').ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled 
+			end)
+			torch:PivotTo(v:GetPivot())
+			v:Destroy()
+
+		else
+			v:Destroy()
+		end
+	  end
+   end
+  end
+end)()
+
+for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures:GetDescendants()) do
+	if v.Name == "LightStand" then
+		if game.ReplicatedStorage.GameData.LatestRoom.Value < 53 then
+			local torch = LightReplaceModel:Clone()
+			torch.Parent = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures
+			torch.LightFixture.Changed:Connect(function()
+				torch.LightFixture.Neon.atachm["Ok you cannot tell me this isnt good"].Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture.Neon["Bright sh idfk"].ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled
+					torch.LightFixture:WaitForChild('Dust').ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled 
+			end)
+			torch:PivotTo(v:GetPivot())
+			v:Destroy()
+
+		else
+			v:Destroy()
+		end
+	  end
+   end
+
+-- Sprint, if u wanna change keybind pls follow (default is Q)
+loadstring(game:HttpGet("https://pastefy.app/Pg1NtMoz/raw"))()
+
+------------        ripper
+coroutine.wrap(function()
+    while true do
+        wait(179)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Ripper", -- Custom name of your entity
+    Model = "rbxassetid://15989468546", -- Can be GitHub file or rbxassetid
+    Speed = 185, -- Percentage, 100 = default Rush speed
+    DelayTime = 6.9, -- Time before starting cycles (seconds)
+    HeightOffset = 6,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 0,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        2.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 4,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {15,25,0,2,1,6}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "nil", -- Image1 url
+            Image2 = "nil", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 5 }, -- Sound properties
+            },
+            Sound2 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 3 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = true,
+    CustomDialog = {  
+        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+loadstring(game:HttpGet("https://pastefy.app/ZHMofq2t/raw"))()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+wait(0.2)
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camara = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+ camara.CFrame = camara.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(15,25,0,2,1,6)
+
+    local ripeend = Instance.new("Sound")
+    ripeend.Parent = workspace
+    ripeend.Name = "RipperEnd"
+    ripeend.SoundId = "rbxassetid://1837829565"
+    ripeend.Volume = 3
+    ripeend.Pitch = 1
+    ripeend:Play()
+
+---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Torn Apart",
+    Desc = "Dont leave too early..",
+    Reason = "Encounter Ripper.",
+    Image = "rbxassetid://17702317077"
+})
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+wait(0.2)
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local RipeMoving = Instance.new("Sound")
+    RipeMoving.SoundId = GitAud(soundlink, filename)
+    RipeMoving.Parent = workspace
+    RipeMoving.Volume = 3
+    RipeMoving:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20Ripper%20Has%20Moving%20Sound%20(320%20kbps).mp3", 1, "RipperHasMoving")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+RipeMoving:Stop()
+
+game.workspace.Ripper:Destroy()
+
+local player = game.Players.LocalPlayer
+
+player.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+player.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+player.Character.HumanoidRootPart.Anchored = true
+
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = vol
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20Doors%20HardCore%20Mode_%201%20ripper%20part%20sound%20(320%20kbps).mp3", 1, "Ripper5Sound")
+wait(1.5)
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound1 = Instance.new("Sound")
+    Sound1.SoundId = GitAud(soundlink, filename)
+    Sound1.Parent = workspace
+    Sound1.Volume = vol
+    Sound1:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20Doors%20Hardcore%20Mode_%20Ripperscare%20part%202%20sound%20(320%20kbps).mp3", 1, "Ripper6Sound")
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxassetid://236542974"
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+wait(0.3)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+wait(0.1)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+wait(0.2)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+wait(0.2)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+wait(0.3)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+wait(0.2)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+wait(0.20)
+local player = game.Players.LocalPlayer
+local humanoid = player.Character:FindFirstChild("Humanoid")
+humanoid.Health = humanoid.Health - 100
+game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Ripper"
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Ripper...",
+    "You can tell his presence by the lights and his scream.",
+    "Hide when he does this!"
+}, "Blue") -- "Blue" or "Yellow"
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+    end
+end)()
+
+---------- Dread
+coroutine.wrap(function()
+while true do
+wait(321)
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Dread", -- Custom name of your entity
+    Model = "rbxassetid://12653092543", -- Can be GitHub file or rbxassetid
+    Speed = 0, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 1,
+    CanKill = false,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 30,
+    OneRoom = true,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        80 -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1.5,
+        Max = 2.5,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://11394027278", -- Image1 url
+            Image2 = "rbxassetid://11394027278", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "10483837590", -- SoundId Link or Roblox ID
+                { Volume = 3 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(48, 25, 52), -- Color
+            },
+            Tease = {
+                false, -- Enabled/Disabled
+                Min = 1,
+                Max = 1,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait()
+game.workspace.Dread:Destroy()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+    local Player = game.Players.LocalPlayer.Character
+Player:FindFirstChild("HumanoidRootPart").Anchored = true
+    game.workspace.Dread.RushNew.Anchored = false
+    wait(1)
+    loadstring(game:HttpGet("https://pastefy.app/pxRzdPs1/raw"))()
+
+    coroutine.wrap(function()
+    wait(14)
+         game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100)
+         game.workspace.Dread:Destroy()
+         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+    end)()
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+end)()
+
+ ---------- CEASE
+
+-- scawy
+coroutine.wrap(function()
+    while true do
+        wait(150)
+        
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Cease", -- Custom name of your entity
+    Model = "rbxassetid://12262854624", -- Can be GitHub file or rbxassetid
+    Speed = 89, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 30,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        true, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        80 -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://11394027278", -- Image1 url
+            Image2 = "rbxassetid://11394027278", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 0 }, -- Sound properties
+            },
+            Sound2 = {
+                "10483837590", -- SoundId Link or Roblox ID
+                { Volume = 3 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(48, 25, 52), -- Color
+            },
+            Tease = {
+                false, -- Enabled/Disabled
+                Min = 1,
+                Max = 1,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+    local TweenService = game:GetService("TweenService")
+
+--- Configs
+local ambruhspeed = 40
+local redtweeninfo = TweenInfo.new(3)
+local redinfo = {Color = Color3.fromRGB(125, 125, 255)}
+
+-- Đ˜Đ·Đ¼ĐµĐ½ĐµĐ½Đ¸Đµ Ñ†Đ²ĐµÑ‚Đ° ÑĐ²ĐµÑ‚Đ°
+for i, v in pairs(workspace.CurrentRooms:GetDescendants()) do
+    if v:IsA("Light") then
+        TweenService:Create(v, redtweeninfo, redinfo):Play()
+        if v.Parent.Name == "LightFixture" then
+            TweenService:Create(v.Parent, redtweeninfo, redinfo):Play()
+        end
+    end
+end
+
+local room = workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")]
+local color = Color3.fromRGB(100, 120, 228)
+
+for _, thing in pairs(room.Assets:GetDescendants()) do
+    if thing:FindFirstChild("LightFixture") then
+        local lightFixture = thing.LightFixture
+        if lightFixture:FindFirstChild("Neon") then
+            lightFixture.Neon.Color = color
+        end
+        for _, light in pairs(lightFixture:GetChildren()) do
+            if light:IsA("SpotLight") or light:IsA("PointLight") then
+                light.Color = color
+            end
+        end
+    end
+end
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+    end
+end)()
+
+
+ ------------------------------ The Deer God
+coroutine.wrap(function()
+    while true do
+        wait(385)
+       
+loadstring(game:HttpGet("https://pastefy.app/blDgT925/raw"))()
+    end
+end)()
+
+
+
+ ------------------------------Shocker
+coroutine.wrap(function()
+    while true do
+        wait(math.random(96, 97))
+        
+loadstring(game:HttpGet("https://pastefy.app/dC8PRM9i/raw"))()
+
+    end
+end)()
+
+
+ ----------------------- SILENCE
+coroutine.wrap(function()
+    while true do
+        wait(560)
+        
+loadstring(game:HttpGet("https://pastefy.app/RBB6rsDB/raw"))()
+    end
+end)()
+
+
+---------------------- A60
+coroutine.wrap(function()
+wait()
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait(239)
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Asitty",
+		Asset = "rbxassetid://16138462624",
+		HeightOffset = 0.5
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 5
+		},
+		Shatter = true,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = false
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 326,
+		Delay = math.random(5, 5),
+		Reversed = false
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 5,
+		Max = 5,
+		Delay = 1
+	},
+	Damage = {
+		Enabled = true,
+		Range = 50,
+		Amount = 130
+	},
+	Crucifixion = {
+		Enabled = false,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Curious",
+		Hints = {"You die to A-60", "...", "...", "..."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    coroutine.wrap(function()
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+while true do wait(0.0006)
+game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
+game.Workspace.Asitty.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
+wait(0.0001)
+game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
+game.Workspace.Asitty.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
+wait(0.0001)
+game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
+game.Workspace.Asitty.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
+wait(0.0001)
+game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
+game.Workspace.Asitty.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
+wait(0.0001)
+game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
+game.Workspace.Asitty.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
+wait(0.0001)
+game.Workspace.Asitty.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+game.Workspace.Asitty.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+end
+end)()
+
+  coroutine.wrap(function()
+    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
+				Reboundcolor.Name = "Despawn"
+				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
+				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
+				game.Debris:AddItem(Reboundcolor,40)
+
+				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
+				local camera = workspace.CurrentCamera
+
+				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
+					camera.CFrame = camera.CFrame * cf
+				end)
+				camShake:Start()
+				camShake:ShakeOnce(5,45,0.1,20,2,2)
+   end)()
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    game.workspace.Asitty.RushNew.Main.PointLight.Range = 23
+game.workspace.Asitty.RushNew.Main.PointLight.Brightness = 7
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
+				Reboundcolor.Name = "Despawn"
+				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
+				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
+				game.Debris:AddItem(Reboundcolor,40)
+
+				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
+				local camera = workspace.CurrentCamera
+
+				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
+					camera.CFrame = camera.CFrame * cf
+				end)
+				camShake:Start()
+				camShake:ShakeOnce(5,45,0.1,20,2,2)
+					local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = " Might Come Back...",
+    Desc = "Encounter And Survive The Rare Entity Called A-60",
+    Reason = "",
+    Image = "rbxasset://custom_gloop/A60OncdSteroids.png",
+})
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to an enitity designated as A-60", "It can Appear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, "Blue")
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 7
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/A60JumpscareOld.mp3", 1, "asixtyScareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+wait(0.0001)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+	else
+end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run() 
+end)()
+
+--------------------------- REBOUND
+coroutine.wrap(function()
+        wait(250)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+        local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
+    Reboundcolor.Name = "Warn"
+    Reboundcolor.TintColor = Color3.fromRGB(65, 138, 255) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
+    game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local cue1 = Instance.new("Sound")
+cue1.Parent = game.Workspace
+cue1.Name = "Scream"
+cue1.SoundId = "rbxassetid://9114397505"
+local distort = Instance.new("DistortionSoundEffect")
+distort.Parent = cue1
+distort.Level = 1
+local distort2 = Instance.new("DistortionSoundEffect")
+distort2.Parent = cue1
+distort2.Level = 1
+local pitch = Instance.new("PitchShiftSoundEffect")
+pitch.Parent = cue1
+pitch.Octave = 0.5
+local pitch2 = Instance.new("PitchShiftSoundEffect")
+pitch2.Parent = cue1
+pitch2.Octave = 0.5
+local pitch3 = Instance.new("PitchShiftSoundEffect")
+pitch3.Parent = cue1
+pitch3.Octave = 0.5
+cue1.Volume = 0.1
+cue1:Play()
+local cue2 = Instance.new("Sound")
+cue2.Parent = game.Workspace
+cue2.Name = "Spawn"
+cue2.SoundId = "rbxassetid://9114221327"
+cue2.Volume = 3
+cue2:Play()
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camara = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+ camara.CFrame = camara.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(10,3,0.1,6,2,0.5)
+wait(2.8)
+ 
+function GetGitSound(GithubSnd,SoundName)
+ local url=GithubSnd
+ if not isfile(SoundName..".mp3") then
+  writefile(SoundName..".mp3", game:HttpGet(url))
+ end
+ local sound=Instance.new("Sound")
+ sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+ return sound
+end
+
+local scare = Instance.new("Sound")
+scare.Parent = game.Workspace
+scare.Name = "MyEarsBurn"
+scare.SoundId = "rbxassetid://5567523008"
+scare.PlaybackSpeed = 3
+scare.Volume = 1
+
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 5.35, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 10000,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = true,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18331472022", -- Image1 url
+            Image2 = "rbxassetid://18331472022", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 5 }, -- Sound properties
+            },
+            Sound2 = {
+                "5567523008", -- SoundId Link or Roblox ID
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(100, 200, 100), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+wait(3.45)
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local ReboudMov = Instance.new("Sound")
+    ReboudMov.SoundId = GitAud(soundlink, filename)
+    ReboudMov.Parent = workspace
+    ReboudMov.Volume = 2
+    ReboudMov:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
+wait(30)
+game.workspace.Rebound:Destroy()
+end
+
+entity.Debug.OnEntityDespawned = function()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 5.35, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 10000,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = true,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18331472022", -- Image1 url
+            Image2 = "rbxassetid://18331472022", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 5 }, -- Sound properties
+            },
+            Sound2 = {
+                "5567523008", -- SoundId Link or Roblox ID
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(100, 200, 100), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+wait(3.45)
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local ReboudMov = Instance.new("Sound")
+    ReboudMov.SoundId = GitAud(soundlink, filename)
+    ReboudMov.Parent = workspace
+    ReboudMov.Volume = 2
+    ReboudMov:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
+wait(30)
+game.workspace.Rebound:Destroy()
+end
+
+entity.Debug.OnEntityDespawned = function()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 5.35, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 10000,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = true,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18331472022", -- Image1 url
+            Image2 = "rbxassetid://18331472022", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 5 }, -- Sound properties
+            },
+            Sound2 = {
+                "5567523008", -- SoundId Link or Roblox ID
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(100, 200, 100), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+wait(3.45)
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local ReboudMov = Instance.new("Sound")
+    ReboudMov.SoundId = GitAud(soundlink, filename)
+    ReboudMov.Parent = workspace
+    ReboudMov.Volume = 2
+    ReboudMov:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
+wait(30)
+game.workspace.Rebound:Destroy()
+end
+
+entity.Debug.OnEntityDespawned = function()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 5.35, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 10000,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = true,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18331472022", -- Image1 url
+            Image2 = "rbxassetid://18331472022", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 5 }, -- Sound properties
+            },
+            Sound2 = {
+                "5567523008", -- SoundId Link or Roblox ID
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(100, 200, 100), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+wait(3.45)
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local ReboudMov = Instance.new("Sound")
+    ReboudMov.SoundId = GitAud(soundlink, filename)
+    ReboudMov.Parent = workspace
+    ReboudMov.Volume = 2
+    ReboudMov:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
+wait(30)
+game.workspace.Rebound:Destroy()
+end
+
+entity.Debug.OnEntityDespawned = function()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://12254145022", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 5.35, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 10000,
+    OneRoom = false,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = true,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://18331472022", -- Image1 url
+            Image2 = "rbxassetid://18331472022", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 5 }, -- Sound properties
+            },
+            Sound2 = {
+                "5567523008", -- SoundId Link or Roblox ID
+                { Volume = 1 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(100, 200, 100), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+wait(3.45)
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local ReboudMov = Instance.new("Sound")
+    ReboudMov.SoundId = GitAud(soundlink, filename)
+    ReboudMov.Parent = workspace
+    ReboudMov.Volume = 2
+    ReboudMov:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20DOORS%20HARDCORE_REBOUND%20MOVING%20START%20(320%20kbps).mp3", 1, "ReboundMoving")
+wait(30)
+game.workspace.Rebound:Destroy()
+end
+
+entity.Debug.OnEntityDespawned = function()
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+Speed = 120
+wait(1)
+Speed = 170
+wait(1)
+Speed = 200
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+wait(-290)
+loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Rebound...",
+    "He makes his presence known and keeps coming back...",
+    "Hide when this happens!"
+}, "Blue") -- "Blue" or "Yellow"
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+Speed = 120
+wait(1)
+Speed = 170
+wait(1)
+Speed = 200
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+wait(-290)
+loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Rebound...",
+    "He makes his presence known and keeps coming back...",
+    "Hide when this happens!"
+}, "Blue") -- "Blue" or "Yellow"
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+Speed = 120
+wait(1)
+Speed = 170
+wait(1)
+Speed = 200
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+wait(-290)
+loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Rebound...",
+    "He makes his presence known and keeps coming back...",
+    "Hide when this happens!"
+}, "Blue") -- "Blue" or "Yellow"
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+Speed = 120
+wait(1)
+Speed = 170
+wait(1)
+Speed = 200
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+wait(-290)
+loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Rebound...",
+    "He makes his presence known and keeps coming back...",
+    "Hide when this happens!"
+}, "Blue") -- "Blue" or "Yellow"
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+Speed = 120
+wait(1)
+Speed = 170
+wait(1)
+Speed = 200
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+wait(-290)
+loadstring(game:HttpGet('https://pastefy.app/RtjDtwEJ/raw'))()
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Rebound...",
+    "He makes his presence known and keeps coming back...",
+    "Hide when this happens!"
+}, "Blue") -- "Blue" or "Yellow"
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+end)()
+
+ --------------------------- FROSTBITE
+coroutine.wrap(function()
+    while true do
+        wait(200)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+        local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
+
+
+-- Create entity
+local entity = Spawner.createEntity({
+    CustomName = "FrostBite", -- Custom name of your entity
+    Model = "rbxassetid://12272255258", -- Can be GitHub file or rbxassetid
+    Speed = 0, -- Percentage, 100 = default Rush speed
+    DelayTime = 8.10, -- Time before starting cycles (seconds)
+    HeightOffset = 4,
+    CanKill = false,
+    NoDieOnCrouching = false,
+    NoHiding = false,
+    AntiCrucifix = false,
+    KillRange = 0,
+    OneRoom = true,
+    DieOnLook = false,
+    BreakLights = false,
+    BackwardsMovement = false,
+     MovementDeath = {
+        false, -- Turned On?
+        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+    },
+    FlickerLights = {
+        false, -- Enabled/Disabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        false, -- Enabled/Disabled
+        {3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled/Disabled
+        {
+            Type = "2", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
+            Image1 = "rbxassetid://10483855823", -- Image1 url
+            Image2 = "rbxassetid://10483999903", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 5 }, -- Sound properties
+            },
+            Sound2 = {
+                "0", -- SoundId Link or Roblox ID
+                { Volume = 3 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled/Disabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled/Disabled
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
+    DiffrentMessages = false,
+    CustomDialog = {  
+        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
+        {"Stop Dieing"},
+        {"Bruh", "Use what you have learned from Rush!"},
+        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
+         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
+    }
+})
+
+-----[[ Advanced Sctipting ]]-----
+
+entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
+print("Invincible: "..tostring(Invincible))
+print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
+print("Hiding: "..tostring(Hiding))
+end
+       
+entity.Debug.OnEntitySpawned = function()
+    print("Entity has spawned:")
+
+game.workspace.FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = false
+game.workspace.FrostBite.FrostyNew.Attachment.smoke.Enabled = true
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound25 = Instance.new("Sound")
+    Sound25.SoundId = GitAud(soundlink, filename)
+    Sound25.Parent = workspace
+    Sound25.Volume = 1
+    Sound25:Play()
+end
+
+CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/Y2meta.app%20-%20FrostBite%20Spawned%20Sound%20(320%20kbps).mp3", 1, "FRRR FRFRFFRR I AM FR")
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local Sound55 = Instance.new("Sound")
+			local FlangeSoundEffect1 = Instance.new("FlangeSoundEffect")
+			local DistortionSoundEffect2 = Instance.new("DistortionSoundEffect")
+			FlangeSoundEffect3 = Instance.new("FlangeSoundEffect")
+			Sound55.Name = "ahhhhhh"
+			Sound55.MaxDistance = 500
+			Sound55.Pitch = 0.23999999463558197
+			Sound55.PlaybackSpeed = 0.23999999463558197
+			Sound55.Parent = workspace
+			Sound55.RollOffMode = Enum.RollOffMode.InverseTapered
+			Sound55.SoundId = "rbxassetid://6305809364"
+			FlangeSoundEffect1.Parent = Sound55
+			FlangeSoundEffect1.Rate = 0.75
+			FlangeSoundEffect1.Depth = 1
+			FlangeSoundEffect1.Mix = 0.7300000190734863
+			DistortionSoundEffect2.Parent = Sound55
+			DistortionSoundEffect2.Level = 0.9800000190734863
+			FlangeSoundEffect3.Parent = Sound55
+			FlangeSoundEffect3.Rate = 0.25
+			FlangeSoundEffect3.Depth = 1
+			FlangeSoundEffect3.Mix = 1
+			Sound55:Play()
+game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
+game.workspace.Frostbite.FrostyNew.Ambience:Stop()
+game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
+
+
+game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
+wait(8)
+workspace.Frostbite:Destroy()
+end
+
+entity.Debug.OnEntityDespawned = function()
+    print("Entity has despawned:")
+end
+
+entity.Debug.OnEntityStartMoving = function()
+    print("Entity has started moving:")
+game.workspace.FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = true
+game.workspace.FrostBite.FrostyNew.Attachment.face.Enabled = true
+game.workspace.FrostBite.FrostyNew.Attachment.Heylois.Enabled = true
+game.workspace.FrostBite.FrostyNew.Attachment.BlackTrail.Enabled = true
+game.workspace.FrostBite.FrostyNew.Attachment.smoke.Enabled = false
+game.workspace.FrostBite.FrostyNew.Attachment.BlackTrai2l.Enabled = true
+game.workspace.FrostBite.FrostyNew.Attachment.BlackTrai3l.Enabled = true
+game.workspace.FrostBite.FrostyNew.Ambience:Play()
+game.workspace.FrostBite.FrostyNew.AmbienceFar:Play()
+local ColorCorrectionEffect0 = Instance.new("ColorCorrectionEffect")
+			ColorCorrectionEffect0.Parent = game:GetService("Lighting")
+			ColorCorrectionEffect0.TintColor = Color3.new(1, 1, 1)
+			ColorCorrectionEffect0.Enabled = true
+game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(0.00784314, 0.188235, 1)}):Play()
+local ultimaroom = game.ReplicatedStorage.GameData.LatestRoom.Value
+
+coroutine.wrap(function()
+while true do
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.Health -= 1
+if ultimaroom ~= game.ReplicatedStorage.GameData.LatestRoom.Value then break end
+
+end
+end)()
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+    print("Entity has finished rebound:")
+end
+
+entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+    print("Entity:", "has entered room:",room)
+end
+
+entity.Debug.OnLookAtEntity = function()
+    print("Player has looked at entity:")
+end
+
+entity.Debug.OnDeath = function()
+    warn("Player has died.")
+end
+
+------------------------
+
+-- Run the created entity
+Spawner.runEntity(entity)
+    end
+end)()
+
+-------------------- NEW SEEK
+loadstring(game:HttpGet('https://pastefy.app/RsMZdWA9/raw'))()
+
+
+
+----------------------- NEW PAINTING YOOOOO
+local painters = 1
+local paints = {
+ [1] = {"rbxassetid://11881132074", "Despair"},
+ [2] = {"rbxassetid://11881132745", "Old Creator"},
+ [3] = {"rbxassetid://11881654771", "A tryhard..."},
+ [4] = {"rbxassetid://7084794697", "him."}
+}
+
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function()
+ local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+ if room:FindFirstChild("Assets") then
+  local paintings = {}
+  for i, painting in next, room:FindFirstChild("Assets"):GetChildren() do
+   if painting.Name:find("Painting") then
+    table.insert(paintings, painting)
+   end
+  end
+  if #paintings > 0 then
+   local currentpainting
+   if paintings[#paintings] then
+    painters = painters + 1
+    currentpainting = paintings[#paintings]
+   else
+    currentpainting = paintings[1]
+   end
+   if currentpainting then
+    if currentpainting:FindFirstChild("Canvas") then
+     local selected = paints[math.random(1, #paints)]
+     if currentpainting:FindFirstChild("InteractPrompt") then
+local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
+      cloning.Name = "fakeInteract"
+      cloning.Parent = currentpainting
+      currentpainting:FindFirstChild("InteractPrompt"):Destroy()
+      local t = cloning.Triggered:Connect(function()
+       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("", true)
+       local paintingTitle = selected[2]
+       local captionText = string.gsub("This painting is titled \"NAMEOFTHING\"", "NAMEOFTHING", paintingTitle)
+       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption(captionText, true)
+      end)
+     end
+     currentpainting:FindFirstChild("Canvas"):FindFirstChildOfClass("SurfaceGui"):FindFirstChildOfClass("ImageLabel").Image = selected[1]
+    end
+   end
+  end
+ end
+end)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+msg("Hardcore initiated")
+wait(3)
+msg("Made by noonie#0001(Scripter) and Ping#1848 (Music composer and Modeler)")
+wait(3)
+local SillyBillies1 = {"Good Luck!", "Holy ####... Lois", "Fuck L_0 all my homies hate L_0", "who tf is joe???", "Do Not.", "Five Nights at Freddy's, Is this where you want to be? I just don't get it!!! Why you want to stay?"}
+msg(SillyBillies1[math.random(1,#SillyBillies1)])
+
+-- credits to noonie and ping for some things
