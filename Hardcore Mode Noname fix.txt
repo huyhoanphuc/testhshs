@@ -1414,7 +1414,7 @@ end)()
 
 --------------------------- REBOUND
 coroutine.wrap(function()
-        wait(150)
+        wait(250)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
         local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
@@ -1494,7 +1494,7 @@ end)()
 
  --------------------------- FROSTBITE
 coroutine.wrap(function()
-        wait(140)
+        wait(240)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
         local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
