@@ -368,6 +368,8 @@ end)()
 coroutine.wrap(function()
 while true do
 wait(321)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+wait(0)
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
 ---====== Create entity ======---
