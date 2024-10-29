@@ -1010,7 +1010,7 @@ local entity = spawner.Create({
 	},
 	Death = {
 		Type = "Guiding",
-		Hints = {"You died to whom you Call Deer God", "Closets Wont work! So try running", "Its form is incomprehensible to a human upclose...", "..-so avoid Eye Contact"},
+		Hints = {"You died to who you call Silence", "Stay as silent as possible when you suspect its coming, so you know when to hide!", "Its slow, but hard to hear", "so hide!"},
 		Cause = ""
 	}
 })
