@@ -834,7 +834,7 @@ local entity = spawner.Create({
 	Entity = {
 		Name = "Deer god",
 		Asset = "rbxassetid://12805689281",
-		HeightOffset = 0
+		HeightOffset = 5
 	},
 	Lights = {
 		Flicker = {
@@ -853,7 +853,7 @@ local entity = spawner.Create({
 		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 25,
+		Speed = 27,
 		Delay = math.random(0, 0),
 		Reversed = false
 	},
@@ -935,6 +935,32 @@ end)
 
 entity:SetCallback("OnDespawning", function()
     print("Entity is despawning")
+    local match = Instance.new("Sound")
+match.PlaybackSpeed = 1
+match.SoundId = "rbxassetid://9043357758"
+match.Volume = 1
+match.Name = "DeerGodEscape"
+match.Parent = workspace
+match:Play()
+
+local match = Instance.new("Sound")
+match.PlaybackSpeed = 0.1
+match.SoundId = "rbxassetid://635822826"
+match.Volume = 0.8
+match.Name = "DeerGodEnd"
+match.Parent = workspace
+match:Play()
+---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Last Chance To Look Away",
+    Desc = "Why You Are Running?",
+    Reason = "Survive the rare Entity Called Deer God",
+    Image = "rbxassetid://11395249132"
+})
+Followed:Destroy()
 end)
 
 entity:SetCallback("OnDespawned", function()
@@ -999,63 +1025,74 @@ end)()
 coroutine.wrap(function()
     while true do
         wait(math.random(96, 97))
- local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 70 and roomValue <= 85)) then
-wait()       
-local plr = game.Players.LocalPlayer
-local chr = plr.Character or plr.CharacterAdded:Wait()
-local cam = workspace.CurrentCamera
-local offsetgyat = 7.5
-local TweenService = game:GetService("TweenService")
+ local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
 
-local entity = game:GetObjects("rbxassetid://11547803978")[1]
-entity.Parent = workspace
-local primary_part = entity:FindFirstChildWhichIsA("BasePart") or entity:FindFirstChildWhichIsA("Part")
-entity.PrimaryPart = primary_part
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
 
-if not entity.PrimaryPart then return end
+local function spawnShocker()
+    local shockerModel = game:GetObjects("rbxassetid://11547803978")[1]
+    shockerModel.PrimaryPart = shockerModel:FindFirstChild("HumanoidRootPart") or shockerModel:FindFirstChildWhichIsA("Part")
+    
+    local camera = Workspace.CurrentCamera
+    shockerModel:SetPrimaryPartCFrame(camera.CFrame * CFrame.new(0, 0, -7))
+    shockerModel.Parent = Workspace
 
-entity:SetPrimaryPartCFrame(chr.HumanoidRootPart.CFrame * CFrame.new(0, 0, -offsetgyat))
-entity.PrimaryPart.Anchored = true
+    local oogaBoogaaPart = shockerModel:WaitForChild("OOGA BOOGAAAA")
+    local horrorScream = shockerModel:WaitForChild("OOGA BOOGAAAA"):WaitForChild("HORROR SCREAM 15")
 
-local horrorScream = entity:WaitForChild("OOGA BOOGAAAA"):WaitForChild("HORROR SCREAM 15")
-game.workspace.Shocker.PlaySound:Destroy()
-wait(0.1)
-game.workspace.Shocker.PlaySound.PlayOnRemove = false
+    local lookDuration = 4
+    local startTime = tick()
+    local playerLookingAtShocker = true
 
-local function damageblud()
-    local hum = chr:FindFirstChild("Humanoid")
-    if hum then
-        local dmg = 30
-        hum:TakeDamage(dmg)
-    end
-end
+    while playerLookingAtShocker do
+        wait(0.1)
 
-local function check()
-    local direction = (entity.PrimaryPart.Position - cam.CFrame.Position).unit
-    local dot_product = direction:Dot(cam.CFrame.LookVector)
-    return dot_product > 0.50
-end
+        local angle = (oogaBoogaaPart.Position - character.PrimaryPart.Position).unit
+        local direction = camera.CFrame.LookVector
 
-local function move(target_cframe, duration)
-    local tween_info = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-    local tween = TweenService:Create(entity.PrimaryPart, tween_info, {CFrame = target_cframe})
-    tween:Play()
-    tween.Completed:Wait()
-end
+        if (angle:Dot(direction) > 0.9) then
+            if tick() - startTime >= lookDuration then
+                horrorScream:Play()
+                humanoid:TakeDamage(30)
+                local function GetGitSound(GithubSnd,SoundName)
+				local url=GithubSnd
+				if not isfile(SoundName..".mp3") then
+					writefile(SoundName..".mp3", game:HttpGet(url))
+				end
+				local sound=Instance.new("Sound")
+				sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+				return sound
+			end
+			game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 255, 255)
+	game.Lighting.MainColorCorrection.Contrast = 1
+	local tween = game:GetService("TweenService")
+	tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
+	local TweenService = game:GetService("TweenService")
+	local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(80),{TintColor = Color3.fromRGB(255, 255, 255)})
+	TW:Play()
+        local ShokerJC = GetGitSound("https://github.com/huyhoanphuc/thh/blob/main/km_20240823_720p_12f_20240823_021809.mp3?raw=true","ShokerJC")
+				ShokerJC.Parent = workspace
+				ShokerJC.Volume = 1.3
+				ShokerJC:Play()
+                playerLookingAtShocker = false
 
-entity.PrimaryPart.Anchored = false
-wait(1.5)
+                local speed = 10
+                local targetPosition = character.PrimaryPart.Position
 
-if check() then
-    move(chr.HumanoidRootPart.CFrame, 0.5)
-    damageblud()
-    horrorScream:Play()
-end
+                while oogaBoogaaPart.Position.Y > targetPosition.Y do
+                    local directionToPlayer = (targetPosition - oogaBoogaaPart.Position).unit
+                    oogaBoogaaPart.Position = oogaBoogaaPart.Position + directionToPlayer * speed * 0.1
+                    wait(0.1)
+                end
 
-entity.PrimaryPart.Anchored = false
-entity.PrimaryPart.CanCollide = false
-wait(0.9)
+                oogaBoogaaPart.CanCollide = false
+                oogaBoogaaPart.Anchored = false
+                wait(3)
+                shockerModel:Destroy()
+                wait(0.9)
 getgenv().Title = "Shocking Experience" --Title Here 
      getgenv().Description = "Look at me." --Description Here 
      getgenv().Reason = "Encounter Shocker." --Reason Here 
@@ -1073,10 +1110,47 @@ getgenv().Title = "Shocking Experience" --Title Here
      end 
      spawn(function() 
       Unlock(nil,"Join") 
-     end)
+    end)
+game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Shocker"
+local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
 
-wait(5)
-entity:Destroy()
+for i,v in next, getgc(false) do
+    if typeof(v) == "function" then
+        local info = getinfo(v)
+        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
+            func = v
+            break
+        end
+    end
+end
+
+local function DeathHint(hints, type: string)
+    setupval(func, 1, hints)
+    if type ~= nil then
+        setupval(func, 2, type)
+    end
+end
+
+DeathHint({
+    "You died to who you call Shocker...",
+    "Dont look at it or it stuns you!"
+}, "Blue") -- "Blue" or "Yellow"
+                break
+            end
+        else
+            
+            oogaBoogaaPart.CanCollide = false
+            oogaBoogaaPart.Anchored = false
+            break
+        end
+    end
+oogaBoogaaPart.CanCollide = false
+oogaBoogaaPart.Anchored = false
+wait(3)
+    shockerModel:Destroy()
+end
+
+spawnShocker()
     end
  end
 end)()
