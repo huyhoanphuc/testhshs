@@ -1542,10 +1542,360 @@ end)
 entity:Run() 
 end)()
 
- --------------------------- FROSTBITE
+--------------------------- FROSTBITE
 coroutine.wrap(function()
         wait(240)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+        local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+local FrostBite = game:GetObjects("rbxassetid://12797521669")[1]
+ 
+local num=0
+
+local Static = FrostBite.FrostyNew:FindFirstChild("Static Effect")
+if currentLoadedRoom:FindFirstChild("Nodes") then
+   num = math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
+end
+
+FrostBite.FrostyNew.CFrame=(
+	num==0 and currentLoadedRoom[currentLoadedRoom.Name] or currentLoadedRoom.Nodes[num]
+).CFrame+Vector3.new(0,10,0)
+
+FrostBite.Parent=workspace
+FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = false
+local hum=game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+
+Static:Play()
+wait(5)
+game.TweenService:Create(Static,TweenInfo.new(2),{Pitch = 0}):Play()
+wait(2.5)
+game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = true
+game.workspace.Frostbite.FrostyNew.Ambience:Play()
+game.workspace.Frostbite.FrostyNew.AmbienceFar:Play()
+local ColorCorrectionEffect0 = Instance.new("ColorCorrectionEffect")
+			ColorCorrectionEffect0.Parent = game:GetService("Lighting")
+			ColorCorrectionEffect0.TintColor = Color3.new(1, 1, 1)
+			ColorCorrectionEffect0.Enabled = true
+game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(0.00784314, 0.188235, 1)}):Play()
+local ultimaroom = game.ReplicatedStorage.GameData.LatestRoom.Value
+
+while true do
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.Health -= 5
+if ultimaroom ~= game.ReplicatedStorage.GameData.LatestRoom.Value then break end
+
+end
+
+			local Sound55 = Instance.new("Sound")
+			local FlangeSoundEffect1 = Instance.new("FlangeSoundEffect")
+			local DistortionSoundEffect2 = Instance.new("DistortionSoundEffect")
+			FlangeSoundEffect3 = Instance.new("FlangeSoundEffect")
+			Sound55.Name = "ahhhhhh"
+			Sound55.MaxDistance = 500
+			Sound55.Pitch = 0.23999999463558197
+			Sound55.PlaybackSpeed = 0.23999999463558197
+			Sound55.Parent = workspace
+			Sound55.RollOffMode = Enum.RollOffMode.InverseTapered
+			Sound55.SoundId = "rbxassetid://6305809364"
+			FlangeSoundEffect1.Parent = Sound55
+			FlangeSoundEffect1.Rate = 0.75
+			FlangeSoundEffect1.Depth = 1
+			FlangeSoundEffect1.Mix = 0.7300000190734863
+			DistortionSoundEffect2.Parent = Sound55
+			DistortionSoundEffect2.Level = 0.9800000190734863
+			FlangeSoundEffect3.Parent = Sound55
+			FlangeSoundEffect3.Rate = 0.25
+			FlangeSoundEffect3.Depth = 1
+			FlangeSoundEffect3.Mix = 1
+			Sound55:Play()
+game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
+game.workspace.Frostbite.FrostyNew.Ambience:Stop()
+game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
+
+
+game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
+wait(8)
+workspace.Frostbite:Destroy()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
+    Reboundcolor.Name = "Warn"
+    Reboundcolor.TintColor = Color3.fromRGB(65, 138, 255) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
+    game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local cue1 = Instance.new("Sound")
+cue1.Parent = game.Workspace
+cue1.Name = "Scream"
+cue1.SoundId = "rbxassetid://9114397505"
+local distort = Instance.new("DistortionSoundEffect")
+distort.Parent = cue1
+distort.Level = 1
+local distort2 = Instance.new("DistortionSoundEffect")
+distort2.Parent = cue1
+distort2.Level = 1
+local pitch = Instance.new("PitchShiftSoundEffect")
+pitch.Parent = cue1
+pitch.Octave = 0.5
+local pitch2 = Instance.new("PitchShiftSoundEffect")
+pitch2.Parent = cue1
+pitch2.Octave = 0.5
+local pitch3 = Instance.new("PitchShiftSoundEffect")
+pitch3.Parent = cue1
+pitch3.Octave = 0.5
+cue1.Volume = 0.1
+cue1:Play()
+local cue2 = Instance.new("Sound")
+cue2.Parent = game.Workspace
+cue2.Name = "Spawn"
+cue2.SoundId = "rbxassetid://9114221327"
+cue2.Volume = 3
+cue2:Play()
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camara = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+ camara.CFrame = camara.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(10,3,0.1,6,2,0.5)
+wait(2.8)
+ 
+function GetGitSound(GithubSnd,SoundName)
+ local url=GithubSnd
+ if not isfile(SoundName..".mp3") then
+  writefile(SoundName..".mp3", game:HttpGet(url))
+ end
+ local sound=Instance.new("Sound")
+ sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+ return sound
+end
+
+local scare = Instance.new("Sound")
+scare.Parent = game.Workspace
+scare.Name = "MyEarsBurn"
+scare.SoundId = "rbxassetid://5567523008"
+scare.PlaybackSpeed = 3
+scare.Volume = 1
+
+loadstring(game:HttpGet("https://pastefy.app/lqKr4GyO/raw"))()
+wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://pastefy.app/lqKr4GyO/raw"))()
+wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://pastefy.app/lqKr4GyO/raw"))()
+wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://pastefy.app/lqKr4GyO/raw"))()
+wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://pastefy.app/LYBjay0S/raw"))()
+end)()
+
+--------------------------- FROSTBITE
+coroutine.wrap(function()
+        wait(240)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+        local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+local FrostBite = game:GetObjects("rbxassetid://12797521669")[1]
+ 
+local num=0
+
+local Static = FrostBite.FrostyNew:FindFirstChild("Static Effect")
+if currentLoadedRoom:FindFirstChild("Nodes") then
+   num = math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
+end
+
+FrostBite.FrostyNew.CFrame=(
+	num==0 and currentLoadedRoom[currentLoadedRoom.Name] or currentLoadedRoom.Nodes[num]
+).CFrame+Vector3.new(0,10,0)
+
+FrostBite.Parent=workspace
+FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = false
+local hum=game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+
+Static:Play()
+wait(5)
+game.TweenService:Create(Static,TweenInfo.new(2),{Pitch = 0}):Play()
+wait(2.5)
+game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = true
+game.workspace.Frostbite.FrostyNew.Ambience:Play()
+game.workspace.Frostbite.FrostyNew.AmbienceFar:Play()
+local ColorCorrectionEffect0 = Instance.new("ColorCorrectionEffect")
+			ColorCorrectionEffect0.Parent = game:GetService("Lighting")
+			ColorCorrectionEffect0.TintColor = Color3.new(1, 1, 1)
+			ColorCorrectionEffect0.Enabled = true
+game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(0.00784314, 0.188235, 1)}):Play()
+local ultimaroom = game.ReplicatedStorage.GameData.LatestRoom.Value
+
+while true do
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.Health -= 5
+if ultimaroom ~= game.ReplicatedStorage.GameData.LatestRoom.Value then break end
+
+end
+
+			local Sound55 = Instance.new("Sound")
+			local FlangeSoundEffect1 = Instance.new("FlangeSoundEffect")
+			local DistortionSoundEffect2 = Instance.new("DistortionSoundEffect")
+			FlangeSoundEffect3 = Instance.new("FlangeSoundEffect")
+			Sound55.Name = "ahhhhhh"
+			Sound55.MaxDistance = 500
+			Sound55.Pitch = 0.23999999463558197
+			Sound55.PlaybackSpeed = 0.23999999463558197
+			Sound55.Parent = workspace
+			Sound55.RollOffMode = Enum.RollOffMode.InverseTapered
+			Sound55.SoundId = "rbxassetid://6305809364"
+			FlangeSoundEffect1.Parent = Sound55
+			FlangeSoundEffect1.Rate = 0.75
+			FlangeSoundEffect1.Depth = 1
+			FlangeSoundEffect1.Mix = 0.7300000190734863
+			DistortionSoundEffect2.Parent = Sound55
+			DistortionSoundEffect2.Level = 0.9800000190734863
+			FlangeSoundEffect3.Parent = Sound55
+			FlangeSoundEffect3.Rate = 0.25
+			FlangeSoundEffect3.Depth = 1
+			FlangeSoundEffect3.Mix = 1
+			Sound55:Play()
+game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = true
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = false
+game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
+game.workspace.Frostbite.FrostyNew.Ambience:Stop()
+game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
+
+
+game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
+wait(8)
+workspace.Frostbite:Destroy()
+end)()
+
+
+--------------------------- FROSTBITEAA
+coroutine.wrap(function()
+        wait(240)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
         local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
 local FrostBite = game:GetObjects("rbxassetid://12797521669")[1]
@@ -1755,26 +2105,25 @@ end)
     end
 end)()
 
--- Seek Model
-workspace.ChildAdded:Connect(function(seek)
-	if seek.Name == "SeekMovingNewClone" then
-		wait(0.5)
-	    workspace.SeekMovingNewClone.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://0"
-		for i,v in pairs(workspace.SeekMovingNewClone.SeekRig:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.Transparency = 1
-			end
-		end
-		local getSeek:Model = game:GetObjects("rbxassetid://11664451634")[1]
-		getSeek.Parent = workspace.SeekMovingNewClone.Figure
-		getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
-		local Weld = Instance.new("WeldConstraint",getSeek)
-		Weld.Part0 = getSeek.PrimaryPart
-		Weld.Part1 = workspace.SeekMovingNewClone.Figure
-	else
+-- New Seek music and animation loader
+coroutine.wrap(function()
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+        wait(0.0005)
+        if game.Workspace:FindFirstChild("SeekMovingNewClone") then
 
-	end
-end)
+            function ReplaceAudGit(GithubSnd, SoundName)
+                local url = GithubSnd
+                if not isfile(SoundName .. ".mp3") then
+                    writefile(SoundName .. ".mp3", game:HttpGet(url))
+                end
+                return (getcustomasset or getsynasset)(SoundName .. ".mp3")
+            end
+
+            local a = game.Workspace.SeekMovingNewClone
+            a.SeekMusic.SoundId = ReplaceAudGit("https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true", "NewSeek")
+        end
+    end)
+end)()
 
 -- Seek Model 2
 workspace.ChildAdded:Connect(function(seek)
@@ -1796,17 +2145,17 @@ workspace.SeekMoving.SeekRigNewClone.StringCheese:Destroy()
 	else
 	end
 end)
-     
+
 -- NEW SEEK 
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function() 
     wait(3.5) 
-    if not workspace:FindFirstChild("SeekMov") then 
+    if not workspace:FindFirstChild("SeekMoving") then 
         return  
     end 
     
     local RealSeek = workspace:FindFirstChild("SeekMovingNewClone") 
     local RealSeekRig = RealSeek:FindFirstChild("SeekRig") 
-    local seekNew = game:GetObjects("rbxassetid://11664451634")[1]  
+    local seekNew:Model = game:GetObjects("rbxassetid://11664451634")[1]
     seekNew.Name = "seek2" 
 
     for _, v in pairs(seekNew.Figure:GetChildren()) do 
@@ -1818,6 +2167,10 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
     RealSeekRig.Head.Eye:Destroy() 
     RealSeekRig.Head.Black:Destroy() 
     seekNew.Parent = workspace 
+    seekNew:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
+		local Weld = Instance.new("WeldConstraint",seekNew)
+		Weld.Part0 = seekNew.PrimaryPart
+		Weld.Part1 = workspace.SeekMovingNewClone.Figure
     local SeekRig = seekNew:FindFirstChild("SeekRig") 
     SeekRig:FindFirstChild("Root").Anchored = true 
 
