@@ -2126,27 +2126,6 @@ end)
     end
 end)()
 
--- Seek Model
-workspace.ChildAdded:Connect(function(seek)
-	if seek.Name == "SeekMovingNewClone" then
-		wait(0.5)
-	    workspace.SeekMovingNewClone.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://0"
-		for i,v in pairs(workspace.SeekMovingNewClone.SeekRig:GetDescendants()) do
-			if v:IsA("BasePart") then
-				v.Transparency = 1
-			end
-		end
-		local getSeek:Model = game:GetObjects("rbxassetid://11664451634")[1]
-		getSeek.Parent = workspace.SeekMovingNewClone.Figure
-		getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
-		local Weld = Instance.new("WeldConstraint",getSeek)
-		Weld.Part0 = getSeek.PrimaryPart
-		Weld.Part1 = workspace.SeekMovingNewClone.Figure
-	else
-
-	end
-end)
-
 -- Seek Model 2
 workspace.ChildAdded:Connect(function(seek)
 	if seek.Name == "SeekMovingNewClone" then
@@ -2177,7 +2156,7 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
     
     local RealSeek = workspace:FindFirstChild("SeekMovingNewClone") 
     local RealSeekRig = RealSeek:FindFirstChild("SeekRig") 
-    local seekNew = game:GetObjects("rbxassetid://11664451634")[1]  
+    local seekNew:Model = game:GetObjects("rbxassetid://11664451634")[1]
     seekNew.Name = "seek2" 
 
     for _, v in pairs(seekNew.Figure:GetChildren()) do 
@@ -2189,6 +2168,7 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
     RealSeekRig.Head.Eye:Destroy() 
     RealSeekRig.Head.Black:Destroy() 
     seekNew.Parent = workspace 
+    seekNew:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
     local SeekRig = seekNew:FindFirstChild("SeekRig") 
     SeekRig:FindFirstChild("Root").Anchored = true 
 
