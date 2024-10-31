@@ -271,7 +271,7 @@ local entity = spawner.Create({
 		Values = {5.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 180,
+		Speed = 185,
 		Delay = math.random(8, 8),
 		Reversed = false
 	},
@@ -539,7 +539,7 @@ local entity = spawner.Create({
 		Reversed = false
 	},
 	Rebounding = {
-		Enabled = true,
+		Enabled = false,
 		Type = "Ambush",
 		Min = 1,
 		Max = 1,
@@ -867,7 +867,7 @@ local entity = spawner.Create({
 	Damage = {
 		Enabled = true,
 		Range = 100,
-		Amount = 2
+		Amount = 6
 	},
 	Crucifixion = {
 		Enabled = true,
@@ -1353,15 +1353,15 @@ local entity = spawner.Create({
 		Values = {70.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 426,
+		Speed = 626,
 		Delay = math.random(5, 5),
 		Reversed = false
 	},
 	Rebounding = {
 		Enabled = true,
 		Type = "Ambush",
-		Min = 8,
-		Max = 8,
+		Min = 5,
+		Max = 5,
 		Delay = 0.7
 	},
 	Damage = {
