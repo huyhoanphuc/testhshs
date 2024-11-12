@@ -1482,7 +1482,7 @@ workspace.ChildAdded:Connect(function(seek)
 				v.Transparency = 1
 			end
 		end
-		local getSeek = game:GetObjects("rbxassetid://16893141009")[1]
+		local getSeek = game:GetObjects("rbxassetid://12298827153")[1]
 		getSeek.Parent = workspace.SeekMovingNewClone.Figure
 		getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
 		local Weld = Instance.new("WeldConstraint",getSeek)
