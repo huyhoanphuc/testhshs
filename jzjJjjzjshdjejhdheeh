@@ -1954,7 +1954,7 @@ end)()
 
 --Dreads
 coroutine.wrap(function()
-while true do wait(212)
+while true do wait(612)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -1992,7 +1992,7 @@ local entity = spawner.Create({
 		Reversed = false
 	},
 	Rebounding = {
-		Enabled = true,
+		Enabled = false,
 		Type = "Ambush",
 		Min = 1,
 		Max = 1,
