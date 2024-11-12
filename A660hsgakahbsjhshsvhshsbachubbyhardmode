@@ -125,18 +125,16 @@ function GitPNG(GithubImg, ImageName)
     return (getcustomasset or getsynasset)(ImageName .. ".png")
 end
 
-while true do wait(0.0006)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
+while true do wait(0.0005)
+game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400232478.png?raw=true", "Al60OnaSteroids")
 wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
+game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400747879.png?raw=true", "Al60OnceSteroids")
 wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
+game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400700237.png?raw=true", "Al60OnaSteroids")
 wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
+game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400722380.png?raw=true", "Al60OnbSteroids")
 wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400670897.png?raw=true", "Al600shgSterois")
 end
 end)()
 
@@ -223,6 +221,8 @@ function GitPNG(GithubImg, ImageName)
     end
     return (getcustomasset or getsynasset)(ImageName .. ".png")
 end
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
 
 while true do wait(0.0006)
 game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
@@ -389,7 +389,7 @@ game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.co
 wait(0.0001)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
 wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
 wait(0.0001)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
 	else
@@ -448,7 +448,7 @@ CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/km_20241031_360p_12
 end)
 
 entity:SetCallback("OnStartMoving", function()
-    game.workspace.Asitty.RushNew.Main.PointLight.Range = 23
+    game.workspace.Asitty.RushNew.Main.PointLight.Range = 6
 game.workspace.Asitty.RushNew.Main.PointLight.Brightness = 7
 end)
 
@@ -503,7 +503,7 @@ achievementGiver({
     Title = " Might Come Back...",
     Desc = "Encounter And Survive The Rare Entity Called A-60",
     Reason = "",
-    Image = "rbxasset://custom_gloop/A60OnfSteroids.png",
+    Image = "rbxasset://custom_gloop/A6ajsgsgsSteroids.png",
 })
 end)
 
@@ -511,18 +511,11 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
 	else
-	workspace.Asaittya:Destroy()
 	game.workspace.Asitty.RushNew.Anchored = false
 	workspace.Asitty.RushNew.Scream:Stop()
     workspace.Asitty.RushNew.FarStatic:Stop()
     workspace.Asitty.RushNew.FarScream:Stop()
 wait(2)
-local Lighting = game:GetService("Lighting")
-Lighting.Ambient = Color3.new(255, 0, 0)
-Lighting.Brightness = 0.1
-Lighting.FogEnd = 50
-Lighting.FogStart = 0.1
-Lighting.FogColor = Color3.new(255, 0, 0)
 
 	firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to an enitity designated as A-60", "It can Appear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, "Blue")
 function GitAud(soundgit,filename)
@@ -537,7 +530,7 @@ function CustomGitSound(soundlink, vol, filename)
     local Sound = Instance.new("Sound")
     Sound.SoundId = GitAud(soundlink, filename)
     Sound.Parent = workspace
-    Sound.Volume = 8
+    Sound.Volume = 10
     Sound:Play()
 end
 
@@ -559,38 +552,30 @@ function GitPNG(GithubImg, ImageName)
     return (getcustomasset or getsynasset)(ImageName .. ".png")
 end
 
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400232478.png?raw=true", "Al60OnaSteroids")
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400747879.png?raw=true", "Al60OnceSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400700237.png?raw=true", "Al60OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400722380.png?raw=true", "Al60OnbSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400232478.png?raw=true", "Al60OnbSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400700237.png?raw=true", "Al60OncSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400747879.png?raw=true", "Al60OncdSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400722380.png?raw=true", "Al60OncSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400670897.png?raw=true", "Al600shgSterois")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/static-assets-upload7018128357614146730.png?raw=true", "A6rsed0OnceSteroids")
+wait(0.8)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+wait()
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
 
 game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100)
 
@@ -636,16 +621,10 @@ local mom = {"rbxasset://gloop_custom/A60OnfSteroids.png", "rbxasset://gloop_cus
     task.wait(0.2)
     game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
 game.TweenService:Create(Background, TweenInfo.new(2.6), {BackgroundTransparency = 1}):Play()
-    task.wait()
-    JumpscareGui:Destroy()
+    wait()
     game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-60"
     
-    local Lighting = game:GetService("Lighting")
-Lighting.Ambient = Color3.new(255, 0, 0)
-Lighting.Brightness = 1
-Lighting.FogEnd = 1e+23
-Lighting.FogStart = 10000000000000000
-Lighting.FogColor = Color3.new(255, 0, 0)
+game.Lighting:Destroy()
 
     local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
@@ -821,6 +800,10 @@ achievementGiver({
     Reason = "",
     Image = "rbxasset://custom_gloop/A60OncdSteroids.png",
 })
+
+game.workspace.Asaittya:Destroy()
+wait()
+game.workspace.Asaitty:Destroy()
 end)
 
 entity:SetCallback("OnDamagePlayer", function(newHealth)
