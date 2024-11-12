@@ -264,7 +264,7 @@ end)()
 
 --Rebound
 coroutine.wrap(function()
-waitt(176)
+wait(176)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
     Reboundcolor.Name = "Warn"
@@ -339,7 +339,7 @@ end)()
 
 --Reboundb
 coroutine.wrap(function()
-waitt(176)
+wait(176)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
