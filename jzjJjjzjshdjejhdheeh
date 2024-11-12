@@ -1,3 +1,22 @@
+caa = 0
+tween = game:GetService("TweenService")
+local TestMultplayer = true
+if game:GetService("ReplicatedStorage"):FindFirstChild("Stamina") then
+    warn("You have Already Loaded")
+
+    return true
+end
+local Test = Instance.new("Part")
+Test.Name = "Stamina"
+Test.Parent = game:GetService("ReplicatedStorage")
+Test = 1
+
+-- I Thank you noname for frostbite
+
+
+-- Original By Noonie and ping
+
+
 local blackListeds = {"Yarik9847"} 
 if table.find(blackListeds, game.Players.LocalPlayer.Name) then
 game.Players.LocalPlayer:Kick("You have been for banned from Hardcore Mode.")
@@ -8,32 +27,45 @@ if table.find(blakListeds, game.Players.LocalPlayer.Name) then
 game.Players.LocalPlayer:Kick("You have been for banned from Hardcore Mode.")
 end
 
-local shut = game.Players.LocalPlayer.PlayerGui.MainUI.MainFrame.IntroText
-local intro = shut:Clone()
-intro.Parent = game.Players.LocalPlayer.PlayerGui.MainUI
-intro.Name = "IntroTextPleaseThankYou"
-intro.Visible = true
-intro.Text = "3xtr3m3 M0d3 v6.517"
-intro.TextTransparency = 0
-local underline = UDim2.new(1.1, 0, 0.015, 6)
-game.TweenService:Create(intro.Underline, TweenInfo.new(3), {Size = underline}):Play()
-wait(7)
-game.TweenService:Create(intro.Underline, TweenInfo.new(1.3), {Size = UDim2.new(0.95, 0, 0.015, 6)}):Play()
-wait(1)
-game.TweenService:Create(intro.Underline, TweenInfo.new(2), {ImageTransparency = 1}):Play()
-game.TweenService:Create(intro, TweenInfo.new(2), {TextTransparency = 1}):Play()
-game.TweenService:Create(intro.Underline, TweenInfo.new(7), {Size = UDim2.new(0, 0, 0.015, 6)}):Play()
-wait(2.3)
-intro.Visible = false
-wait(2)
-intro:Destroy()
 
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Loading Menu",true)
-
---Crucifix
+-------- goober
 coroutine.wrap(function()
-loadstring(game:HttpGet("https://pastefy.app/nOEH2tmm/raw"))()
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function(v)
+   L = game:GetService("Workspace").CurrentRooms[v].PathfindNodes:Clone()
+L.Parent = game:GetService("Workspace").CurrentRooms[v]
+L.Name = 'Nodes'
+
+end)
 end)()
+
+print("Loade") 
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.SoundId = "rbxassetid://10472612727" 
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Pitch = 0.55 
+ 
+game.Lighting.FogColor = Color3.fromRGB(0, 0, 0) 
+game.Lighting.FogStart = 5 
+game.Lighting.FogEnd = 800 
+ 
+game.ReplicatedStorage.Sounds.BulbZap.SoundId = "rbxassetid://4398878054"  
+ 
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function msg(message)
+    
+    local mainGame = require(LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+    
+    
+    mainGame.caption(message, true)
+end
+
+if game.ReplicatedStorage.GameData.LatestRoom.Value > 1 then 
+	game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Error"
+	firesignal(game.ReplicatedStorage.RemoteEvents.DeathHint.OnClientEvent, {"You need to execute the script at door 0!", "Remember this!"}, "Blue")
+	game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)  
+	return
+end
 
 --MuscSeekaajs
 coroutine.wrap(function()
@@ -53,7 +85,7 @@ function CustomGitSound(soundlink, vol, filename)
     Sound:Play()
 end
 
-CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20240919_720p_12f_20240919_022413.mp3?raw=true", 1, "Hereicoahgskhmeseekog")
+CustomGitSound("https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Here%20i%20come%20but%20WHAT%20THE%20FUCK.mp3?raw=true", 1, "Hereicomeseekog")
 
 local function GetGitSoundID(GithubSnd,SoundName)
 		SoundName=tostring(SoundName)
@@ -66,1360 +98,399 @@ local function GetGitSoundID(GithubSnd,SoundName)
 	end
 end)()
 
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Will Are You See",true)
-
-caa = 0
-tween = game:GetService("TweenService")
-local TestMultplayer = true
-if game:GetService("ReplicatedStorage"):FindFirstChild("Entity") then
-    warn("You have Already Loaded")
-
-    return true
-end
-local Test = Instance.new("Part")
-Test.Name = "Entity"
-Test.Parent = game:GetService("ReplicatedStorage")
-Test = 1
-
---Asitsitsit
-coroutine.wrap(function()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Go to A-98?",true)
-wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/heehbbg"))()
-end)()
-
---DoorSound
-coroutine.wrap(function()
-while true do
-game.ReplicatedStorage.Entities.Screech.Top.Eyes.Color = Color3.fromRGB(255, 0, 0)
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Caught.SoundId = "rbxassetid://537141778"
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Caught.PlaybackSpeed = 1.6
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Attack.SoundId = "rbxassetid://6754147732"
-wait()
-game.Workspace.Ambience_Dark.SoundId = "rbxassetid://8132494511"
-game.Workspace.Ambience_Dark.PlaybackSpeed = 1
-end
-end)()
-
---Ambience
+--Ambiencea
 coroutine.wrap(function()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-if game.Workspace:FindFirstChild("SeekMovingClone") then
 wait(0.0005)
-game.Workspace.SeekMovingClone.SeekMusic.SoundId = "rbxassetid://1837892736"
-game.Workspace.SeekMovingClone.SeekMusic.Volume = "0.7"
-game.Workspace.SeekMoving.Ambience.SoundId = "rbxassetid://1837892736"
-game.Workspace.SeekMoving.Ambience.Volume = "0.7"
-end
+game.Workspace.CurrentRooms["50"].FigureSetup.Ambience.SoundId = GetGitSoundID("https://github.com/Sosnen/Ping-s-Dumbass-projects-/raw/main/Figure%20Ambience.mp3?raw=true","NewFigure")
+game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceEnd.SoundId = GetGitSoundID("https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Figure%20Start.mp3?raw=true","NewFigureStart")
+game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceStart.SoundId = GetGitSoundID("https://github.com/Sosnen/Ping-s-Dumbass-projects-/blob/main/Figure%20End.mp3?raw=true","NewFigureEnd")
 end)
+end)()
+
+--BlueDies
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.SoundId = "rbxassetid://10472612727" 
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Blue.Pitch = 0.55 
+ 
+--Lighting
+local Lighting = game:GetService("Lighting")
+Lighting.Ambient = Color3.new(0, 0, 0)
+Lighting.Brightness = 0.2
+Lighting.FogEnd = 200
+Lighting.FogStart = 5
+Lighting.FogColor = Color3.new(0, 0, 0)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+msg("Hardcore initiated")
+wait(3)
+msg("Made by noonie#0001(Scripter) and Ping#1848 (Music composer and Modeler)")
+wait(3)
+local SillyBillies1 = {"Good Luck!", "Holy ####... Lois", "Fuck L_0 all my homies hate L_0", "who tf is joe???", "Do Not.", "Five Nights at Freddy's, Is this where you want to be? I just don't get it!!! Why you want to stay?"}
+msg(SillyBillies1[math.random(1,#SillyBillies1)])
+
+--Ripper
+coroutine.wrap(function()
+while true do wait(108)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbshripper"))()
+end
+end)()
+
+--Frostbite
+coroutine.wrap(function()
+wait(160)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
+end)()
+
+--Frostbitea
+coroutine.wrap(function()
+wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
+end)()
+
+--Frostbiteb
+coroutine.wrap(function()
+wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
+end)()
+
+--Rebound
+coroutine.wrap(function()
+waitt(176)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
+    Reboundcolor.Name = "Warn"
+    Reboundcolor.TintColor = Color3.fromRGB(65, 138, 255) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
+    game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local cue1 = Instance.new("Sound")
+cue1.Parent = game.Workspace
+cue1.Name = "Scream"
+cue1.SoundId = "rbxassetid://9114397505"
+local distort = Instance.new("DistortionSoundEffect")
+distort.Parent = cue1
+distort.Level = 1
+local distort2 = Instance.new("DistortionSoundEffect")
+distort2.Parent = cue1
+distort2.Level = 1
+local pitch = Instance.new("PitchShiftSoundEffect")
+pitch.Parent = cue1
+pitch.Octave = 0.5
+local pitch2 = Instance.new("PitchShiftSoundEffect")
+pitch2.Parent = cue1
+pitch2.Octave = 0.5
+local pitch3 = Instance.new("PitchShiftSoundEffect")
+pitch3.Parent = cue1
+pitch3.Octave = 0.5
+cue1.Volume = 0.1
+cue1:Play()
+local cue2 = Instance.new("Sound")
+cue2.Parent = game.Workspace
+cue2.Name = "Spawn"
+cue2.SoundId = "rbxassetid://9114221327"
+cue2.Volume = 5
+cue2:Play()
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camara = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+ camara.CFrame = camara.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(10,3,0.1,6,2,0.5)
+wait(2.8)
+ 
+function GetGitSound(GithubSnd,SoundName)
+ local url=GithubSnd
+ if not isfile(SoundName..".mp3") then
+  writefile(SoundName..".mp3", game:HttpGet(url))
+ end
+ local sound=Instance.new("Sound")
+ sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+ return sound
+end
+
+local scare = Instance.new("Sound")
+scare.Parent = game.Workspace
+scare.Name = "MyEarsBurn"
+scare.SoundId = "rbxassetid://5567523008"
+scare.PlaybackSpeed = 3
+scare.Volume = 5
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
+end)()
+
+--Reboundb
+coroutine.wrap(function()
+waitt(176)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
+    Reboundcolor.Name = "Warn"
+    Reboundcolor.TintColor = Color3.fromRGB(65, 138, 255) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
+    game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+local cue1 = Instance.new("Sound")
+cue1.Parent = game.Workspace
+cue1.Name = "Scream"
+cue1.SoundId = "rbxassetid://9114397505"
+local distort = Instance.new("DistortionSoundEffect")
+distort.Parent = cue1
+distort.Level = 1
+local distort2 = Instance.new("DistortionSoundEffect")
+distort2.Parent = cue1
+distort2.Level = 1
+local pitch = Instance.new("PitchShiftSoundEffect")
+pitch.Parent = cue1
+pitch.Octave = 0.5
+local pitch2 = Instance.new("PitchShiftSoundEffect")
+pitch2.Parent = cue1
+pitch2.Octave = 0.5
+local pitch3 = Instance.new("PitchShiftSoundEffect")
+pitch3.Parent = cue1
+pitch3.Octave = 0.5
+cue1.Volume = 0.1
+cue1:Play()
+local cue2 = Instance.new("Sound")
+cue2.Parent = game.Workspace
+cue2.Name = "Spawn"
+cue2.SoundId = "rbxassetid://9114221327"
+cue2.Volume = 5
+cue2:Play()
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camara = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+ camara.CFrame = camara.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(10,3,0.1,6,2,0.5)
+wait(2.8)
+ 
+function GetGitSound(GithubSnd,SoundName)
+ local url=GithubSnd
+ if not isfile(SoundName..".mp3") then
+  writefile(SoundName..".mp3", game:HttpGet(url))
+ end
+ local sound=Instance.new("Sound")
+ sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
+ return sound
+end
+
+local scare = Instance.new("Sound")
+scare.Parent = game.Workspace
+scare.Name = "MyEarsBurn"
+scare.SoundId = "rbxassetid://5567523008"
+scare.PlaybackSpeed = 3
+scare.Volume = 5
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
+end)()
+
+--Shocker
+coroutine.wrap(function()
+while true do
+wait(math.random(32, 37))
+loadstring(game:HttpGet("https://pastefy.app/1mLzDwTN/raw"))()
+end
+end)()
+
+--DeerGod
+coroutine.wrap(function()
+while true do wait(332)
+loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
+end
+end)()
+
+--Dread
+coroutine.wrap(function()
+while true do wait(762)
+loadstring(game:HttpGet("https://pastefy.app/17nNEGQe/raw"))()
+end
 end)()
 
 -- Optional Seek Eyes it might lag your device
@@ -1441,7 +512,7 @@ coroutine.wrap(function()
 workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].ChildAdded:Connect(function(seekeye)
 	if seekeye.Name == "Eye" then
 		wait(0.0005)
-		local getSeek:Model = game:GetObjects("rbxassetid://13394794877")[1]
+		local getSeek:Model = game:GetObjects("rbxassetid://11717372116")[1]
 		getSeek.Parent = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Folder
 		getSeek:PivotTo(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye.Black.CFrame)
 		workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Eye:Destroy()
@@ -1482,13 +553,13 @@ workspace.ChildAdded:Connect(function(seek)
 				v.Transparency = 1
 			end
 		end
-		local getSeek = game:GetObjects("rbxassetid://16893141009")[1]
+		local getSeek = game:GetObjects("rbxassetid://11664451634")[1]
 		getSeek.Parent = workspace.SeekMovingNewClone.Figure
 		getSeek:PivotTo(workspace.SeekMovingNewClone.Figure.CFrame)
 		local Weld = Instance.new("WeldConstraint",getSeek)
 		Weld.Part0 = getSeek.PrimaryPart
 		Weld.Part1 = workspace.SeekMovingNewClone.Figure
-        workspace.SeekMovingNewClone.SeekMusic.SoundId = "rbxasset://custom_gloop/Hereicoahgskhmeseekog.mp3"
+        workspace.SeekMovingNewClone.SeekMusic.SoundId = "rbxasset://custom_gloop/Hereicomeseekog.mp3"
         workspace.SeekMovingNewClone.SeekRig:Destroy()
        wait()
         workspace.SeekMovingNewClone.Figure.SeekMoving.Figure.FootseptsFar:Stop()
@@ -1636,3271 +707,49 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
     end)
 end)
 
-
---Ambiencea
+--Silence
 coroutine.wrap(function()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-wait(0.0005)
-game.Workspace.CurrentRooms["50"].FigureSetup.Ambience.SoundId = "rbxassetid://0"
-game.Workspace.CurrentRooms["50"].FigureSetup.Ambience.Volume = "0.3"
-game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceEnd.SoundId = "rbxassetid://4890185640"
-game.Workspace.CurrentRooms["50"].FigureSetup.AmbienceEnd.Volume = "0.5"
-end)
-end)()
-
-pcall(function()
-spawn(function()
-	while wait() do
-	local currentroomnumber = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
-		if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door") ~= nil then
-		 if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door") ~= nil then
-			workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door").Material = Enum.Material.DiamondPlate
-			workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door").Color = Color3.new(0.341176, 0.341176, 0.341176)
-		    end
-		end
-	end
-end)
-spawn(function()
-	while wait() do
-	local currentroomnumber = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
-		if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door") ~= nil then
-		 if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door") ~= nil then
-		 if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door"):FindFirstChild("Sign") ~= nil then
-		 workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door").Sign:Destroy()
-		 workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door"):FindFirstChild("Sign"):Destroy()
-                end
-		    end
-		end
-	end
-end)
-end)
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Open.SoundId = "rbxassetid://3908308607"
-        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Unlock.SoundId = "rbxassetid://3908308607"
-        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.SoundId = "rbxassetid://3908308607"
-        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.TimePosition = 2
--- doors
-coroutine.wrap(function()
-    while true do
-        wait(0.0005)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0.0005)
-        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Open.SoundId = "rbxassetid://3908308607"
-        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Unlock.SoundId = "rbxassetid://3908308607"
-        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.SoundId = "rbxassetid://3908308607"
-        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.TimePosition = 2
-    end
-end)()
-
--- doors 2
-coroutine.wrap(function()
-    while true do
-        wait(0.0005)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0.0005)
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Open.SoundId = "rbxassetid://3908308607"
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Open.SoundId = "rbxassetid://3908308607"
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Open.SoundId = "rbxassetid://3908308607"
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Open.SoundId = "rbxassetid://3908308607"
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Unlock.SoundId = "rbxassetid://3908308607"
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Unlock.SoundId = "rbxassetid://3908308607"
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Unlock.SoundId = "rbxassetid://3908308607"
-workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Parts.DoorNormal.Door.Unlock.SoundId = "rbxassetid://3908308607"
-    end
-end)()
-wait(2)
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-
---NEWPAINTINGYOOOOO
-local painters = 1
-local paints = {
- [1] = {"rbxassetid://12309073114", "Primes A-60 The Boss"},
- [2] = {"rbxassetid://104009837806204", "A-90 The Glitch"},
- [3] = {"rbxassetid://11881654771", "A tryhard..."},
- [4] = {"rbxassetid://7084794697", "him."}
-}
-
-game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function()
- local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
- if room:FindFirstChild("Assets") then
-  local paintings = {}
-  for i, painting in next, room:FindFirstChild("Assets"):GetChildren() do
-   if painting.Name:find("Painting") then
-    table.insert(paintings, painting)
-   end
-  end
-  if #paintings > 0 then
-   local currentpainting
-   if paintings[#paintings] then
-    painters = painters + 1
-    currentpainting = paintings[#paintings]
-   else
-    currentpainting = paintings[1]
-   end
-   if currentpainting then
-    if currentpainting:FindFirstChild("Canvas") then
-     local selected = paints[math.random(1, #paints)]
-     if currentpainting:FindFirstChild("InteractPrompt") then
-local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
-      cloning.Name = "fakeInteract"
-      cloning.Parent = currentpainting
-      currentpainting:FindFirstChild("InteractPrompt"):Destroy()
-      local t = cloning.Triggered:Connect(function()
-       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("", true)
-       local paintingTitle = selected[2]
-       local captionText = string.gsub("This painting is titled \"NAMEOFTHING\"", "NAMEOFTHING", paintingTitle)
-       require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption(captionText, true)
-      end)
-     end
-     currentpainting:FindFirstChild("Canvas"):FindFirstChildOfClass("SurfaceGui"):FindFirstChildOfClass("ImageLabel").Image = selected[1]
-    end
-   end
-  end
- end
-end)
--- echo sound
-game.SoundService.AmbientReverb = "ConcertHall"
-
---ambient fog and horror sound
-local Workspace = game:GetService("Workspace")
-local Lighting = game:GetService("Lighting")
-local SoundService = game:GetService("SoundService")
-
--- new the lights bulb sounds
-game.ReplicatedStorage.Sounds.BulbCharge.SoundId = "rbxassetid://9125973034"
-game.ReplicatedStorage.Sounds.BulbZap.SoundId = "rbxassetid://4288784832"
-game.ReplicatedStorage.Sounds.BulbZap.Volume = 2
-game.ReplicatedStorage.Sounds.BulbBreak.SoundId = "rbxassetid://260496290"
-
---LightStand Model
-local LightReplaceModel = game:GetObjects("rbxassetid://12543866876")[1] or nil
-
---Change Light Model
-coroutine.wrap(function()
-    while true do   
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures:GetDescendants()) do
-	if v.Name == "LightStand" then
-		if game.ReplicatedStorage.GameData.LatestRoom.Value < 53 then
-			local torch = LightReplaceModel:Clone()
-			torch.Parent = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures
-			torch.LightFixture.Changed:Connect(function()
-				torch.LightFixture.Neon.atachm["Ok you cannot tell me this isnt good"].Enabled = torch.LightFixture.PointLight.Enabled
-					torch.LightFixture.Neon["Bright sh idfk"].ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled
-					torch.LightFixture:WaitForChild('Dust').ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled 
-			end)
-			torch:PivotTo(v:GetPivot())
-			v:Destroy()
-
-		else
-			v:Destroy()
-		end
-	  end
-   end
-  end
-end)()
-
-for i,v in pairs(workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures:GetDescendants()) do
-	if v.Name == "LightStand" then
-		if game.ReplicatedStorage.GameData.LatestRoom.Value < 53 then
-			local torch = LightReplaceModel:Clone()
-			torch.Parent = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value].Assets.Light_Fixtures
-			torch.LightFixture.Changed:Connect(function()
-				torch.LightFixture.Neon.atachm["Ok you cannot tell me this isnt good"].Enabled = torch.LightFixture.PointLight.Enabled
-					torch.LightFixture.Neon["Bright sh idfk"].ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled
-					torch.LightFixture:WaitForChild('Dust').ParticleEmitter.Enabled = torch.LightFixture.PointLight.Enabled 
-			end)
-			torch:PivotTo(v:GetPivot())
-			v:Destroy()
-
-		else
-			v:Destroy()
-		end
-	  end
-   end
-
---Set up horror sound
-local horrorSound = Instance.new("Sound", Workspace)
-horrorSound.SoundId = "rbxassetid://1846999385" -- replace with your own sound id
-horrorSound.Volume = 0
-horrorSound.Looped = true
-
---Play the sound
-horrorSound:Play()
-
---Shocker
-coroutine.wrap(function()
-while true do
-wait(math.random(40, 50))
-local Players = game:GetService("Players")
-local Workspace = game:GetService("Workspace")
-
-local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-
-local function spawnShocker()
-    local shockerModel = game:GetObjects("rbxassetid://11547803978")[1]
-    shockerModel.PrimaryPart = shockerModel:FindFirstChild("HumanoidRootPart") or shockerModel:FindFirstChildWhichIsA("Part")
-    
-    local camera = Workspace.CurrentCamera
-    shockerModel:SetPrimaryPartCFrame(camera.CFrame * CFrame.new(0, 0, -7))
-    shockerModel.Parent = Workspace
-
-    local oogaBoogaaPart = shockerModel:WaitForChild("OOGA BOOGAAAA")
-    local horrorScream = shockerModel:WaitForChild("OOGA BOOGAAAA"):WaitForChild("HORROR SCREAM 15")
-
-    local lookDuration = 4
-    local startTime = tick()
-    local playerLookingAtShocker = true
-
-    while playerLookingAtShocker do
-        wait(0.1)
-
-        local angle = (oogaBoogaaPart.Position - character.PrimaryPart.Position).unit
-        local direction = camera.CFrame.LookVector
-
-        if (angle:Dot(direction) > 0.9) then
-            if tick() - startTime >= lookDuration then
-                horrorScream:Play()
-                humanoid:TakeDamage(30)
-                local function GetGitSound(GithubSnd,SoundName)
-				local url=GithubSnd
-				if not isfile(SoundName..".mp3") then
-					writefile(SoundName..".mp3", game:HttpGet(url))
-				end
-				local sound=Instance.new("Sound")
-				sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
-				return sound
-			end
-			game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 255, 255)
-	game.Lighting.MainColorCorrection.Contrast = 1
-	local tween = game:GetService("TweenService")
-	tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-	local TweenService = game:GetService("TweenService")
-	local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(80),{TintColor = Color3.fromRGB(255, 255, 255)})
-	TW:Play()
-        local ShokerJC = GetGitSound("https://github.com/huyhoanphuc/thh/blob/main/km_20240823_720p_12f_20240823_021809.mp3?raw=true","ShokerJC")
-				ShokerJC.Parent = workspace
-				ShokerJC.Volume = 1.3
-				ShokerJC:Play()
-                playerLookingAtShocker = false
-
-                local speed = 10
-                local targetPosition = character.PrimaryPart.Position
-
-                while oogaBoogaaPart.Position.Y > targetPosition.Y do
-                    local directionToPlayer = (targetPosition - oogaBoogaaPart.Position).unit
-                    oogaBoogaaPart.Position = oogaBoogaaPart.Position + directionToPlayer * speed * 0.1
-                    wait(0.1)
-                end
-
-                oogaBoogaaPart.CanCollide = false
-                oogaBoogaaPart.Anchored = false
-                wait(3)
-                shockerModel:Destroy()
-game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Shocker"
-local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
-
-for i,v in next, getgc(false) do
-    if typeof(v) == "function" then
-        local info = getinfo(v)
-        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
-            func = v
-            break
-        end
-    end
-end
-
-local function DeathHint(hints, type: string)
-    setupval(func, 1, hints)
-    if type ~= nil then
-        setupval(func, 2, type)
-    end
-end
-
-DeathHint({
-    "You died to who you call Shocker...",
-    "Dont look at it or it stuns you!"
-}, "Blue") -- "Blue" or "Yellow"
-                break
-            end
-        else
-            
-            oogaBoogaaPart.CanCollide = false
-            oogaBoogaaPart.Anchored = false
-            break
-        end
-    end
-oogaBoogaaPart.CanCollide = false
-oogaBoogaaPart.Anchored = false
-wait(3)
-    shockerModel:Destroy()
-end
-
-spawnShocker()
+while true do wait(661)
+loadstring(game:HttpGet("https://pastefy.app/87ReQWOF/raw"))()
 end
 end)()
 
---Demonium
+--Cease
 coroutine.wrap(function()
-while true do wait(321)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-loadstring(game:HttpGet("https://github.com/huyhoanphuc/crazy-za/blob/main/pandemonium"))()
-end
-end
-end)()
-
---Dreads
-coroutine.wrap(function()
-while true do wait(212)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Dread",
-		Asset = "rbxassetid://12653092543",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 1
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
-	},
-	Movement = {
-		Speed = 120,
-		Delay = math.random(2, 2),
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Ambush",
-		Min = 1,
-		Max = 1,
-		Delay = 0
-	},
-	Damage = {
-		Enabled = true,
-		Range = 100,
-		Amount = 1
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Guiding",
-		Hints = {"You died to death...", "so hide every.."},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnSpawned", function()
-    print("Entity has spawned")
-    require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Dread Has Spawner",true)
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    print("Entity has started moving")
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-	else
-        print("Entity has finished rebounding")
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
-    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "Die Or Survival",
-    Desc = "Survival Dread",
-    Reason = "",
-    Image = "rbxassetid://17818670913"
-})
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-	else
-		print("Entity has damaged the player")
-		local Player = game.Players.LocalPlayer.Character
-Player:FindFirstChild("HumanoidRootPart").Anchored = true
-    game.workspace.Dread.RushNew.Anchored = false
-    wait(1)
-    loadstring(game:HttpGet("https://pastefy.app/pxRzdPs1/raw"))()
-
-    coroutine.wrap(function()
-    wait(14)
-         game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100)
-         game.workspace.Dread:Destroy()
-         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-         game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-    end)()
-	end
-end)
-
---[[
-
-DEVELOPER NOTE:
-By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
-
-entity:SetCallback("CrucifixionOverwrite", function()
-    print("Custom crucifixion callback")
-end)
-
-]]--
-
----====== Run entity ======---
-
-entity:Run()
-end
-end
-end)()
-
---Matcher
-coroutine.wrap(function()
-while true do wait(126)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(212, 255, 0)
-game.Lighting.MainColorCorrection.Contrast = 0.3
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-    local roast = Instance.new("Sound")
-    roast.Parent = workspace
-    roast.Name = "roast"
-    roast.SoundId = "rbxassetid://9125936117"
-    roast.Volume = 1.6
-    roast.Pitch = 3
-    roast:Play()
-    wait(0.6)
-    roast:Destroy()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Matcher",
-		Asset = "rbxassetid://12459977063",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 1
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1}
-	},
-	Movement = {
-		Speed = 100,
-		Delay = 2,
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = false,
-		Type = "Blitz",
-		Min = 1,
-		Max = math.random(1, 2),
-		Delay = math.random(10, 30) / 10
-	},
-	Damage = {
-		Enabled = true,
-		Range = 40,
-		Amount = 125
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"Oh... Hello.", "I didn't expect to see you here.", "Let's see what you died to Matcher ?"},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-	-- Variables for the entity
-	local entityModel = entity.Model
-	local main = entityModel:WaitForChild("Main")
-	local attachment = main:WaitForChild("Attachment")
-	local AttachmentSwitch = main:WaitForChild("AttachmentSwitch")
-	local sounds = {
-		footsteps = main:WaitForChild("Footsteps"),
-		playSound = main:WaitForChild("PlaySound"),
-		switch = main:WaitForChild("Switch"),
-		switchBack = main:WaitForChild("SwitchBack")
-	}
-
-	-- Toggle particle emitters and lights within the entityModel
-	-- To switch between green & red state
-	for _, c in attachment:GetChildren() do
-		c.Enabled = (not startOfRebound)
-	end
-	for _, c in AttachmentSwitch:GetChildren() do
-		c.Enabled = startOfRebound
-	end
-
-	-- Play sounds
-	if startOfRebound == true then
-		sounds.footsteps.PlaybackSpeed = 0.35
-		sounds.playSound.PlaybackSpeed = 0.25
-		sounds.switch:Play()
-	else
-		sounds.footsteps.PlaybackSpeed = 0.25
-		sounds.playSound.PlaybackSpeed = 0.16
-		sounds.switchBack:Play()
-	end
-end)
-
----====== Run entity ======---
-
-entity:Run()
-end
-end
-end)()
-
---Twister
-coroutine.wrap(function()
-wait(100)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanggphuc/Entity-obfuscate/refs/heads/main/Twister%20test"))()
-end
-end)()
-
---Twisters
-coroutine.wrap(function()
-wait(321)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanggphuc/Entity-obfuscate/refs/heads/main/Twister%20test"))()
-end
-end)()
-
---Twisterss
-coroutine.wrap(function()
-wait(160)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if ((roomValue >= 52 and roomValue <= 70)) then
-wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanggphuc/Entity-obfuscate/refs/heads/main/Twister%20test"))()
-end
-end)()
-
-
---Demonim
-coroutine.wrap(function()
-wait(math.random(1, 10000))
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Demonium",
-		Asset = "rbxassetid://12785074053",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 5
-		},
-		Shatter = false,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
-	},
-	Movement = {
-		Speed = 500,
-		Delay = math.random(6, 6.5),
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Ambush",
-		Min = 4,
-		Max = 4,
-		Delay = 0
-	},
-	Damage = {
-		Enabled = true,
-		Range = 500,
-		Amount = 130
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"You die to laughing Demonium", "...", "...", "..."},
-		Cause = "Trauma"
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnSpawned", function()
-    print("Entity has spawned")
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    print("Entity has started moving")
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-        loadstring(game:HttpGet("https://pastefy.app/C0lTRffA/raw"))()
-	else
-        print("Entity has finished rebounding")
-        loadstring(game:HttpGet("https://pastefy.app/C0lTRffA/raw"))()
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-	else
-		print("Entity has damaged the player")
-	end
-end)
-
---[[
-
-DEVELOPER NOTE:
-By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
-
-entity:SetCallback("CrucifixionOverwrite", function()
-    print("Custom crucifixion callback")
-end)
-
-]]--
-
----====== Run entity ======---
-
-entity:Run()
-end
-end)()
-
---Blitz
-coroutine.wrap(function()
-while true do wait(313)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Blitz",
-		Asset = "https://github.com/RegularVynixu/Utilities/raw/main/Doors/Entity%20Spawner/Assets/Entities/BackdoorRush.rbxm",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = true,
-			Duration = 1
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1}
-	},
-	Movement = {
-		Speed = 100,
-		Delay = 2,
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Blitz",
-		Min = 1,
-		Max = math.random(1, 2),
-		Delay = math.random(10, 30) / 10
-	},
-	Damage = {
-		Enabled = true,
-		Range = 40,
-		Amount = 125
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"Oh... Hello.", "I didn't expect to see you here.", "Let's see what you died to.", "Oh, one of my favorites.", "She said we should call that one Blitz.", "Well... I'll see you later, right? You'll come back?", "Haha... of course you will."},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-	-- Variables for the entity
-	local entityModel = entity.Model
-	local main = entityModel:WaitForChild("Main")
-	local attachment = main:WaitForChild("Attachment")
-	local AttachmentSwitch = main:WaitForChild("AttachmentSwitch")
-	local sounds = {
-		footsteps = main:WaitForChild("Footsteps"),
-		playSound = main:WaitForChild("PlaySound"),
-		switch = main:WaitForChild("Switch"),
-		switchBack = main:WaitForChild("SwitchBack")
-	}
-
-	-- Toggle particle emitters and lights within the entityModel
-	-- To switch between green & red state
-	for _, c in attachment:GetChildren() do
-		c.Enabled = (not startOfRebound)
-	end
-	for _, c in AttachmentSwitch:GetChildren() do
-		c.Enabled = startOfRebound
-	end
-
-	-- Play sounds
-	if startOfRebound == true then
-		sounds.footsteps.PlaybackSpeed = 0.35
-		sounds.playSound.PlaybackSpeed = 0.25
-		sounds.switch:Play()
-	else
-		sounds.footsteps.PlaybackSpeed = 0.25
-		sounds.playSound.PlaybackSpeed = 0.16
-		sounds.switchBack:Play()
-	end
-end)
-
----====== Run entity ======---
-
-entity:Run()
-end
-end
-end)()
-
---AmbushKk
-coroutine.wrap(function()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()     
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "laughing ambush",
-		Asset = "rbxassetid://13293983665",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 5
-		},
-		Shatter = false,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
-	},
-	Movement = {
-		Speed = 500,
-		Delay = math.random(6, 6.5),
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Ambush",
-		Min = 2,
-		Max = 3,
-		Delay = 2.5
-	},
-	Damage = {
-		Enabled = true,
-		Range = 50,
-		Amount = 130
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"You die to laughing ambush", "...", "...", "..."},
-		Cause = "Trauma"
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnSpawned", function()
-    print("Entity has spawned")
-    local WarningSound = Instance.new("Sound")
-                    WarningSound.Parent = workspace
-                    WarningSound.SoundId = "rbxassetid://8680141474"
-                    WarningSound.Volume = workspace.Ambience_Ambush.Volume
-                    WarningSound:Play()
-                    workspace.Ambience_Ambush:Play()
-                    wait(3)
-                    WarningSound:Destroy()
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    print("Entity has started moving")
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-	else
-        print("Entity has finished rebounding")
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-	else
-		print("Entity has damaged the player")
-	end
-end)
-
---[[
-
-DEVELOPER NOTE:
-By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
-
-entity:SetCallback("CrucifixionOverwrite", function()
-    print("Custom crucifixion callback")
-end)
-
-]]--
-
----====== Run entity ======---
-
-entity:Run()
-end)() 
-
---Barrage
-coroutine.wrap(function()
-while true do wait(255)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Barrage",
-		Asset = "rbxassetid://13396010379",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 5
-		},
-		Shatter = false,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
-	},
-	Movement = {
-		Speed = 500,
-		Delay = math.random(6, 6.5),
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = false,
-		Type = "Ambush",
-		Min = 1,
-		Max = 5,
-		Delay = 2.5
-	},
-	Damage = {
-		Enabled = true,
-		Range = 50,
-		Amount = 130
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"You die to laughing ambush", "...", "...", "..."},
-		Cause = "Trauma"
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnSpawned", function()
-    print("Entity has spawned")
-    game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 247, 8)
-game.Lighting.MainColorCorrection.Contrast = 5
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-wait(12)
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    print("Entity has started moving")
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-	else
-        print("Entity has finished rebounding")
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-	else
-		print("Entity has damaged the player")
-	end
-end)
-
---[[
-
-DEVELOPER NOTE:
-By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
-
-entity:SetCallback("CrucifixionOverwrite", function()
-    print("Custom crucifixion callback")
-end)
-
-]]--
-
----====== Run entity ======---
-
-entity:Run()
-end
-end
-end)() 
-
---A120
-coroutine.wrap(function()
-wait()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-120 Has Spawner",true)
-wait(2)
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "A-120",
-		Asset = "rbxassetid://12761009640",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 1
-		},
-		Shatter = false,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
-	},
-	Movement = {
-		Speed = 40,
-		Delay = math.random(3, 3),
-		Reversed = true
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Ambush",
-		Min = 1,
-		Max = 1,
-		Delay = 0
-	},
-	Damage = {
-		Enabled = true,
-		Range = 30,
-		Amount = 100
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Guiding",
-		Hints = {"You died to death...", "so hide every.."},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnSpawned", function()
-    print("Entity has spawned")
-    wait(5)
-local Speed = 12
-
-local Workspace = game:GetService("Workspace")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Debris = game:GetService("Debris")
-local Player = Players.LocalPlayer
-local Character = Player.Character or Player.CharacterAdded:Wait()
-
-local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
-local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
-Dumy.Parent = workspace
-Matchers.Parent = workspace
-
-local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
-
-game.workspace.insidea.Main.Anchored = true
-
-Dumy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, -126)
-
-local function followPlayer()
-    local Direction = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).unit
-    Dumy.HumanoidRootPart.Velocity = Direction * Speed
-    Dumy.HumanoidRootPart.CFrame = CFrame.new(Dumy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
-end
-
-RunService.RenderStepped:Connect(function()
-if Matchers:IsDescendantOf(workspace) and Dumy:IsDescendantOf(workspace) and Dumy:FindFirstChild("HumanoidRootPart") and Dumy:FindFirstChild("Humanoid").Health > 0 then
-local Distance = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).magnitude
-
-if Distance <= math.huge then
-followPlayer()
-end
-
-Matchers:PivotTo(Dumy.HumanoidRootPart.CFrame)
-end
-end)
-
-wait(10)
-game.workspace.insidea.Main.CanCollide = true
-wait(0.1)
-if not game.Players.LocalPlayer.Character:GetAttribute("Hiding") then
-
-wait()
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 3
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
-
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-
-    local JumpscareGui = Instance.new("ScreenGui")
-    local Background = Instance.new("Frame")
-    local Face = Instance.new("ImageLabel")
-
-    JumpscareGui.Name = "JumpscareGui"
-    JumpscareGui.IgnoreGuiInset = true
-    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    Background.Name = "Background"
-    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    Background.BorderSizePixel = 0
-    Background.Size = UDim2.new(1, 0, 1, 0)
-    Background.ZIndex = 999
-    Background.BackgroundTransparency = 0.6
-
-    Face.Name = "Face"
-    Face.AnchorPoint = Vector2.new(0.5, 0.5)
-    Face.BackgroundTransparency = 1
-    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
-    Face.ResampleMode = Enum.ResamplerMode.Pixelated
-    Face.Size = UDim2.new(0, 0, 0, 0)
-    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
-    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    Face.ImageTransparency = 0
-
-    Face.Parent = Background
-    Background.Parent = JumpscareGui
-
-    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
-    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
-    task.wait(0.2)
-    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
-game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
-    task.wait(8)
-    JumpscareGui:Destroy()
-end
-
-game.workspace.insidea:Destroy()
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    print("Entity has started moving")
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-        wait(5)
-local Speed = 12
-
-local Workspace = game:GetService("Workspace")
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Debris = game:GetService("Debris")
-local Player = Players.LocalPlayer
-local Character = Player.Character or Player.CharacterAdded:Wait()
-
-local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
-local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
-Dumy.Parent = workspace
-Matchers.Parent = workspace
-
-local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
-
-game.workspace.insidea.Main.Anchored = true
-
-Dumy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, -126)
-
-local function followPlayer()
-    local Direction = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).unit
-    Dumy.HumanoidRootPart.Velocity = Direction * Speed
-    Dumy.HumanoidRootPart.CFrame = CFrame.new(Dumy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
-end
-
-RunService.RenderStepped:Connect(function()
-if Matchers:IsDescendantOf(workspace) and Dumy:IsDescendantOf(workspace) and Dumy:FindFirstChild("HumanoidRootPart") and Dumy:FindFirstChild("Humanoid").Health > 0 then
-local Distance = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).magnitude
-
-if Distance <= math.huge then
-followPlayer()
-end
-
-Matchers:PivotTo(Dumy.HumanoidRootPart.CFrame)
-end
-end)
-
-wait(10)
-game.workspace.insidea.Main.CanCollide = true
-wait(0.1)
-if not game.Players.LocalPlayer.Character:GetAttribute("Hiding") then
-
-wait()
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 3
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
-
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-
-    local JumpscareGui = Instance.new("ScreenGui")
-    local Background = Instance.new("Frame")
-    local Face = Instance.new("ImageLabel")
-
-    JumpscareGui.Name = "JumpscareGui"
-    JumpscareGui.IgnoreGuiInset = true
-    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    Background.Name = "Background"
-    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    Background.BorderSizePixel = 0
-    Background.Size = UDim2.new(1, 0, 1, 0)
-    Background.ZIndex = 999
-    Background.BackgroundTransparency = 0.6
-
-    Face.Name = "Face"
-    Face.AnchorPoint = Vector2.new(0.5, 0.5)
-    Face.BackgroundTransparency = 1
-    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
-    Face.ResampleMode = Enum.ResamplerMode.Pixelated
-    Face.Size = UDim2.new(0, 0, 0, 0)
-    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
-    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    Face.ImageTransparency = 0
-
-    Face.Parent = Background
-    Background.Parent = JumpscareGui
-
-    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
-    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
-    task.wait(0.2)
-    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
-game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
-    task.wait(8)
-    JumpscareGui:Destroy()
-end
-
-game.workspace.insidea:Destroy()
-	else
-        print("Entity has finished rebounding")
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-		function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 3
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
-
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
--- UI Construction
-
-    local JumpscareGui = Instance.new("ScreenGui")
-    local Background = Instance.new("Frame")
-    local Face = Instance.new("ImageLabel")
-
-    JumpscareGui.Name = "JumpscareGui"
-    JumpscareGui.IgnoreGuiInset = true
-    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    Background.Name = "Background"
-    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    Background.BorderSizePixel = 0
-    Background.Size = UDim2.new(1, 0, 1, 0)
-    Background.ZIndex = 999
-    Background.BackgroundTransparency = 0.6
-
-    Face.Name = "Face"
-    Face.AnchorPoint = Vector2.new(0.5, 0.5)
-    Face.BackgroundTransparency = 1
-    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
-    Face.ResampleMode = Enum.ResamplerMode.Pixelated
-    Face.Size = UDim2.new(0, 0, 0, 0)
-    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
-    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    Face.ImageTransparency = 0
-
-    Face.Parent = Background
-    Background.Parent = JumpscareGui
-
-    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
-    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
-    task.wait(0.2)
-    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
-game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
-    task.wait(8)
-    JumpscareGui:Destroy()
-	else
-		print("Entity has damaged the player")
-	end
-end)
-
---[[
-
-DEVELOPER NOTE:
-By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
-
-entity:SetCallback("CrucifixionOverwrite", function()
-    print("Custom crucifixion callback")
-end)
-
-]]--
-
----====== Run entity ======---
-
-entity:Run()
-end)()
-
---Aml
-coroutine.wrap(function()
-while true do wait(329)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
-
----====== Create entity ======---
-
-local entity = Spawner.createEntity({
-    CustomName = "A-15",
-    Model = "https://github.com/Franciscolovedoorshardcoremode/EntitiesScraryMode/blob/main/a10.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
-    Speed = 100,
-    MoveDelay = 1.8,
-    HeightOffset = 0,
-    CanKill = true,
-    KillRange = 40,
-    SpawnInFront = false,
-    ShatterLights = false,
-    FlickerLights = {
-        Enabled = false,
-        Duration = 8
-    },
-    Cycles = {
-        Min = 0.5,
-        Max = 0.5,
-        Delay = 0
-    },
-    CamShake = {
-        Enabled = true,
-        Values = {5.15, 20, 0.1, 1},
-        Range = 100
-    },
-    ResistCrucifix = false,
-    BreakCrucifix = false,
-    DeathMessage = {"you die to A-10", "yee."},
-    IsCuriousLight = true
-})
-
----====== Debug ======---
-
-entity.Debug.OnEntitySpawned = function()
-end
-
-entity.Debug.OnEntityDespawned = function()
-    workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value]:WaitForChild("Door").ClientOpen:FireServer()
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity started moving")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity finished rebound")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-end
-
-entity.Debug.OnDeath = function()
-    warn("You died.")
-end
-
---[[
-    NOTE: By overwriting 'OnUseCrucifix', the default crucifixion will be ignored and this function will be called instead
-
-    entity.Debug.OnUseCrucifix = function()
-        print("Custom crucifixion script here")
-    end
-]]--
-
----====== Run entity ======---
-
-Spawner.runEntity(entity)
-end
-end
-end)() 
---
-
---abl
-coroutine.wrap(function()
-while true do wait(569)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-
-
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "A-35", -- Custom name of your entity
-    Model = "rbxassetid://13486970543", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 3, -- Time before starting cycles (seconds)
-    HeightOffset = 0.5,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 60,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1.5,
-        Max = 1.5,
-        WaitTime = 1,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {30, 30, 0.1, 1}, -- Shake values (don't ch--ge if you don't know)
-        50, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled/Disabled
-        {
-            Type = "3", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://18384688860", -- Image1 url
-            Image2 = "rbxassetid://18384701999", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "18103906189", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Sound2 = {
-                "18103906189", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(255, 255, 255), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"A-60 has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")   
-end
-
-entity.Debug.OnEntityDespawned = function()
-    print("Nostalgic frikig")
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
-end
-end
-end)()
-
---Ripper
-coroutine.wrap(function()
-while true do wait(108)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbshripper"))()
-end
-end)()
-
---Depth
-coroutine.wrap(function()
-while true do wait(612)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local cue2 = Instance.new("Sound")
-	cue2.Parent = game.Workspace
-	cue2.Name = "Spawn"
-	cue2.SoundId = "rbxassetid://8627516764"
-	cue2.Volume = 1
-	cue2.PlaybackSpeed = 1
-	cue2:Play()
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(0, 100, 255)
-game.Lighting.MainColorCorrection.Contrast = 5
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
----====== Define spawner ======---
- 
-local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
- 
----====== Create entity ======---
- 
-local entity = Spawner.createEntity({
-    CustomName = "Depth",
-    Model = "rbxassetid://13296774233",
-    Speed = 700,
-    MoveDelay = 5,
-    HeightOffset = 0,
-    CanKill = true,
-    KillRange = 50,
-    SpawnInFront = false,
-    ShatterLights = true,
-    FlickerLights = {
-        Enabled = false,
-        Duration = 0.5
-    },
-    Cycles = {
-        Min = 1.5,
-        Max = 2,
-        Delay = 2.5
-    },
-    CamShake = {
-        Enabled = true,
-        Values = {1.5, 20, 0.1, 1},
-        Range = 100
-    },
-    ResistCrucifix = false,
-    BreakCrucifix = true
-})
- 
----====== Debug ======---
- 
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned")
-end
- 
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned")
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
- 
----====== Display achievement ======---
-achievementGiver({
-    Title = "Too Depths",
-    Desc = "I'm catching for you",
-    Reason = "Encounter Depth",
-    Image = "rbxassetid://12482826636"
-})
-end
- 
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity started moving")
-    waiut(60)
-    game.workspace.Depth:Destroy()
-end
- 
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity finished rebound")
-end
- 
-entity.Debug.OnEntityEnteredRoom = function(room)
-    print("Entity entered room:", room)
-end
- 
-entity.Debug.OnLookAtEntity = function()
-    print("Player looking at entity")
-end
- 
-entity.Debug.OnDeath = function()
-    print("Player has died")
-local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
- 
-for i,v in next, getgc(false) do
-    if typeof(v) == "function" then
-        local info = getinfo(v)
-        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
-            func = v
-            break
-        end
-    end
-end
- 
-local function DeathHint(hints, type: string)
-    setupval(func, 1, hints)
-    if type ~= nil then
-        setupval(func, 2, type)
-    end
-end
- 
-DeathHint({
-    "You died to Depth",
-    "It occasionally appears ???",
-    "He will come back many times, so hide until it is safe...",
-}, "Blue") -- "Blue" or "Yellow"
-end
- 
---[[
-    NOTE: By overwriting 'OnUseCrucifix', the default crucifixion will be ignored and this function will be called instead
- 
-    entity.Debug.OnUseCrucifix = function()
-        print("Custom crucifixion script here")
-    end
-]]--
- 
----====== Run entity ======---
- 
-Spawner.runEntity(entity)
-end
+while true do 
+wait(math.random(23, 370))
+loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/hdisgvshceaseeee"))()
 end
 end)()
 
 --A90
 coroutine.wrap(function()
-while true do wait(213)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 49 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 99 and roomValue <= 101)) then
-wait()
+while true do wait(143)
 local TweenService = game:GetService("TweenService")
 	local LocalPlayer = game.Players.LocalPlayer
 	local UI = game.Players.LocalPlayer.PlayerGui.MainUI
 	local Jumpscare_A90 = UI.Jumpscare.Jumpscare_A90
 	local A90Module = UI.Initiator.Main_Game.RemoteListener.Modules.A90
 	local MainGame = require(UI.Initiator.Main_Game)
-	 Jumpscare_A90.Face.Image = "http://www.roblox.com/asset/?id=104009837806204"
-	Jumpscare_A90.FaceAngry.Image = "http://www.roblox.com/asset/?id=108518853018222"
-	
-function DeathHint(args, Color) -- credits to Master Oogway in the kardin hong discord server
-local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
+	 Jumpscare_A90.Face.Image = "http://www.roblox.com/asset/?id=12635832722"
+	Jumpscare_A90.FaceAngry.Image = "http://www.roblox.com/asset/?id=12635955412"
 
-for i,v in next, getgc(false) do
-    if typeof(v) == "function" then
-        local info = getinfo(v)
-        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
-            func = v
-            break
-        end
-    end
-end
-
-local function Hint(hints, type: string)
-    setupval(func, 1, hints)
-    if type ~= nil then
-        setupval(func, 2, type)
-    end
-end
-
-Hint({
-unpack(args)
-}, Color)
-end
 spawn(function()
 require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.A90)(require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game))
 end)
+
 spawn(function()
-wait(2) -- dont know any other way
+wait(0.1) -- dont know any other way
 Survived = true
 end)
-repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_A90.FaceAngry.Visible == true or Survived
-if Survived then return end
+
+repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_A90.FaceAngry.Visible == true
+if Survived then
+
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(72)
 local ReSt = game:GetService("ReplicatedStorage") 
- ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-90"
- pcall(function()
-  DeathHint({
-  "Oh... Hello.",
-  "I'm surprised you found this place...",
-  "It's pretty tedious just to get here, last time I checked",
-  "Anyways, what'd you die to?",
-  "Oh that one...",
-  "I hope that one isn't too confusing...",
-  "All I'll let you know is that it starts attacking after room A-90.",
-  "So, you could call it A-90.",
-  "Anyways, I hope you don't mind trying again. It would be helpful.",
-}, "Yellow")
-end)
-wait(1)
-game.Players.LocalPlayer.Character.Humanoid:TakeDamage(78)
-end
-end
-end)()
-
---Frostbite
-coroutine.wrap(function()
-wait(140)
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
-end)()
-
---Frostbitea
-coroutine.wrap(function()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
-end)()
-
---Frostbiteb
-coroutine.wrap(function()
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://pastefy.app/Zb1au2BU/raw"))()
-end)()
-
---Rebound
-coroutine.wrap(function()
-waitt(155)
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-    Reboundcolor.Name = "Warn"
-    Reboundcolor.TintColor = Color3.fromRGB(65, 138, 255) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-    game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-local cue1 = Instance.new("Sound")
-cue1.Parent = game.Workspace
-cue1.Name = "Scream"
-cue1.SoundId = "rbxassetid://9114397505"
-local distort = Instance.new("DistortionSoundEffect")
-distort.Parent = cue1
-distort.Level = 1
-local distort2 = Instance.new("DistortionSoundEffect")
-distort2.Parent = cue1
-distort2.Level = 1
-local pitch = Instance.new("PitchShiftSoundEffect")
-pitch.Parent = cue1
-pitch.Octave = 0.5
-local pitch2 = Instance.new("PitchShiftSoundEffect")
-pitch2.Parent = cue1
-pitch2.Octave = 0.5
-local pitch3 = Instance.new("PitchShiftSoundEffect")
-pitch3.Parent = cue1
-pitch3.Octave = 0.5
-cue1.Volume = 0.1
-cue1:Play()
-local cue2 = Instance.new("Sound")
-cue2.Parent = game.Workspace
-cue2.Name = "Spawn"
-cue2.SoundId = "rbxassetid://9114221327"
-cue2.Volume = 5
-cue2:Play()
-local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
-local camara = game.Workspace.CurrentCamera
-local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
- camara.CFrame = camara.CFrame * shakeCf
-end)
-camShake:Start()
-camShake:ShakeOnce(10,3,0.1,6,2,0.5)
-wait(2.8)
- 
-function GetGitSound(GithubSnd,SoundName)
- local url=GithubSnd
- if not isfile(SoundName..".mp3") then
-  writefile(SoundName..".mp3", game:HttpGet(url))
- end
- local sound=Instance.new("Sound")
- sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
- return sound
-end
-
-local scare = Instance.new("Sound")
-scare.Parent = game.Workspace
-scare.Name = "MyEarsBurn"
-scare.SoundId = "rbxassetid://5567523008"
-scare.PlaybackSpeed = 3
-scare.Volume = 5
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
-end)()
-
---Reboundb
-coroutine.wrap(function()
-waitt()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-    Reboundcolor.Name = "Warn"
-    Reboundcolor.TintColor = Color3.fromRGB(65, 138, 255) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-    game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-local cue1 = Instance.new("Sound")
-cue1.Parent = game.Workspace
-cue1.Name = "Scream"
-cue1.SoundId = "rbxassetid://9114397505"
-local distort = Instance.new("DistortionSoundEffect")
-distort.Parent = cue1
-distort.Level = 1
-local distort2 = Instance.new("DistortionSoundEffect")
-distort2.Parent = cue1
-distort2.Level = 1
-local pitch = Instance.new("PitchShiftSoundEffect")
-pitch.Parent = cue1
-pitch.Octave = 0.5
-local pitch2 = Instance.new("PitchShiftSoundEffect")
-pitch2.Parent = cue1
-pitch2.Octave = 0.5
-local pitch3 = Instance.new("PitchShiftSoundEffect")
-pitch3.Parent = cue1
-pitch3.Octave = 0.5
-cue1.Volume = 0.1
-cue1:Play()
-local cue2 = Instance.new("Sound")
-cue2.Parent = game.Workspace
-cue2.Name = "Spawn"
-cue2.SoundId = "rbxassetid://9114221327"
-cue2.Volume = 5
-cue2:Play()
-local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
-local camara = game.Workspace.CurrentCamera
-local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
- camara.CFrame = camara.CFrame * shakeCf
-end)
-camShake:Start()
-camShake:ShakeOnce(10,3,0.1,6,2,0.5)
-wait(2.8)
- 
-function GetGitSound(GithubSnd,SoundName)
- local url=GithubSnd
- if not isfile(SoundName..".mp3") then
-  writefile(SoundName..".mp3", game:HttpGet(url))
- end
- local sound=Instance.new("Sound")
- sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
- return sound
-end
-
-local scare = Instance.new("Sound")
-scare.Parent = game.Workspace
-scare.Name = "MyEarsBurn"
-scare.SoundId = "rbxassetid://5567523008"
-scare.PlaybackSpeed = 3
-scare.Volume = 5
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
-end)()
-
---Deergod
-coroutine.wrap(function()
-while true do wait(219)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-
-
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Deer God", -- Custom name of your entity
-    Model = "rbxassetid://12805689281", -- Can be GitHub file or rbxassetid
-    Speed = 25, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 5,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 100,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = true,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        true, -- Enabled/Disabled
-        80 -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 5,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {22.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        50, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11394027278", -- Image1 url
-            Image2 = "rbxassetid://11394027278", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "10483837590", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(48, 25, 52), -- Color
-            },
-            Tease = {
-                false, -- Enabled/Disabled
-                Min = 1,
-                Max = 1,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-end
-
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 1
-match.SoundId = "rbxassetid://9043357758"
-match.Volume = 1
-match.Name = "DeerGodEscape"
-match.Parent = workspace
-match:Play()
-
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 0.1
-match.SoundId = "rbxassetid://635822826"
-match.Volume = 0.8
-match.Name = "DeerGodEnd"
-match.Parent = workspace
-match:Play()
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "Last Chance To Look Away",
-    Desc = "Why You Are Running?",
-    Reason = "Survive the rare Entity Called Deer God",
-    Image = "rbxassetid://11395249132"
-})
-Followed:Destroy()
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Folloed = Instance.new("Sound")
-    Folloed.SoundId = GitAud(soundlink, filename)
-    Folloed.Parent = workspace
-    Folloed.Volume = 2
-    Folloed:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20241010_360p_12f_20241010_010658.mp3?raw=true", 1, "Folloed")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-    local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
-
-for i,v in next, getgc(false) do
-    if typeof(v) == "function" then
-        local info = getinfo(v)
-        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
-            func = v
-            break
-        end
-    end
-end
-
-local function DeathHint(hints, type: string)
-    setupval(func, 1, hints)
-    if type ~= nil then
-        setupval(func, 2, type)
-    end
-end
-
-DeathHint({
-    "You died to whom you Call Deer God",
-    "Closets Wont work! So try running",
-    "Its form is incomprehensible to a human upclose...",
-    "..-so avoid Eye Contact"
-}, "Blue") -- "Blue" or "Yellow"
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
-end
-end
-end)()
-
---Trauma
-coroutine.wrap(function()
-while true do wait(569)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
-
----====== Create entity ======---
-
-
-local entity = Spawner.createEntity({
-    CustomName = "Trauma",
-    Model = "https://github.com/munciseek/DOORS-entity-models/blob/main/Nightmare/Trauma.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
-    Speed = 100,
-    MoveDelay = 0,
-    HeightOffset = 4,
-    CanKill = true,
-    KillRange = 30,
-    SpawnInFront = false,
-    ShatterLights = false,
-    FlickerLights = {
-        Enabled = false,
-        Duration = 3
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        Delay = 0
-    },
-    CamShake = {
-        Enabled = true,
-        Values = {1.5, 20, 0.1, 1},
-        Range = 100
-    },
-    ResistCrucifix = true,
-    BreakCrucifix = true,
-    DeathMessage = {"you die to A-10", "yee."},
-    IsCuriousLight = true
-})
-
----====== Debug ======---
-
-entity.Debug.OnEntitySpawned = function()
-wait(30)
-game.workspace.Trauma:Destroy()
-end
-
-entity.Debug.OnEntityDespawned = function()
-    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
- 
----====== Display achievement ======---
-achievementGiver({
-    Title = "Ser Verty Has Deted",
-    Desc = "Ave Sira Cant Detdesa",
-    Reason = "Encounter Trauma",
-    Image = "rbxassetid://0"
-})
-end
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity started moving")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity finished rebound")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(room)
-    print("Entity entered room:", room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player looking at entity")
-end
-
-entity.Debug.OnDeath = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/huyhoangphuc/ytu/main/A-200Jumpscare'))()
-end
-
---[[
-    NOTE: By overwriting 'OnUseCrucifix', the default crucifixion will be ignored and this function will be called instead
-
-    entity.Debug.OnUseCrucifix = function()
-        print("Custom crucifixion script here")
-    end
-]]--
-
----====== Run entity ======---
-
-Spawner.runEntity(entity)
-end
-end
-end)()
-
---Gcl
-coroutine.wrap(function()
-while true do wait(636)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
-
----====== Create entity ======---
-
-
-local entity = Spawner.createEntity({
-    CustomName = "G95",
-    Model = "https://github.com/munciseek/DOORS-entity-models/blob/main/Nightmare/G-95.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
-    Speed = 100,
-    MoveDelay = 0,
-    HeightOffset = 4,
-    CanKill = true,
-    KillRange = 30,
-    SpawnInFront = true,
-    ShatterLights = false,
-    FlickerLights = {
-        Enabled = false,
-        Duration = 3
-    },
-    Cycles = {
-        Min = 4,
-        Max = 5.5,
-        Delay = 0
-    },
-    CamShake = {
-        Enabled = true,
-        Values = {1.5, 20, 0.1, 1},
-        Range = 100
-    },
-    ResistCrucifix = true,
-    BreakCrucifix = true,
-    DeathMessage = {"you die to A-10", "yee."},
-    IsCuriousLight = true
-})
-
----====== Debug ======---
-
-entity.Debug.OnEntitySpawned = function()
-wait(30)
-game.workspace.G95:Destroy()
-end
-
-entity.Debug.OnEntityDespawned = function()
-    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
- 
----====== Display achievement ======---
-achievementGiver({
-    Title = "The Will A Sea",
-    Desc = "Are You Will Do",
-    Reason = "Encounter G-95",
-    Image = "rbxassetid://537141778"
-})
-end
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity started moving")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity finished rebound")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(room)
-    print("Entity entered room:", room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player looking at entity")
-end
-
-entity.Debug.OnDeath = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/huyhoangphuc/ytu/main/A-200Jumpscare'))()
-end
-
---[[
-    NOTE: By overwriting 'OnUseCrucifix', the default crucifixion will be ignored and this function will be called instead
-
-    entity.Debug.OnUseCrucifix = function()
-        print("Custom crucifixion script here")
-    end
-]]--
-
----====== Run entity ======---
-
-Spawner.runEntity(entity)
-end
-end
-end)()
-
---Mka
-coroutine.wrap(function()
-while true do
-wait(math.random(310,650))
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait(2)
-local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
-
----====== Create entity ======---
-
-
-local entity = Spawner.createEntity({
-    CustomName = "Maniack Rush",
-    Model = "https://github.com/munciseek/DOORS-entity-models/blob/main/Nightmare/G-95.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
-    Speed = 100,
-    MoveDelay = 2,
-    HeightOffset = 4,
-    CanKill = true,
-    KillRange = 30,
-    SpawnInFront = true,
-    ShatterLights = false,
-    FlickerLights = {
-        Enabled = false,
-        Duration = 3
-    },
-    Cycles = {
-        Min = 1,
-        Max = 2,
-        Delay = 1
-    },
-    CamShake = {
-        Enabled = true,
-        Values = {1.5, 20, 0.1, 1},
-        Range = 100
-    },
-    ResistCrucifix = true,
-    BreakCrucifix = true,
-    DeathMessage = {"you die to A-10", "yee."},
-    IsCuriousLight = true
-})
-
----====== Debug ======---
-
-entity.Debug.OnEntitySpawned = function()
-wait(30)
-game.workspace.G95:Destroy()
-end
-
-entity.Debug.OnEntityDespawned = function()
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity started moving")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity finished rebound")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(room)
-    print("Entity entered room:", room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player looking at entity")
-end
-
-entity.Debug.OnDeath = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/huyhoangphuc/ytu/main/A-200Jumpscare'))()
-end
-
---[[
-    NOTE: By overwriting 'OnUseCrucifix', the default crucifixion will be ignored and this function will be called instead
-
-    entity.Debug.OnUseCrucifix = function()
-        print("Custom crucifixion script here")
-    end
-]]--
-
----====== Run entity ======---
-
-Spawner.runEntity(entity)
-end
-end
-end)()
-
---Dread
-coroutine.wrap(function()
-wait(math.random(231, 512))
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-
-
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "GrandFatherClockDread", -- Custom name of your entity
-    Model = "rbxassetid://14700391347", -- Can be GitHub file or rbxassetid
-    Speed = 0, -- Percentage, 100 = default Rush speed
-    DelayTime = 3.40, -- Time before starting cycles (seconds)
-    HeightOffset = 1,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 0,
-    OneRoom = true,
-    DieOnLook = false,
-    BreakLights = false,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        2.5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 4,
-    },
-    CamShake = {
-        false, -- Enabled/Disabled
-        {15,25,0,2,1,6}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "nil", -- Image1 url
-            Image2 = "nil", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 5 }, -- Sound properties
-            },
-            Sound2 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = true,
-    CustomDialog = {  
-        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-wait(1)
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = vol
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/blob/main/ClockSounds.mp3?raw=true", 1, "ClockSound")
-
-end
-
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(55, 58, 79)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local screenGui = Instance.new("ScreenGui")
-local imageLabel = Instance.new("ImageLabel")
-
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-imageLabel.Size = UDim2.new(1, 0, 1, 0)
-imageLabel.Position = UDim2.new(0, 0, 0, 0)
-imageLabel.Image = "rbxassetid://18904153178"
-imageLabel.BackgroundTransparency = 1
-
-imageLabel.Parent = screenGui
-
-wait(32.20)
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 255, 255)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-imageLabel.Visible = false
-game.workspace.GrandFatherClockDread:Destroy()
-loadstring(game:HttpGet("https://pastefy.app/F1t06D94/raw"))()
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
-end
-end)()
-
---Silence
-coroutine.wrap(function()
-while true do wait(300)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-loadstring(game:HttpGet("https://pastefy.app/9cBLkVId/raw"))()
-end
-end
-end)()
-
---Cease
-coroutine.wrap(function()
-while true do wait(186)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-loadstring(game:HttpGet("https://pastefy.app/9cBLkVId/raw"))()
-end
-end
-end)()
-
---Tiker
-coroutine.wrap(function()
-while true do wait(520)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
-
----====== Create entity ======---
-
-wait(2)
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(128, 128, 128)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(80),{TintColor = Color3.fromRGB(128, 128, 128)})
-TW:Play()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoangphuc/jee/main/jshshdhhdhdh"))()
-
-wait(5)
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 0, 0)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(80),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoangphuc/jee/main/mskshshjsjshshshshhshsjs8727272"))()
-
-wait(3)
-local entity = Spawner.createEntity({
-    CustomName = "Tikers",
-    Model = "rbxassetid://12686240661", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
-    Speed = 100,
-    MoveDelay = 2,
-    HeightOffset = 0,
-    CanKill = true,
-    KillRange = 50,
-    SpawnInFront = false,
-    ShatterLights = true,
-    FlickerLights = {
-        Enabled = false,
-        Duration = 1
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        Delay = 2
-    },
-    CamShake = {
-        Enabled = true,
-        Values = {1.5, 20, 0.1, 1},
-        Range = 100
-    },
-    ResistCrucifix = true,
-    BreakCrucifix = true,
-    DeathMessage = {"you die to A-35", "yee."},
-    IsCuriousLight = true
-})
-
----====== Debug ======---
-
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned")
-end
-
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned")
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity started moving")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity finished rebound")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(room)
-    print("Entity entered room:", room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player looking at entity")
-end
-
-entity.Debug.OnDeath = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoangphuc/jee/main/mskshshjsjshshshshhshsjs8727272"))()
-end
-
---[[
-    NOTE: By overwriting 'OnUseCrucifix', the default crucifixion will be ignored and this function will be called instead
-
-    entity.Debug.OnUseCrucifix = function()
-        print("Custom crucifixion script here")
-    end
-]]--
-
----====== Run entity ======---
-
-Spawner.runEntity(entity)
-end
-end
-end)()
-
---Wh1t3
-coroutine.wrap(function()
-while true do wait(760)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 0, 0)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(80),{TintColor = Color3.fromRGB(255, 0, 0)})
-TW:Play()
-local sound = Instance.new("Sound")
-	sound.SoundId = "rbxassetid://"..131489490
-	sound.Looped = false
-	sound.Parent = workspace
-	sound.Volume = 3.1
-	sound:Play()
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Wh1t3", -- Custom name of your entity
-    Model = "rbxassetid://16735149732", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 5, -- Time before starting cycles (seconds)
-    HeightOffset = 1,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 50,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = true,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        false, -- Enabled/Disabled
-        2.5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 2.5,
-        Max = 2.5,
-        WaitTime = 1,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {20,25,0,2,1,6}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Type = "2", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11678966779", -- Image1 url
-            Image2 = "rbxassetid://11678966779", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "rbxassetid://5263560896", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Sound2 = {
-                "rbxassetid://5263560896", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled/Disabled
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = true,
-    CustomDialog = {  
-        {"You died to who you call Ripper...", "You can tell his presence by the lights and his scream.", "Hide when he does it!."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-    while true do wait(0.1)
-    game.workspace.Wh1t3.whiteyNew.Anchored = true
-    end
-    wait(30)
-    game.workspace.Wh1t3:Destroy()
-end
-
-entity.Debug.OnEntityDespawned = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoangphuc/impossible-entity/main/how"))()
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-    game.Players.LocalPlayer.Character.Humanoid.Health -= 0.5
-    game.workspace.Wh1t3.whiteyNew.Anchored = false
-    wait(0.1)
-    game.workspace.Wh1t3.whiteyNew.Anchored = true
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
+ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-90"
 end
 end
 end)()
@@ -4910,7 +759,9 @@ coroutine.wrap(function()
 loadstring(game:HttpGet("https://github.com/huyhoanphuc/testhshs/raw/refs/heads/main/A660hsgakahbsjhshsvhshsbachubbyhardmode"))()
 end)()
 
---3xtr3m3 M0d3 by Pr!me
+--Hardcore Remake by Pr!me
+
+--Mode Made Original By Noonie And ping
 
 --Admincommand
 loadstring(game:HttpGet("https://raw.githubusercontent.com/lolmusicseekfaceas/helsgsssgshs/refs/heads/main/admin"))()
