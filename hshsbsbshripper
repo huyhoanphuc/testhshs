@@ -172,11 +172,11 @@ entity:SetCallback("OnDamagePlayer", function(newHealth)
          game.workspace.Ripper.RushNew.CanCollide = true
 		game.Players.LocalPlayer.Character.Humanoid.Health = 100
 		local Camera = workspace.CurrentCamera
-local RunService = game:GetService("RunService")
+local runService = game:GetService("RunService")
 
 local lockOn = workspace.Ripper.RushNew
 
-RunService.RenderStepped:Connect(function()
+local event = runService.RenderStepped:Connect(function()
 Camera.CFrame = CFrame.lookAt(Camera.CFrame.Position, lockOn.Position)
 end)
 
@@ -247,16 +247,11 @@ game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
 wait(0.2)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
 wait(0.2)
-workspace.CurrentCamera:remove()
-workspace.CurrentCamera.CameraType = "Scriptable"
+event:Disconnect()
 
 game.Players.LocalPlayer.Character.Humanoid.Health -= 100
 game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Ripper"
 wait()
-
-local Camera = workspace.CurrentCamera
-Camera.CameraType = Enum.CameraType.Custom
-Camera.CameraSubject = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
 
 game.workspace.Ripper.RushNew.CanCollide = false
 game.workspace.Ripper:Destroy()
