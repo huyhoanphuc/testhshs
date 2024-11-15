@@ -62,6 +62,7 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
+    workspace.Ripper.RushNew.Ambush:Stop()
     function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -85,6 +86,7 @@ end)
 entity:SetCallback("OnStartMoving", function()
     print("Entity has started moving")
     wait(0.5)
+    workspace.Ripper.RushNew.Ambush:Starta()
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -130,8 +132,11 @@ end)
 
 entity:SetCallback("OnDespawning", function()
     print("Entity is despawning")
-    wait(0.2)
-local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+    local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
 local camara = game.Workspace.CurrentCamera
 local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
  camara.CFrame = camara.CFrame * shakeCf
@@ -157,10 +162,6 @@ achievementGiver({
     Reason = "Encounter Ripper.",
     Image = "rbxassetid://17702317077"
 })
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
 end)
 
 entity:SetCallback("OnDamagePlayer", function(newHealth)
