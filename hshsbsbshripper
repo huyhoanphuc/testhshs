@@ -132,10 +132,8 @@ end)
 
 entity:SetCallback("OnDespawning", function()
     print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
+    game.workspace.Ripper:Destroy()
+    
     local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
 local camara = game.Workspace.CurrentCamera
 local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
@@ -144,15 +142,6 @@ end)
 camShake:Start()
 camShake:ShakeOnce(15,25,0,2,1,6)
 
-    local ripeend = Instance.new("Sound")
-    ripeend.Parent = workspace
-    ripeend.Name = "RipperEnd"
-    ripeend.SoundId = "rbxassetid://1837829565"
-    ripeend.Volume = 3
-    ripeend.Pitch = 1
-    ripeend:Play()
-
----====== Load achievement giver ======---
 local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
 
 ---====== Display achievement ======---
@@ -162,6 +151,10 @@ achievementGiver({
     Reason = "Encounter Ripper.",
     Image = "rbxassetid://17702317077"
 })
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
 end)
 
 entity:SetCallback("OnDamagePlayer", function(newHealth)
