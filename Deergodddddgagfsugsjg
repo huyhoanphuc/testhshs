@@ -110,11 +110,9 @@ end)
 
 entity:SetCallback("OnDespawning", function()
     print("Entity is despawning")
-end)
+game.workspace.Deergod:Destroy()
 
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
-    local match = Instance.new("Sound")
+local match = Instance.new("Sound")
 match.PlaybackSpeed = 1
 match.SoundId = "rbxassetid://9043357758"
 match.Volume = 1
@@ -140,6 +138,10 @@ achievementGiver({
     Image = "rbxassetid://11395249132"
 })
 Followed:Destroy()
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
 end)
 
 entity:SetCallback("OnDamagePlayer", function(newHealth)
