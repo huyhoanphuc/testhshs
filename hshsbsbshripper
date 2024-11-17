@@ -2,7 +2,7 @@ local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 26 and roomValue <= 45) or (roomValue >= 49 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
  game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-    local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
 ---====== Create entity ======---
 
@@ -10,7 +10,7 @@ local entity = spawner.Create({
 	Entity = {
 		Name = "Ripper",
 		Asset = "rbxassetid://13942047057",
-		HeightOffset = 4
+		HeightOffset = 0
 	},
 	Lights = {
 		Flicker = {
@@ -42,7 +42,7 @@ local entity = spawner.Create({
 	},
 	Damage = {
 		Enabled = true,
-		Range = 100,
+		Range = 56,
 		Amount = 1
 	},
 	Crucifixion = {
@@ -63,6 +63,25 @@ local entity = spawner.Create({
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
     workspace.Ripper.RushNew.Ambush:Stop()
+    
+    function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+workspace.Ripper.RushNew.Attachment.ParticleEmitter.Texture = GitPNG("https://github.com/huyhoanggphuc/Entity-obfuscate/blob/main/Ripper%20(1).png?raw=true", "RipperFace")
+
     function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -85,8 +104,9 @@ end)
 
 entity:SetCallback("OnStartMoving", function()
     print("Entity has started moving")
-    wait(0.5)
-    workspace.Ripper.RushNew.Ambush:Starta()
+    wait()
+    workspace.Ripper.RushNew.Ambush:Start()
+
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
@@ -241,15 +261,15 @@ game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
 wait(0.2)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
 wait(0.2)
-event:Disconnect()
-
 game.Players.LocalPlayer.Character.Humanoid.Health -= 100
+wait()
+event:Disconnect()
 game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Ripper"
 wait()
 
-game.workspace.Ripper.RushNew.CanCollide = false
+player.Character.HumanoidRootPart.Anchored = false
+wait()
 game.workspace.Ripper:Destroy()
-
 
 game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Ripper"
 local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
