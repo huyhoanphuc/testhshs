@@ -643,11 +643,6 @@ if msg == '/god' or msg == '/God' or msg == '/GM' then
 					local b = game:GetObjects("rbxassetid://12797521669")[1]
                     b.Parent = Workspace
                      
-                     while true do wait()
-                     if b then
-                     game.Players.LocalPlayer.Character.Humanoid.Health = 100
-                     end
-                 end
 			end)()
 
 		end						
@@ -1739,7 +1734,7 @@ end)()
 
 --Matcher
 coroutine.wrap(function()
-while true do wait(1)
+while true do wait(187)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
