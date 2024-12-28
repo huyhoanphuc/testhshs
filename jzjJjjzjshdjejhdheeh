@@ -67,11 +67,14 @@ coroutine.wrap(function ()
 
 				if msg == '/ripper' or msg == '/Ripper' then
 					coroutine.wrap(function ()
-						 if not Workspace.Frostbite then
+					
+						 
+						
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbshripper"))()
-end
 
+wait(1)
 if Workspace.Frostbite then
+
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 26 and roomValue <= 45) or (roomValue >= 49 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
@@ -401,9 +404,1294 @@ if msg == '/60' or msg == '/a-60' or msg == '/a60' then
 
 				end							
 
+if msg == '/120' or msg == '/a-120' or msg == '/a120' then
+					coroutine.wrap(function ()
+					
+						local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-120 Has Spawner",true)
+wait(2)
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "A-120",
+		Asset = "rbxassetid://12761009640",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 40,
+		Delay = math.random(3, 3),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 30,
+		Amount = 100
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    if Workspace.Frostbite then
+    game.Workspace["A-120"]:Destroy()
+    end
+    
+    wait(5)
+local Speed = 12
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Debris = game:GetService("Debris")
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
+local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
+Dumy.Parent = workspace
+Matchers.Parent = workspace
+
+if Workspace.Frostbite then
+    game.Workspace.Insidea:Destroy()
+  end
+
+local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
+
+game.workspace.insidea.Main.Anchored = true
+
+Dumy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, -126)
+
+local function followPlayer()
+    local Direction = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).unit
+    Dumy.HumanoidRootPart.Velocity = Direction * Speed
+    Dumy.HumanoidRootPart.CFrame = CFrame.new(Dumy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
+end
+
+RunService.RenderStepped:Connect(function()
+if Matchers:IsDescendantOf(workspace) and Dumy:IsDescendantOf(workspace) and Dumy:FindFirstChild("HumanoidRootPart") and Dumy:FindFirstChild("Humanoid").Health > 0 then
+local Distance = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).magnitude
+
+if Distance <= math.huge then
+followPlayer()
+end
+
+Matchers:PivotTo(Dumy.HumanoidRootPart.CFrame)
+end
+end)
+
+wait(10)
+game.workspace.insidea.Main.CanCollide = true
+wait(0.1)
+if not game.Players.LocalPlayer.Character:GetAttribute("Hiding") then
+
+wait()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+end
+
+game.workspace.insidea:Destroy()
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+        wait(5)
+local Speed = 12
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Debris = game:GetService("Debris")
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
+local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
+Dumy.Parent = workspace
+Matchers.Parent = workspace
+
+if Workspace.Frostbite then
+    game.Workspace.Insidea:Destroy()
+  end
+
+local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
+
+game.workspace.insidea.Main.Anchored = true
+
+Dumy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, -126)
+
+local function followPlayer()
+    local Direction = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).unit
+    Dumy.HumanoidRootPart.Velocity = Direction * Speed
+    Dumy.HumanoidRootPart.CFrame = CFrame.new(Dumy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
+end
+
+RunService.RenderStepped:Connect(function()
+if Matchers:IsDescendantOf(workspace) and Dumy:IsDescendantOf(workspace) and Dumy:FindFirstChild("HumanoidRootPart") and Dumy:FindFirstChild("Humanoid").Health > 0 then
+local Distance = (Character.HumanoidRootPart.Position - Dumy.HumanoidRootPart.Position).magnitude
+
+if Distance <= math.huge then
+followPlayer()
+end
+
+Matchers:PivotTo(Dumy.HumanoidRootPart.CFrame)
+end
+end)
+
+wait(10)
+game.workspace.insidea.Main.CanCollide = true
+wait(0.1)
+if not game.Players.LocalPlayer.Character:GetAttribute("Hiding") then
+
+wait()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+end
+
+game.workspace.insidea:Destroy()
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+-- UI Construction
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+	else
+		print("Entity has damaged the player")
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+
+wait(1)
+if Workspace.Frostbite then
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-120 Has Spawner",true)
+wait(2)
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "A-120",
+		Asset = "rbxassetid://12761009640",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 40,
+		Delay = math.random(3, 3),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = false,
+		Range = 30,
+		Amount = 100
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/km_20241017-1_1080p_15f_20241017_183631.mp3?raw=true", 1, "acareOmg")
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+-- UI Construction
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/testhshs/blob/main/cropped-%D7%91%D7%90%D7%A0%D7%A8-%D7%A8%D7%A7%D7%A2-%D7%A9%D7%A7%D7%95%D7%A3-2-2%20(1).png?raw=true", "A6nSteroidfssss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(8)
+    JumpscareGui:Destroy()
+	else
+		print("Entity has damaged the player")
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+end
+					end)()
+
+				end							
+
+if msg == '/200' or msg == '/a-200' or msg == '/a200' then
+					coroutine.wrap(function ()
+					
+					game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+						local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-200 Has Spawner",true)
+wait(2)
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "monster2",
+		Asset = "rbxassetid://11914816436",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 60,
+		Delay = math.random(3, 3),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 60,
+		Amount = 0.001
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    if Workspace.Frostbite then
+    game.workspace["monster2"]:Destroy()
+    end
+    
+    isspawned = true
+
+				spawn(function()
+
+					local modeler = workspace["monster2"]
+
+					local faces = modeler.monster2.BillboardGui:GetChildren()
+
+					while wait(Random.new():NextInteger(0.5,0.7)) and isspawned do
+
+						for i,v in pairs(faces) do
+
+							v.Visible = false
+
+						end
+
+						faces[math.random(1,#faces)].Visible = true
+
+					end
+
+				end)
+				
+				 function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+				game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_001.png?raw=true", "A6gaagshsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_002.png?raw=true", "A6uuuuugsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_003.png?raw=true", "A2999900OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_004.png?raw=true", "A6222gsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_005.png?raw=true", "A6gsf7770OueyueyteuueyenaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_006.png?raw=true", "A200OnaStaaaassssaeroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_007.png?raw=true", "A6gsf7770OnaSterkjsjjjjjjjoids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_008.png?raw=true", "A6gsf777hsfsgejgdgsjhgd0OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_009.png?raw=true", "A200OnaSthgsjgseroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_010.png?raw=true", "A6gsf7vsjgcs770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_011.png?raw=true", "A6gsf762762770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_012.png?raw=true", "A200OnaSteroi888ds")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_013.png?raw=true", "A6gsf7770Ona825753Steroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_015.png?raw=true", "A200OnaaadsjgdiaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_016.png?raw=true", "A6gsf7770xsgdsOnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_017.png?raw=true", "A6gsf7770OnhsgishgsaSteroids")
+wait(0.01)
+
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+    game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+    spawn(function()
+
+					repeat wait() until workspace["monster2"]
+
+					while isspawned do wait(math.random(1,5)) 
+
+						local s = workspace["monster2"].monster2["windy"..math.random(1,4)]
+
+						s.RollOffMinDistance = 10
+
+						s.RollOffMaxDistance = 500
+
+						s:Play()
+
+						print("Played "..workspace["monster2"].monster2["windy"..math.random(1,4)].Name)
+
+					end
+
+				end)
+
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    isspawned = false
+
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+	else
+		print("Entity has damaged the player")
+		--jumpscare sound
+coroutine.wrap(function()
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/lv_0_20241228203719.mp3?raw=true", 1, "a200acarejumpscareOmg")
+end)()
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnalolSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnalolSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gaagshsf7770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6uuuuugsf7770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A2999900OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6222gsf7770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770OueyueyteuueyenaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaStaaaassssaeroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770OnaSterkjsjjjjjjjoids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf777hsfsgejgdgsjhgd0OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaSthgsjgseroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7vsjgcs770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf762762770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaSteroi888ds.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770Ona825753Steroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770982662OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaaadsjgdiaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770xsgdsOnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770OnhsgishgsaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100000000000000000000000000000008)
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+
+local ReSt = game:GetService("ReplicatedStorage") 
+ ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-200"    
+
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+
+wait(1)
+if Workspace.Frostbite then
+
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-200 Has Spawner",true)
+wait(2)
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "monster2",
+		Asset = "rbxassetid://11914816436",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 60,
+		Delay = math.random(3, 3),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = false,
+		Range = 60,
+		Amount = 0.001
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    isspawned = true
+
+				spawn(function()
+
+					local modeler = workspace["monster2"]
+
+					local faces = modeler.monster2.BillboardGui:GetChildren()
+
+					while wait(Random.new():NextInteger(0.5,0.7)) and isspawned do
+
+						for i,v in pairs(faces) do
+
+							v.Visible = false
+
+						end
+
+						faces[math.random(1,#faces)].Visible = true
+
+					end
+
+				end)
+				
+				 function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+				game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_001.png?raw=true", "A6gaagshsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_002.png?raw=true", "A6uuuuugsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_003.png?raw=true", "A2999900OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_004.png?raw=true", "A6222gsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_005.png?raw=true", "A6gsf7770OueyueyteuueyenaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_006.png?raw=true", "A200OnaStaaaassssaeroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_007.png?raw=true", "A6gsf7770OnaSterkjsjjjjjjjoids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_008.png?raw=true", "A6gsf777hsfsgejgdgsjhgd0OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_009.png?raw=true", "A200OnaSthgsjgseroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_010.png?raw=true", "A6gsf7vsjgcs770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_011.png?raw=true", "A6gsf762762770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_012.png?raw=true", "A200OnaSteroi888ds")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_013.png?raw=true", "A6gsf7770Ona825753Steroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_015.png?raw=true", "A200OnaaadsjgdiaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_016.png?raw=true", "A6gsf7770xsgdsOnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_017.png?raw=true", "A6gsf7770OnhsgishgsaSteroids")
+wait(0.01)
+
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+    game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+    spawn(function()
+
+					repeat wait() until workspace["monster2"]
+
+					while isspawned do wait(math.random(1,5)) 
+
+						local s = workspace["monster2"].monster2["windy"..math.random(1,4)]
+
+						s.RollOffMinDistance = 10
+
+						s.RollOffMaxDistance = 500
+
+						s:Play()
+
+						print("Played "..workspace["monster2"].monster2["windy"..math.random(1,4)].Name)
+
+					end
+
+				end)
+
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    isspawned = false
+
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+	else
+		print("Entity has damaged the player")
+		--jumpscare sound
+coroutine.wrap(function()
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/lv_0_20241228203719.mp3?raw=true", 1, "a200acarejumpscareOmg")
+end)()
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnalolSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnalolSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gaagshsf7770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6uuuuugsf7770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A2999900OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6222gsf7770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770OueyueyteuueyenaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaStaaaassssaeroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770OnaSterkjsjjjjjjjoids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf777hsfsgejgdgsjhgd0OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaSthgsjgseroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7vsjgcs770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf762762770OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaSteroi888ds.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770Ona825753Steroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770982662OnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A200OnaaadsjgdiaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770xsgdsOnaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = "rbxasset://custom_gloop/A6gsf7770OnhsgishgsaSteroids.png"
+wait(0.01)
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100000000000000000000000000000008)
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+
+local ReSt = game:GetService("ReplicatedStorage") 
+ ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-200"    
+
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+end
+					end)()
+
+				end							
+
 if msg == '/frostbite' or msg == '/Frostbite' or msg == '/FB' then
 					coroutine.wrap(function ()
-						if not Workspace.Frostbite then
+					
+						if Workspace.Frostbite then end
 
 local player = game.Players.LocalPlayer
 local Character = player.Character or player.CharacterAdded:Wait()
@@ -517,7 +1805,6 @@ game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
 game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
 wait(8)
 FrostBite:Destroy()
-end
 
 if Workspace.Frostbite then
 
@@ -640,11 +1927,43 @@ end
 
 if msg == '/god' or msg == '/God' or msg == '/GM' then
 					coroutine.wrap(function ()
-					
+										
 					local b = game:GetObjects("rbxassetid://12797521669")[1]
                     b.Parent = Workspace
+                    
+                    while true do wait()
+                    if b then
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+game.Players.LocalPlayer.Character.Humanoid.Health = 100
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 100
+end
+end
                      
-                
 			end)()
 
 		end						
@@ -652,7 +1971,7 @@ if msg == '/god' or msg == '/God' or msg == '/GM' then
 
 if msg == '/ungod' or msg == '/UnGod' or msg == '/UGM' then
 					coroutine.wrap(function ()
-
+									
 						game.Workspace.Frostbite:Destroy()
 					end)()
 
@@ -677,7 +1996,8 @@ local TweenService = game:GetService("TweenService")
 local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
 TW:Play()
 
-if not Workspace.Frostbite then
+
+
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
  
 ---====== Create entity ======---
@@ -714,6 +2034,9 @@ local entity = Spawner.createEntity({
  
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned")
+    if Workspace.Frostbite then
+    game.workspace.Depth:Destroy()
+    end
 end
  
 entity.Debug.OnEntityDespawned = function()
@@ -787,8 +2110,8 @@ end
 ---====== Run entity ======---
  
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
  
@@ -949,6 +2272,7 @@ Survived = true
 end)
 repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_A90.FaceAngry.Visible == true or Survived
 if Survived then return end
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(78)
 local ReSt = game:GetService("ReplicatedStorage") 
  ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-90"
  pcall(function()
@@ -1734,438 +3058,6 @@ end
 end
 end)()
 
---Matcher
-coroutine.wrap(function()
-while true do wait(160)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(212, 255, 0)
-game.Lighting.MainColorCorrection.Contrast = 0.3
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-    local roast = Instance.new("Sound")
-    roast.Parent = workspace
-    roast.Name = "roast"
-    roast.SoundId = "rbxassetid://9125936117"
-    roast.Volume = 1.6
-    roast.Pitch = 3
-    roast:Play()
-    wait(0.6)
-    roast:Destroy()
-    
-    if not Workspace.Frostbite then
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Matcher",
-		Asset = "rbxassetid://12459977063",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 1
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1}
-	},
-	Movement = {
-		Speed = 100,
-		Delay = 2,
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = false,
-		Type = "Blitz",
-		Min = 1,
-		Max = math.random(1, 2),
-		Delay = math.random(10, 30) / 10
-	},
-	Damage = {
-		Enabled = true,
-		Range = 40,
-		Amount = 109
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"Oh... Hello.", "I didn't expect to see you here.", "Let's see what you died to Matcher ?"},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-	-- Variables for the entity
-	local entityModel = entity.Model
-	local main = entityModel:WaitForChild("Main")
-	local attachment = main:WaitForChild("Attachment")
-	local AttachmentSwitch = main:WaitForChild("AttachmentSwitch")
-	local sounds = {
-		footsteps = main:WaitForChild("Footsteps"),
-		playSound = main:WaitForChild("PlaySound"),
-		switch = main:WaitForChild("Switch"),
-		switchBack = main:WaitForChild("SwitchBack")
-	}
-
-	-- Toggle particle emitters and lights within the entityModel
-	-- To switch between green & red state
-	for _, c in attachment:GetChildren() do
-		c.Enabled = (not startOfRebound)
-	end
-	for _, c in AttachmentSwitch:GetChildren() do
-		c.Enabled = startOfRebound
-	end
-
-	-- Play sounds
-	if startOfRebound == true then
-		sounds.footsteps.PlaybackSpeed = 0.35
-		sounds.playSound.PlaybackSpeed = 0.25
-		sounds.switch:Play()
-	else
-		sounds.footsteps.PlaybackSpeed = 0.25
-		sounds.playSound.PlaybackSpeed = 0.16
-		sounds.switchBack:Play()
-	end
-end)
-
----====== Run entity ======---
-
-entity:Run()
-end
-
-if Workspace.Frostbite then
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Matcher",
-		Asset = "rbxassetid://12459977063",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 1
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1}
-	},
-	Movement = {
-		Speed = 100,
-		Delay = 2,
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = false,
-		Type = "Blitz",
-		Min = 1,
-		Max = math.random(1, 2),
-		Delay = math.random(10, 30) / 10
-	},
-	Damage = {
-		Enabled = false,
-		Range = 40,
-		Amount = 99
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"Oh... Hello.", "I didn't expect to see you here.", "Let's see what you died to Matcher ?"},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-	-- Variables for the entity
-	local entityModel = entity.Model
-	local main = entityModel:WaitForChild("Main")
-	local attachment = main:WaitForChild("Attachment")
-	local AttachmentSwitch = main:WaitForChild("AttachmentSwitch")
-	local sounds = {
-		footsteps = main:WaitForChild("Footsteps"),
-		playSound = main:WaitForChild("PlaySound"),
-		switch = main:WaitForChild("Switch"),
-		switchBack = main:WaitForChild("SwitchBack")
-	}
-
-	-- Toggle particle emitters and lights within the entityModel
-	-- To switch between green & red state
-	for _, c in attachment:GetChildren() do
-		c.Enabled = (not startOfRebound)
-	end
-	for _, c in AttachmentSwitch:GetChildren() do
-		c.Enabled = startOfRebound
-	end
-
-	-- Play sounds
-	if startOfRebound == true then
-		sounds.footsteps.PlaybackSpeed = 0.35
-		sounds.playSound.PlaybackSpeed = 0.25
-		sounds.switch:Play()
-	else
-		sounds.footsteps.PlaybackSpeed = 0.25
-		sounds.playSound.PlaybackSpeed = 0.16
-		sounds.switchBack:Play()
-	end
-end)
-
----====== Run entity ======---
-
-entity:Run()
-end
-end
-end
-end)()
-
---Blitz
-coroutine.wrap(function()
-while true do wait(313)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-wait()
-
-if not Workspace.Frostbite then
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Blitz",
-		Asset = "https://github.com/RegularVynixu/Utilities/raw/main/Doors/Entity%20Spawner/Assets/Entities/BackdoorRush.rbxm",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = true,
-			Duration = 1
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1}
-	},
-	Movement = {
-		Speed = 100,
-		Delay = 2,
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Blitz",
-		Min = 1,
-		Max = math.random(1, 2),
-		Delay = math.random(10, 30) / 10
-	},
-	Damage = {
-		Enabled = true,
-		Range = 40,
-		Amount = 125
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"Oh... Hello.", "I didn't expect to see you here.", "Let's see what you died to.", "Oh, one of my favorites.", "She said we should call that one Blitz.", "Well... I'll see you later, right? You'll come back?", "Haha... of course you will."},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-	-- Variables for the entity
-	local entityModel = entity.Model
-	local main = entityModel:WaitForChild("Main")
-	local attachment = main:WaitForChild("Attachment")
-	local AttachmentSwitch = main:WaitForChild("AttachmentSwitch")
-	local sounds = {
-		footsteps = main:WaitForChild("Footsteps"),
-		playSound = main:WaitForChild("PlaySound"),
-		switch = main:WaitForChild("Switch"),
-		switchBack = main:WaitForChild("SwitchBack")
-	}
-
-	-- Toggle particle emitters and lights within the entityModel
-	-- To switch between green & red state
-	for _, c in attachment:GetChildren() do
-		c.Enabled = (not startOfRebound)
-	end
-	for _, c in AttachmentSwitch:GetChildren() do
-		c.Enabled = startOfRebound
-	end
-
-	-- Play sounds
-	if startOfRebound == true then
-		sounds.footsteps.PlaybackSpeed = 0.35
-		sounds.playSound.PlaybackSpeed = 0.25
-		sounds.switch:Play()
-	else
-		sounds.footsteps.PlaybackSpeed = 0.25
-		sounds.playSound.PlaybackSpeed = 0.16
-		sounds.switchBack:Play()
-	end
-end)
-
----====== Run entity ======---
-
-entity:Run()
-end
-
-if Workspace.Frostbite then
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Blitz",
-		Asset = "https://github.com/RegularVynixu/Utilities/raw/main/Doors/Entity%20Spawner/Assets/Entities/BackdoorRush.rbxm",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = true,
-			Duration = 1
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1}
-	},
-	Movement = {
-		Speed = 100,
-		Delay = 2,
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Blitz",
-		Min = 1,
-		Max = math.random(1, 2),
-		Delay = math.random(10, 30) / 10
-	},
-	Damage = {
-		Enabled = false,
-		Range = 40,
-		Amount = 1
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"Oh... Hello.", "I didn't expect to see you here.", "Let's see what you died to.", "Oh, one of my favorites.", "She said we should call that one Blitz.", "Well... I'll see you later, right? You'll come back?", "Haha... of course you will."},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-	-- Variables for the entity
-	local entityModel = entity.Model
-	local main = entityModel:WaitForChild("Main")
-	local attachment = main:WaitForChild("Attachment")
-	local AttachmentSwitch = main:WaitForChild("AttachmentSwitch")
-	local sounds = {
-		footsteps = main:WaitForChild("Footsteps"),
-		playSound = main:WaitForChild("PlaySound"),
-		switch = main:WaitForChild("Switch"),
-		switchBack = main:WaitForChild("SwitchBack")
-	}
-
-	-- Toggle particle emitters and lights within the entityModel
-	-- To switch between green & red state
-	for _, c in attachment:GetChildren() do
-		c.Enabled = (not startOfRebound)
-	end
-	for _, c in AttachmentSwitch:GetChildren() do
-		c.Enabled = startOfRebound
-	end
-
-	-- Play sounds
-	if startOfRebound == true then
-		sounds.footsteps.PlaybackSpeed = 0.35
-		sounds.playSound.PlaybackSpeed = 0.25
-		sounds.switch:Play()
-	else
-		sounds.footsteps.PlaybackSpeed = 0.25
-		sounds.playSound.PlaybackSpeed = 0.16
-		sounds.switchBack:Play()
-	end
-end)
-
----====== Run entity ======---
-
-entity:Run()
-end
-end
-end
-end)()
-
 --AmbushKk
 coroutine.wrap(function()
 wait()
@@ -2174,7 +3066,8 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()     
-if not Workspace.Frostbite then
+if Workspace.Frostbite then end
+
 
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
@@ -2182,7 +3075,7 @@ local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzix
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "laughing ambush",
+		Name = "kkkAmbush",
 		Asset = "rbxassetid://13293983665",
 		HeightOffset = 0
 	},
@@ -2236,6 +3129,11 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
+    
+    if Workspace.Frostbite then
+    game.workspace.kkkAmbush:Destroy()
+    end
+    
     local WarningSound = Instance.new("Sound")
                     WarningSound.Parent = workspace
                     WarningSound.SoundId = "rbxassetid://8680141474"
@@ -2304,8 +3202,8 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
-end
 
+wait(1)
 if Workspace.Frostbite then
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
@@ -2446,7 +3344,8 @@ if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue 
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
-if not Workspace.Frostbite then
+
+
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
 ---====== Create entity ======---
@@ -2507,6 +3406,10 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
+    if Workspace.Frostbite then
+    game.workspace.Barrage:Destroy()
+    end
+    
     game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 247, 8)
 game.Lighting.MainColorCorrection.Contrast = 5
 local tween = game:GetService("TweenService")
@@ -2575,8 +3478,8 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
-end
 
+wait(1)
 if Workspace.Frostbite then
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
@@ -2714,7 +3617,7 @@ end)()
 --A120
 coroutine.wrap(function()
 wait()
-if not Workspace.Frostbite then
+
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
@@ -2794,6 +3697,10 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
+    if Workspace.Frostbite then
+    game.Workspace["A-120"]:Destroy()
+    end
+    
     wait(5)
 local Speed = 12
 
@@ -2808,6 +3715,10 @@ local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
 local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
 Dumy.Parent = workspace
 Matchers.Parent = workspace
+
+if Workspace.Frostbite then
+    game.Workspace.Insidea:Destroy()
+  end
 
 local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
 
@@ -2954,6 +3865,10 @@ local Dumy = game:GetObjects("rbxassetid://96223289630255")[1]
 local Matchers = game:GetObjects("rbxassetid://111920803011003")[1]
 Dumy.Parent = workspace
 Matchers.Parent = workspace
+
+if Workspace.Frostbite then
+    game.Workspace.Insidea:Destroy()
+  end
 
 local primary_part = Matchers:FindFirstChildWhichIsA("BasePart") or Matchers:FindFirstChildWhichIsA("Part")
 
@@ -3168,28 +4083,11 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
-end
 
+wait(1)
 if Workspace.Frostbite then
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-120 Has Spawner",true)
 wait(2)
 ---====== Create entity ======---
@@ -3394,7 +4292,6 @@ wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
 
-if not Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -3432,6 +4329,10 @@ local entity = Spawner.createEntity({
 ---====== Debug ======---
 
 entity.Debug.OnEntitySpawned = function()
+if Workspace.Frostbite then
+workspace["A-15"]:Destroy()
+end
+
 end
 
 entity.Debug.OnEntityDespawned = function()
@@ -3467,8 +4368,8 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
@@ -3556,7 +4457,8 @@ wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait()
 
-if not Workspace.Frostbite then
+
+
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 
 
@@ -3641,6 +4543,9 @@ end
        
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned:")   
+    if Workspace.Frostbite then
+    workspace["A-35"]:Destroy()
+    end
 end
 
 entity.Debug.OnEntityDespawned = function()
@@ -3671,8 +4576,8 @@ end
 
 -- Run the created entity
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 
@@ -3797,22 +4702,22 @@ end)()
 coroutine.wrap(function()
 while true do wait(108)
 
-if not Workspace.Frostbite then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbshripper"))()
-end
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/testhshs/refs/heads/main/hshsbsbsendpper"))()
+
+wait(1)
 if Workspace.Frostbite then
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 26 and roomValue <= 45) or (roomValue >= 49 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
- game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+ 
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
 ---====== Create entity ======---
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Ripper",
+		Name = "Rippera",
 		Asset = "rbxassetid://13942047057",
 		HeightOffset = 0
 	},
@@ -4145,7 +5050,8 @@ local TweenService = game:GetService("TweenService")
 local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
 TW:Play()
 
-if not Workspace.Frostbite then
+
+
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
  
 ---====== Create entity ======---
@@ -4182,6 +5088,9 @@ local entity = Spawner.createEntity({
  
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned")
+    if Workspace.Frostbite then
+    workspace.Depth:Destroy()
+    end
 end
  
 entity.Debug.OnEntityDespawned = function()
@@ -4255,8 +5164,8 @@ end
 ---====== Run entity ======---
  
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
  
@@ -4378,7 +5287,8 @@ while true do wait(213)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 49 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 99 and roomValue <= 101)) then
 wait()
-if not Workspace.Frostbite then
+if Workspace.Frostbite then end
+
 local TweenService = game:GetService("TweenService")
 	local LocalPlayer = game.Players.LocalPlayer
 	local UI = game.Players.LocalPlayer.PlayerGui.MainUI
@@ -4439,7 +5349,6 @@ end)
 wait(1)
 
 game.Players.LocalPlayer.Character.Humanoid:TakeDamage(78)
-end
 
 if Workspace.Frostbite then
 local TweenService = game:GetService("TweenService")
@@ -4512,7 +5421,7 @@ coroutine.wrap(function()
 wait(140)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
-if not Workspace.Frostbite then
+if Workspace.Frostbite then end
 
 local player = game.Players.LocalPlayer
 local Character = player.Character or player.CharacterAdded:Wait()
@@ -4626,123 +5535,6 @@ game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
 game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
 wait(8)
 FrostBite:Destroy()
-end
-
-if Workspace.Frostbite then
-
-local player = game.Players.LocalPlayer
-local Character = player.Character or player.CharacterAdded:Wait()
-
-local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
-local FrostBite = game:GetObjects("rbxassetid://12797521669")[1]
- 
-local num=0
-
-local Static = FrostBite.FrostyNew:FindFirstChild("Static Effect")
-if currentLoadedRoom:FindFirstChild("Nodes") then
-   num = math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
-end
-
-FrostBite.FrostyNew.CFrame=(
-	num==0 and currentLoadedRoom[currentLoadedRoom.Name] or currentLoadedRoom.Nodes[num]
-).CFrame+Vector3.new(0,10,0)
-
-FrostBite.Parent=workspace
-FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = false
-local hum=game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-
-Static:Play()
-wait(5)
-game.TweenService:Create(Static,TweenInfo.new(2),{Pitch = 0}):Play()
-wait(2.5)
-game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = true
-game.workspace.Frostbite.FrostyNew.Ambience:Play()
-game.workspace.Frostbite.FrostyNew.AmbienceFar:Play()
-local ColorCorrectionEffect0 = Instance.new("ColorCorrectionEffect")
-			ColorCorrectionEffect0.Parent = game:GetService("Lighting")
-			ColorCorrectionEffect0.TintColor = Color3.new(1, 1, 1)
-			ColorCorrectionEffect0.Enabled = true
-game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(0.00784314, 0.188235, 1)}):Play()
-local ultimaroom = game.ReplicatedStorage.GameData.LatestRoom.Value
-
-while true do
-wait(1)
-if game.workspace.Frostbite.FrostyNew then
-local hum = Character:FindFirstChildOfClass("Humanoid")
-					if hum then
-						local lighter = Character:FindFirstChild("Lighter")
-						if lighter then
-							local EfH = lighter:FindFirstChild("EffectsHolder")
-							if EfH then
-								local asdasdasd = EfH.AttachOn 
-								if asdasdasd:FindFirstChildWhichIsA("ParticleEmitter").Enabled == false then
-									hum:TakeDamage(5)
-								end
-								if not EfH then
-				            	hum:TakeDamage(0)
-			               	end
-							end
-
-				 	  else
-						hum:TakeDamage(0)
-						end
-					else
-						hum:TakeDamage(0)
-					end
-					if hum.Health < 10 then
-						firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to who you call FrostBite...","He will spawn in the middle and start freezing the room.","Find something that has heat to keep you warm!"}, "Blue")
-						wait(0.01)
-						game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Frostbite"
-					end
-	
-if ultimaroom ~= game.ReplicatedStorage.GameData.LatestRoom.Value then break end
-
-end
-end
-
-			local Sound55 = Instance.new("Sound")
-			local FlangeSoundEffect1 = Instance.new("FlangeSoundEffect")
-			local DistortionSoundEffect2 = Instance.new("DistortionSoundEffect")
-			FlangeSoundEffect3 = Instance.new("FlangeSoundEffect")
-			Sound55.Name = "ahhhhhh"
-			Sound55.MaxDistance = 500
-			Sound55.Pitch = 0.23999999463558197
-			Sound55.PlaybackSpeed = 0.23999999463558197
-			Sound55.Parent = workspace
-			Sound55.RollOffMode = Enum.RollOffMode.InverseTapered
-			Sound55.SoundId = "rbxassetid://6305809364"
-			FlangeSoundEffect1.Parent = Sound55
-			FlangeSoundEffect1.Rate = 0.75
-			FlangeSoundEffect1.Depth = 1
-			FlangeSoundEffect1.Mix = 0.7300000190734863
-			DistortionSoundEffect2.Parent = Sound55
-			DistortionSoundEffect2.Level = 0.9800000190734863
-			FlangeSoundEffect3.Parent = Sound55
-			FlangeSoundEffect3.Rate = 0.25
-			FlangeSoundEffect3.Depth = 1
-			FlangeSoundEffect3.Mix = 1
-			Sound55:Play()
-game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
-game.workspace.Frostbite.FrostyNew.Ambience:Stop()
-game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
-
-
-game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
-wait(8)
-FrostBite:Destroy()
-end
 end)()
 
 --Frostbitea
@@ -4808,7 +5600,7 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-if not Workspace.Frostbite then
+if Workspace.Frostbite then end
 
 local player = game.Players.LocalPlayer
 local Character = player.Character or player.CharacterAdded:Wait()
@@ -4922,123 +5714,8 @@ game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
 game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
 wait(8)
 FrostBite:Destroy()
-end
-
-if Workspace.Frostbite then
-
-local player = game.Players.LocalPlayer
-local Character = player.Character or player.CharacterAdded:Wait()
-
-local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
-local FrostBite = game:GetObjects("rbxassetid://12797521669")[1]
- 
-local num=0
-
-local Static = FrostBite.FrostyNew:FindFirstChild("Static Effect")
-if currentLoadedRoom:FindFirstChild("Nodes") then
-   num = math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
-end
-
-FrostBite.FrostyNew.CFrame=(
-	num==0 and currentLoadedRoom[currentLoadedRoom.Name] or currentLoadedRoom.Nodes[num]
-).CFrame+Vector3.new(0,10,0)
-
-FrostBite.Parent=workspace
-FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = false
-local hum=game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-
-Static:Play()
-wait(5)
-game.TweenService:Create(Static,TweenInfo.new(2),{Pitch = 0}):Play()
-wait(2.5)
-game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = true
-game.workspace.Frostbite.FrostyNew.Ambience:Play()
-game.workspace.Frostbite.FrostyNew.AmbienceFar:Play()
-local ColorCorrectionEffect0 = Instance.new("ColorCorrectionEffect")
-			ColorCorrectionEffect0.Parent = game:GetService("Lighting")
-			ColorCorrectionEffect0.TintColor = Color3.new(1, 1, 1)
-			ColorCorrectionEffect0.Enabled = true
-game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(0.00784314, 0.188235, 1)}):Play()
-local ultimaroom = game.ReplicatedStorage.GameData.LatestRoom.Value
-
-while true do
-wait(1)
-if game.workspace.Frostbite.FrostyNew then
-local hum = Character:FindFirstChildOfClass("Humanoid")
-					if hum then
-						local lighter = Character:FindFirstChild("Lighter")
-						if lighter then
-							local EfH = lighter:FindFirstChild("EffectsHolder")
-							if EfH then
-								local asdasdasd = EfH.AttachOn 
-								if asdasdasd:FindFirstChildWhichIsA("ParticleEmitter").Enabled == false then
-									hum:TakeDamage(5)
-								end
-								if not EfH then
-				            	hum:TakeDamage(0)
-			               	end
-							end
-
-				 	  else
-						hum:TakeDamage(0)
-						end
-					else
-						hum:TakeDamage(0)
-					end
-					if hum.Health < 10 then
-						firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to who you call FrostBite...","He will spawn in the middle and start freezing the room.","Find something that has heat to keep you warm!"}, "Blue")
-						wait(0.01)
-						game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Frostbite"
-					end
-	
-if ultimaroom ~= game.ReplicatedStorage.GameData.LatestRoom.Value then break end
-
-end
-end
-
-			local Sound55 = Instance.new("Sound")
-			local FlangeSoundEffect1 = Instance.new("FlangeSoundEffect")
-			local DistortionSoundEffect2 = Instance.new("DistortionSoundEffect")
-			FlangeSoundEffect3 = Instance.new("FlangeSoundEffect")
-			Sound55.Name = "ahhhhhh"
-			Sound55.MaxDistance = 500
-			Sound55.Pitch = 0.23999999463558197
-			Sound55.PlaybackSpeed = 0.23999999463558197
-			Sound55.Parent = workspace
-			Sound55.RollOffMode = Enum.RollOffMode.InverseTapered
-			Sound55.SoundId = "rbxassetid://6305809364"
-			FlangeSoundEffect1.Parent = Sound55
-			FlangeSoundEffect1.Rate = 0.75
-			FlangeSoundEffect1.Depth = 1
-			FlangeSoundEffect1.Mix = 0.7300000190734863
-			DistortionSoundEffect2.Parent = Sound55
-			DistortionSoundEffect2.Level = 0.9800000190734863
-			FlangeSoundEffect3.Parent = Sound55
-			FlangeSoundEffect3.Rate = 0.25
-			FlangeSoundEffect3.Depth = 1
-			FlangeSoundEffect3.Mix = 1
-			Sound55:Play()
-game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
-game.workspace.Frostbite.FrostyNew.Ambience:Stop()
-game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
 
 
-game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
-wait(8)
-FrostBite:Destroy()
-end
 end)()
 
 --Frostbiteb
@@ -5091,7 +5768,8 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-if not Workspace.Frostbite then
+if Workspace.Frostbite then end
+
 
 local player = game.Players.LocalPlayer
 local Character = player.Character or player.CharacterAdded:Wait()
@@ -5205,123 +5883,8 @@ game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
 game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
 wait(8)
 FrostBite:Destroy()
-end
-
-if Workspace.Frostbite then
-
-local player = game.Players.LocalPlayer
-local Character = player.Character or player.CharacterAdded:Wait()
-
-local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
-local FrostBite = game:GetObjects("rbxassetid://12797521669")[1]
- 
-local num=0
-
-local Static = FrostBite.FrostyNew:FindFirstChild("Static Effect")
-if currentLoadedRoom:FindFirstChild("Nodes") then
-   num = math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
-end
-
-FrostBite.FrostyNew.CFrame=(
-	num==0 and currentLoadedRoom[currentLoadedRoom.Name] or currentLoadedRoom.Nodes[num]
-).CFrame+Vector3.new(0,10,0)
-
-FrostBite.Parent=workspace
-FrostBite.FrostyNew.Part.ParticleEmitter.Enabled = false
-local hum=game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-
-Static:Play()
-wait(5)
-game.TweenService:Create(Static,TweenInfo.new(2),{Pitch = 0}):Play()
-wait(2.5)
-game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = true
-game.workspace.Frostbite.FrostyNew.Ambience:Play()
-game.workspace.Frostbite.FrostyNew.AmbienceFar:Play()
-local ColorCorrectionEffect0 = Instance.new("ColorCorrectionEffect")
-			ColorCorrectionEffect0.Parent = game:GetService("Lighting")
-			ColorCorrectionEffect0.TintColor = Color3.new(1, 1, 1)
-			ColorCorrectionEffect0.Enabled = true
-game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(0.00784314, 0.188235, 1)}):Play()
-local ultimaroom = game.ReplicatedStorage.GameData.LatestRoom.Value
-
-while true do
-wait(1)
-if game.workspace.Frostbite.FrostyNew then
-local hum = Character:FindFirstChildOfClass("Humanoid")
-					if hum then
-						local lighter = Character:FindFirstChild("Lighter")
-						if lighter then
-							local EfH = lighter:FindFirstChild("EffectsHolder")
-							if EfH then
-								local asdasdasd = EfH.AttachOn 
-								if asdasdasd:FindFirstChildWhichIsA("ParticleEmitter").Enabled == false then
-									hum:TakeDamage(5)
-								end
-								if not EfH then
-				            	hum:TakeDamage(0)
-			               	end
-							end
-
-				 	  else
-						hum:TakeDamage(0)
-						end
-					else
-						hum:TakeDamage(0)
-					end
-					if hum.Health < 10 then
-						firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to who you call FrostBite...","He will spawn in the middle and start freezing the room.","Find something that has heat to keep you warm!"}, "Blue")
-						wait(0.01)
-						game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Frostbite"
-					end
-	
-if ultimaroom ~= game.ReplicatedStorage.GameData.LatestRoom.Value then break end
-
-end
-end
-
-			local Sound55 = Instance.new("Sound")
-			local FlangeSoundEffect1 = Instance.new("FlangeSoundEffect")
-			local DistortionSoundEffect2 = Instance.new("DistortionSoundEffect")
-			FlangeSoundEffect3 = Instance.new("FlangeSoundEffect")
-			Sound55.Name = "ahhhhhh"
-			Sound55.MaxDistance = 500
-			Sound55.Pitch = 0.23999999463558197
-			Sound55.PlaybackSpeed = 0.23999999463558197
-			Sound55.Parent = workspace
-			Sound55.RollOffMode = Enum.RollOffMode.InverseTapered
-			Sound55.SoundId = "rbxassetid://6305809364"
-			FlangeSoundEffect1.Parent = Sound55
-			FlangeSoundEffect1.Rate = 0.75
-			FlangeSoundEffect1.Depth = 1
-			FlangeSoundEffect1.Mix = 0.7300000190734863
-			DistortionSoundEffect2.Parent = Sound55
-			DistortionSoundEffect2.Level = 0.9800000190734863
-			FlangeSoundEffect3.Parent = Sound55
-			FlangeSoundEffect3.Rate = 0.25
-			FlangeSoundEffect3.Depth = 1
-			FlangeSoundEffect3.Mix = 1
-			Sound55:Play()
-game.workspace.Frostbite.FrostyNew.Part.ParticleEmitter.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.face.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.Heylois.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrail.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.smoke.Enabled = true
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai2l.Enabled = false
-game.workspace.Frostbite.FrostyNew.Attachment.BlackTrai3l.Enabled = false
-game.workspace.Frostbite.FrostyNew.Ambience:Stop()
-game.workspace.Frostbite.FrostyNew.AmbienceFar:Stop()
 
 
-game.TweenService:Create(ColorCorrectionEffect0,TweenInfo.new(7),{TintColor = Color3.new(1, 1, 1)}):Play()
-wait(8)
-FrostBite:Destroy()
-end
 end)()
 
 --Rebound
@@ -5389,7 +5952,6 @@ scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
 scare.Volume = 5
 
-if not Workspace.Frostbite then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
@@ -5403,8 +5965,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/h
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
-end
 
+wait(1)
 if Workspace.Frostbite then
 loadstring(game:HttpGet("https://gist.githubusercontent.com/huyhoanphuc/80cc9e876d7bf109e4424d6787bc17b8/raw/fd40bf2ceca2c1d9a1dc8c31ead3d96b08f032e8/gistfile1.txt"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
@@ -5546,7 +6108,8 @@ scare.SoundId = "rbxassetid://5567523008"
 scare.PlaybackSpeed = 3
 scare.Volume = 5
 
-if not Workspace.Frostbite then
+
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thh"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
@@ -5560,8 +6123,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/h
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/th/refs/heads/main/thha"))()
-end
 
+wait(1)
 if Workspace.Frostbite then
 loadstring(game:HttpGet("https://gist.githubusercontent.com/huyhoanphuc/80cc9e876d7bf109e4424d6787bc17b8/raw/fd40bf2ceca2c1d9a1dc8c31ead3d96b08f032e8/gistfile1.txt"))()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
@@ -5579,387 +6142,6 @@ loadstring(game:HttpGet("https://gist.githubusercontent.com/huyhoanphuc/da520256
 end
 end)()
 
---Deergod
-coroutine.wrap(function()
-while true do wait(219)
-local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
-if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
-wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-
-if not Workspace.Frostbite then
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-
-
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Deer God", -- Custom name of your entity
-    Model = "rbxassetid://12805689281", -- Can be GitHub file or rbxassetid
-    Speed = 25, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 5,
-    CanKill = true,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 100,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = true,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        true, -- Enabled/Disabled
-        80 -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 5,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {22.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        50, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11394027278", -- Image1 url
-            Image2 = "rbxassetid://11394027278", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "10483837590", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(48, 25, 52), -- Color
-            },
-            Tease = {
-                false, -- Enabled/Disabled
-                Min = 1,
-                Max = 1,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-end
-
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 1
-match.SoundId = "rbxassetid://9043357758"
-match.Volume = 1
-match.Name = "DeerGodEscape"
-match.Parent = workspace
-match:Play()
-
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 0.1
-match.SoundId = "rbxassetid://635822826"
-match.Volume = 0.8
-match.Name = "DeerGodEnd"
-match.Parent = workspace
-match:Play()
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "Last Chance To Look Away",
-    Desc = "Why You Are Running?",
-    Reason = "Survive the rare Entity Called Deer God",
-    Image = "rbxassetid://11395249132"
-})
-Followed:Destroy()
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Folloed = Instance.new("Sound")
-    Folloed.SoundId = GitAud(soundlink, filename)
-    Folloed.Parent = workspace
-    Folloed.Volume = 2
-    Folloed:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20241010_360p_12f_20241010_010658.mp3?raw=true", 1, "Folloed")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-    local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
-
-for i,v in next, getgc(false) do
-    if typeof(v) == "function" then
-        local info = getinfo(v)
-        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
-            func = v
-            break
-        end
-    end
-end
-
-local function DeathHint(hints, type: string)
-    setupval(func, 1, hints)
-    if type ~= nil then
-        setupval(func, 2, type)
-    end
-end
-
-DeathHint({
-    "You died to whom you Call Deer God",
-    "Closets Wont work! So try running",
-    "Its form is incomprehensible to a human upclose...",
-    "..-so avoid Eye Contact"
-}, "Blue") -- "Blue" or "Yellow"
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
-end
-
-if Workspace.Frostbite then
-local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
-
-
--- Create entity
-local entity = Spawner.createEntity({
-    CustomName = "Deer God", -- Custom name of your entity
-    Model = "rbxassetid://12805689281", -- Can be GitHub file or rbxassetid
-    Speed = 25, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 5,
-    CanKill = false,
-    NoDieOnCrouching = false,
-    NoHiding = false,
-    AntiCrucifix = false,
-    KillRange = 100,
-    OneRoom = false,
-    DieOnLook = false,
-    BreakLights = true,
-    BackwardsMovement = false,
-     MovementDeath = {
-        false, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
-    },
-    FlickerLights = {
-        true, -- Enabled/Disabled
-        80 -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 5,
-    },
-    CamShake = {
-        true, -- Enabled/Disabled
-        {22.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
-        50, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled/Disabled
-        {
-            Type = "1", -- "Normal" or 1 | "Pop" or 2 | "endlessdoorsrebound" or "Rebound" or 3 | More coming Soon
-            Image1 = "rbxassetid://11394027278", -- Image1 url
-            Image2 = "rbxassetid://11394027278", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                "0", -- SoundId Link or Roblox ID
-                { Volume = 0 }, -- Sound properties
-            },
-            Sound2 = {
-                "10483837590", -- SoundId Link or Roblox ID
-                { Volume = 3 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled/Disabled
-                Color3.fromRGB(48, 25, 52), -- Color
-            },
-            Tease = {
-                false, -- Enabled/Disabled
-                Min = 1,
-                Max = 1,
-            },
-        },
-    },
-    Color = 'GuidingLight', -- CuriousLight ( Yellow ) | GuidingLight ( Blue )
-    DiffrentMessages = false,
-    CustomDialog = {  
-        {"Claim has seen you.", "It will consume anyone on sight.", "It takes a bit to fully spawn in", "so you can use that to your advantage."}, -- Death Messages
-        {"Stop Dieing"},
-        {"Bruh", "Use what you have learned from Rush!"},
-        {"It seems like Template is causing quite the ruckus...", "Hide in a closet or bed as quickly as possible!"},
-         {"I have told You What to do", "YOU JUST HAVE A SKILL ISSUE"}
-    }
-})
-
------[[ Advanced Sctipting ]]-----
-
-entity.Debug.OnEntityMoving = function(Invincible,Hiding,plrCollisionPoint)
-print("Invincible: "..tostring(Invincible))
-print("Player to Entity Collision (None hiding Point): "..tostring(plrCollisionPoint))
-print("Hiding: "..tostring(Hiding))
-end
-       
-entity.Debug.OnEntitySpawned = function()
-    print("Entity has spawned:")
-end
-
-entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned:")
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 1
-match.SoundId = "rbxassetid://9043357758"
-match.Volume = 1
-match.Name = "DeerGodEscape"
-match.Parent = workspace
-match:Play()
-
-local match = Instance.new("Sound")
-match.PlaybackSpeed = 0.1
-match.SoundId = "rbxassetid://635822826"
-match.Volume = 0.8
-match.Name = "DeerGodEnd"
-match.Parent = workspace
-match:Play()
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "Last Chance To Look Away",
-    Desc = "Why You Are Running?",
-    Reason = "Survive the rare Entity Called Deer God",
-    Image = "rbxassetid://11395249132"
-})
-Followed:Destroy()
-end
-
-entity.Debug.OnEntityStartMoving = function()
-    print("Entity has started moving:")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Folloed = Instance.new("Sound")
-    Folloed.SoundId = GitAud(soundlink, filename)
-    Folloed.Parent = workspace
-    Folloed.Volume = 2
-    Folloed:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/hgss/blob/main/km_20241010_360p_12f_20241010_010658.mp3?raw=true", 1, "Folloed")
-end
-
-entity.Debug.OnEntityFinishedRebound = function()
-    print("Entity has finished rebound:")
-end
-
-entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
-    print("Entity:", "has entered room:",room)
-end
-
-entity.Debug.OnLookAtEntity = function()
-    print("Player has looked at entity:")
-end
-
-entity.Debug.OnDeath = function()
-    warn("Player has died.")
-    local func, setupval, getinfo, typeof, getgc, next = nil, debug.setupvalue or setupvalue, debug.getinfo or getinfo, typeof, getgc, next
-
-for i,v in next, getgc(false) do
-    if typeof(v) == "function" then
-        local info = getinfo(v)
-        if info.currentline == 54 and info.nups == 2 and info.is_vararg == 0 then
-            func = v
-            break
-        end
-    end
-end
-
-local function DeathHint(hints, type: string)
-    setupval(func, 1, hints)
-    if type ~= nil then
-        setupval(func, 2, type)
-    end
-end
-
-DeathHint({
-    "You died to whom you Call Deer God",
-    "Closets Wont work! So try running",
-    "Its form is incomprehensible to a human upclose...",
-    "..-so avoid Eye Contact"
-}, "Blue") -- "Blue" or "Yellow"
-end
-
-------------------------
-
--- Run the created entity
-Spawner.runEntity(entity)
-end
-end
-end
-end)()
-
 --Trauma
 coroutine.wrap(function()
 while true do wait(569)
@@ -5968,7 +6150,6 @@ if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue 
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
-if not Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -6007,8 +6188,9 @@ local entity = Spawner.createEntity({
 ---====== Debug ======---
 
 entity.Debug.OnEntitySpawned = function()
-wait(30)
+if Workspace.Frostbite then
 game.workspace.Trauma:Destroy()
+end
 end
 
 entity.Debug.OnEntityDespawned = function()
@@ -6053,8 +6235,8 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
@@ -6153,7 +6335,8 @@ if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue 
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
-if not Workspace.Frostbite then
+if Workspace.Frostbite then end
+
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -6192,8 +6375,9 @@ local entity = Spawner.createEntity({
 ---====== Debug ======---
 
 entity.Debug.OnEntitySpawned = function()
-wait(30)
-game.workspace.G95:Destroy()
+if Workspace.Frostbite then
+game.workspace["G95"]:Destroy()
+end
 end
 
 entity.Debug.OnEntityDespawned = function()
@@ -6238,8 +6422,8 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
@@ -6339,7 +6523,8 @@ if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue 
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 wait(2)
-if not Workspace.Frostbitep then
+
+
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
 ---====== Create entity ======---
@@ -6378,8 +6563,9 @@ local entity = Spawner.createEntity({
 ---====== Debug ======---
 
 entity.Debug.OnEntitySpawned = function()
-wait(30)
-game.workspace.G95:Destroy()
+if Workspace.Frostbite then
+game.workspace["Maniack Rush"]:Destroy()
+end
 end
 
 entity.Debug.OnEntityDespawned = function()
@@ -6416,8 +6602,8 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
 
@@ -6508,13 +6694,14 @@ if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue 
 wait()
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
-if not Workspace.Frostbite then
+
+
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 
 
 -- Create entity
 local entity = Spawner.createEntity({
-    CustomName = "GrandFatherClockDread", -- Custom name of your entity
+    CustomName = "ClockD", -- Custom name of your entity
     Model = "rbxassetid://14700391347", -- Can be GitHub file or rbxassetid
     Speed = 0, -- Percentage, 100 = default Rush speed
     DelayTime = 3.40, -- Time before starting cycles (seconds)
@@ -6593,6 +6780,10 @@ end
        
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned:")
+    if Workspace.Frostbite then
+    workspace.ClockD:Destroy()
+    end
+    
 wait(1)
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
@@ -6668,8 +6859,8 @@ end
 
 -- Run the created entity
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 
@@ -6807,7 +6998,7 @@ tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 
 local TweenService = game:GetService("TweenService")
 imageLabel.Visible = false
 game.workspace.GrandFatherClockDread:Destroy()
-loadstring(game:HttpGet("https://pastefy.app/F1t06D94/raw"))()
+loadstring(game:HttpGet("https://pastefy.app/9qxMhg1y/raw"))()
 end
 
 entity.Debug.OnEntityFinishedRebound = function()
@@ -6841,7 +7032,6 @@ local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
 
-if not Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 0, 0)
 game.Lighting.MainColorCorrection.Contrast = 1
@@ -6937,11 +7127,9 @@ end
        
 entity.Debug.OnEntitySpawned = function()
     print("Entity has spawned:")
-    while true do wait(0.1)
-    game.workspace.Wh1t3.whiteyNew.Anchored = true
+    if Workspace.Frostbite then
+    game.Workspace["Wh1t3"]:Destroy()
     end
-    wait(30)
-    game.workspace.Wh1t3:Destroy()
 end
 
 entity.Debug.OnEntityDespawned = function()
@@ -6972,8 +7160,8 @@ end
 
 -- Run the created entity
 Spawner.runEntity(entity)
-end
 
+wait(1)
 if Workspace.Frostbite then
 local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd/DoorSuff/main/OtherSuff/DoorEntitySpawn%2BSource'))()
 game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 0, 0)
