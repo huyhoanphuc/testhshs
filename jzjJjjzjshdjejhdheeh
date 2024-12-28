@@ -1740,7 +1740,7 @@ end)()
 
 --Matcher
 coroutine.wrap(function()
-while true do wait(1)
+while true do wait(160)
 local roomValue = game.ReplicatedStorage.GameData.LatestRoom.Value
 if not ((roomValue >= 30 and roomValue <= 45) or (roomValue >= 48 and roomValue <= 55)  or (roomValue >= 72 and roomValue <= 80) or (roomValue >= 98 and roomValue <= 101)) then
 wait()
