@@ -8,7 +8,7 @@ local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzix
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Ripper",
+		Name = "Rippers",
 		Asset = "rbxassetid://13942047057",
 		HeightOffset = 0
 	},
@@ -62,6 +62,9 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
+if workspace.Frostbite then 
+workspace.Rippers:Destroy()
+end
     workspace.Ripper.RushNew.Ambush:Stop()
     
     function GitPNG(GithubImg, ImageName)
