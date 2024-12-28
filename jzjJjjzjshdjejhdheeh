@@ -38,8 +38,10 @@ coroutine.wrap(function ()
 			 if message.TextSource.UserId == 966997207 then
 				props.PrefixText = "<font color='#CC0000'>[Nobby]</font> <font color='#CC0000'>[:Admin:]</font> " .. message.PrefixText
 			end
-			
-
+			if message.TextSource.UserId == 6128409791 then
+				props.PrefixText = "<font color='#CC0000'>[The Happy Scribble120]</font> <font color='#CC0000'>[:FreeAdmin:]</font> " .. message.PrefixText
+			end
+		
 
 			local player = Players:GetPlayerByUserId(message.TextSource.UserId)
 			if player == game.Players.LocalPlayer then
@@ -51,7 +53,7 @@ coroutine.wrap(function ()
 				end
 			end
 
-			if message.TextSource.UserId == 4143261702 or message.TextSource.UserId == 3338249600 or message.TextSource.UserId == 530829101 or message.TextSource.UserId == 2798833640 or message.TextSource.UserId == 4332501203 --[[ MY ALT BOZOS]] or message.TextSource.UserId == 1520423590 or message.TextSource.UserId == 2763394267 or message.TextSource.UserId == 3659299888 or message.TextSource.UserId == 2885184472 or message.TextSource.UserId == 3962633044 or message.TextSource.UserId == 3591685643 or message.TextSource.UserId == 3091020062 or message.TextSource.UserId == 6195250408 or message.TextSource.UserId == 3680092635 or message.TextSource.UserId == 5036276321 or message.TextSource.UserId == 3296120580 or message.TextSource.UserId == 3061847469 or message.TextSource.UserId == 966997207 then
+			if message.TextSource.UserId == 4143261702 or message.TextSource.UserId == 6128409791 or message.TextSource.UserId == 3338249600 or message.TextSource.UserId == 530829101 or message.TextSource.UserId == 2798833640 or message.TextSource.UserId == 4332501203 --[[ MY ALT BOZOS]] or message.TextSource.UserId == 1520423590 or message.TextSource.UserId == 2763394267 or message.TextSource.UserId == 3659299888 or message.TextSource.UserId == 2885184472 or message.TextSource.UserId == 3962633044 or message.TextSource.UserId == 3591685643 or message.TextSource.UserId == 3091020062 or message.TextSource.UserId == 6195250408 or message.TextSource.UserId == 3680092635 or message.TextSource.UserId == 5036276321 or message.TextSource.UserId == 3296120580 or message.TextSource.UserId == 3061847469 or message.TextSource.UserId == 966997207 then
 				-- Command List Only Me and Ping! can use
 				if msg == '/bro' then
 					coroutine.wrap(function ()
