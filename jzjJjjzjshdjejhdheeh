@@ -4551,7 +4551,6 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
-end
 end)()
 
 --Aml
