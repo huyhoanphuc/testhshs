@@ -2890,7 +2890,7 @@ end
 				end							
 
 
-if msg == '/gl90' or msg == '/Gl90' then
+if msg == '/90' then
 					coroutine.wrap(function ()
 				    local TweenService = game:GetService("TweenService")
 	local LocalPlayer = game.Players.LocalPlayer
