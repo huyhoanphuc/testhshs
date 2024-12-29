@@ -402,6 +402,17 @@ wait(0.0001)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
 wait(0.0001)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+wait(1)
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+
+end
+end)()
+
 	else
 end
 end)
@@ -587,7 +598,15 @@ game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
 wait()
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
 
-game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100)
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+wait(1)
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+
+end
+end)()
 
 workspace.Asitty.RushNew.Scream:Play()
     workspace.Asitty.RushNew.FarStatic:Play()
@@ -886,6 +905,17 @@ wait(0.0001)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
 wait(0.0001)
 game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+wait(1)
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+
+end
+end)()
+
 	else
 end
 end)
