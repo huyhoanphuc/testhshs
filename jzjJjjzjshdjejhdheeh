@@ -687,6 +687,8 @@ end)
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
+		game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+		
 		firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to an enitity designated as A-60", "It can Appear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, "Blue")
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
@@ -1190,6 +1192,7 @@ end)
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
+		game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
 		firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to an enitity designated as A-60", "It can Appear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, "Blue")
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
@@ -1668,6 +1671,9 @@ end)
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
+		
+		game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+		
 		function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
