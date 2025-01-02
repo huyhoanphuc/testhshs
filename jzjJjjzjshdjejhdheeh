@@ -401,14 +401,34 @@ end
 				
 if msg == '/60' or msg == '/a-60' or msg == '/a60' then
 					coroutine.wrap(function ()
-						local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+						
+--MultiMonster
+coroutine.wrap(function()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 5
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/th/blob/main/lv_0_20241230200615.mp3?raw=true", 1, " A60jumpscarekill")
+
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
 ---====== Create entity ======---
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Asitty",
-		Asset = "rbxassetid://16167834229",
+		Name = "MultiMonter",
+		Asset = "rbxassetid://11463891411",
 		HeightOffset = 0
 	},
 	Lights = {
@@ -424,36 +444,36 @@ local entity = spawner.Create({
 	},
 	CameraShake = {
 		Enabled = true,
-		Range = 80,
-		Values = {50.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+		Range = 100,
+		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 826,
-		Delay = math.random(5, 5),
+		Speed = 100,
+		Delay = math.random(6, 6.5),
 		Reversed = false
 	},
 	Rebounding = {
-		Enabled = true,
+		Enabled = false,
 		Type = "Ambush",
-		Min = 5,
-		Max = 5,
-		Delay = 0.2
+		Min = 2,
+		Max = 3,
+		Delay = 2.5
 	},
 	Damage = {
 		Enabled = true,
-		Range = 50,
-		Amount = 1
+		Range = 100,
+		Amount = 0.1
 	},
 	Crucifixion = {
 		Enabled = false,
-		Range = 40,
+		Range = 10,
 		Resist = false,
 		Break = true
 	},
 	Death = {
 		Type = "Curious",
-		Hints = {"You die to A-60", "...", "...", "..."},
-		Cause = ""
+		Hints = {"non"},
+		Cause = "A-60"
 	}
 })
 
@@ -461,68 +481,184 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
-    if game.Workspace.Frostbite then
-    game.Workspace.Frostbite:Destroy()
-  end
+    game.workspace.MultiMonster.Head.BlackTrail.Texture = "rbxassetid://10587729749"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+end)
 
-    workspace.Asitty.RushNew.Scream:Play()
-    workspace.Asitty.RushNew.FarStatic:Play()
-    workspace.Asitty.RushNew.FarScream:Play()
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+end)
 
-    
-    coroutine.wrap(function()
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
     end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
+end)
 
-while true do wait(0.0005)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400232478.png?raw=true", "Al60OnaSteroids")
-wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400747879.png?raw=true", "Al60OnceSteroids")
-wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400700237.png?raw=true", "Al60OnaSteroids")
-wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400722380.png?raw=true", "Al60OnbSteroids")
-wait(0.0001)
-game.Workspace.Asitty.RushNew.ImageFace.Face.Texture = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400670897.png?raw=true", "Al600shgSterois")
-end
-end)()
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
 
-local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-				Reboundcolor.Name = "Despawn"
-				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 0, 4),Saturation = 0, Contrast = 0}):Play()
-				game.Debris:AddItem(Reboundcolor,40)
-				
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+	else
+		print("Entity has damaged the player")
+		
+		game.Workspace.MultiMonter.HumanoidRootPart.Anchored = false
+wait()
+
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
-
 ---====== Create entity ======---
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Asaittya",
-		Asset = "rbxassetid://16138462624",
-		HeightOffset = 56
+		Name = "MultiMonters",
+		Asset = "rbxassetid://11463891411",
+		HeightOffset = 1000
 	},
 	Lights = {
 		Flicker = {
 			Enabled = false,
 			Duration = 5
 		},
-		Shatter = true,
+		Shatter = false,
 		Repair = false
 	},
 	Earthquake = {
@@ -531,35 +667,35 @@ local entity = spawner.Create({
 	CameraShake = {
 		Enabled = true,
 		Range = 100,
-		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+		Values = {12.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
 		Speed = 1,
-		Delay = math.random(5, 5),
+		Delay = math.random(0, 0),
 		Reversed = false
 	},
 	Rebounding = {
-		Enabled = true,
+		Enabled = false,
 		Type = "Ambush",
-		Min = 8,
-		Max = 8,
-		Delay = 1
+		Min = 2,
+		Max = 3,
+		Delay = 2.5
 	},
 	Damage = {
-		Enabled = true,
-		Range = 50,
-		Amount = 130
+		Enabled = false,
+		Range = 100,
+		Amount = 0.1
 	},
 	Crucifixion = {
 		Enabled = false,
-		Range = 40,
+		Range = 10,
 		Resist = false,
 		Break = true
 	},
 	Death = {
 		Type = "Curious",
-		Hints = {"You die to A-60", "...", "...", "..."},
-		Cause = ""
+		Hints = {"non"},
+		Cause = "A-60"
 	}
 })
 
@@ -567,568 +703,198 @@ local entity = spawner.Create({
 
 entity:SetCallback("OnSpawned", function()
     print("Entity has spawned")
-    coroutine.wrap(function()
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
-
-while true do wait(0.0006)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-end
-end)()
-
-  coroutine.wrap(function()
-    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-				Reboundcolor.Name = "Despawn"
-				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
-				game.Debris:AddItem(Reboundcolor,40)
-
-				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
-				local camera = workspace.CurrentCamera
-
-				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
-					camera.CFrame = camera.CFrame * cf
-				end)
-				camShake:Start()
-				camShake:ShakeOnce(5,45,0.1,20,2,2)
-   end)()
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    game.workspace.Asitty.RushNew.Main.PointLight.Range = 23
-game.workspace.Asitty.RushNew.Main.PointLight.Brightness = 7
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-	else
-        print("Entity has finished rebounding")
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-				Reboundcolor.Name = "Despawn"
-				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 0, 4),Saturation = 0, Contrast = 0}):Play()
-				game.Debris:AddItem(Reboundcolor,40)
-
-				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
-				local camera = workspace.CurrentCamera
-
-				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
-					camera.CFrame = camera.CFrame * cf
-				end)
-				camShake:Start()
-				camShake:ShakeOnce(5,45,0.1,20,2,2)
-					local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = " Might Come Back...",
-    Desc = "Encounter And Survive The Rare Entity Called A-60",
-    Reason = "",
-    Image = "rbxasset://custom_gloop/A60OnfSteroids.png",
-})
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-		game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
-		
-		firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to an enitity designated as A-60", "It can Appear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, "Blue")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 7
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/A60JumpscareOld.mp3", 1, "asixtyScareOmg")
-
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-wait(1)
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
-
-end
-end)()
-
-	else
-end
-end)
-
---[[
-
-DEVELOPER NOTE:
-By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
-
-entity:SetCallback("CrucifixionOverwrite", function()
-    print("Custom crucifixion callback")
-end)
-
-]]--
-
----====== Run entity ======---
-
-entity:Run() 
-
-  coroutine.wrap(function()
-  function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 2
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/km_20241031_360p_12f_20241031_043802.mp3?raw=true", 1, "acareOaamgff")
-
-    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-				Reboundcolor.Name = "Despawn"
-				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 0, 0),Saturation = 0, Contrast = 0}):Play()
-				game.Debris:AddItem(Reboundcolor,40)
-
-				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
-				local camera = workspace.CurrentCamera
-
-				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
-					camera.CFrame = camera.CFrame * cf
-				end)
-				camShake:Start()
-				camShake:ShakeOnce(5,45,0.1,20,2,2)
-   end)()
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    game.workspace.Asitty.RushNew.Main.PointLight.Range = 6
-game.workspace.Asitty.RushNew.Main.PointLight.Brightness = 7
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-	else
-        print("Entity has finished rebounding")
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-end)
-
-entity:SetCallback("OnDespawned", function()
-game.workspace.Asaittya:Destroy()
-    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-				Reboundcolor.Name = "Despawn"
-				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
-				game.Debris:AddItem(Reboundcolor,40)
-
-				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
-				local camera = workspace.CurrentCamera
-
-				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
-					camera.CFrame = camera.CFrame * cf
-				end)
-				camShake:Start()
-				camShake:ShakeOnce(5,45,0.1,20,2,2)
-					local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = " Might Come Back...",
-    Desc = "Encounter And Survive The Rare Entity Called A-60",
-    Reason = "",
-    Image = "rbxasset://custom_gloop/A6ajsgsgsSteroids.png",
-})
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-	else
-	game.workspace.Asitty.RushNew.Anchored = false
-	workspace.Asitty.RushNew.Scream:Stop()
-    workspace.Asitty.RushNew.FarStatic:Stop()
-    workspace.Asitty.RushNew.FarScream:Stop()
-wait(2)
-
-	firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to an enitity designated as A-60", "It can Appear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, "Blue")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 10
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/lolmusicseekfaceas/helsgsssgshs/blob/main/km_20241103_360p_12f_20241103_034439.mp3?raw=true", 1, "aaasixtyScareOmg")
-
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400232478.png?raw=true", "Al60OnaSteroids")
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400747879.png?raw=true", "Al60OnceSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400700237.png?raw=true", "Al60OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400722380.png?raw=true", "Al60OnbSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400232478.png?raw=true", "Al60OnbSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400700237.png?raw=true", "Al60OncSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400747879.png?raw=true", "Al60OncdSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400722380.png?raw=true", "Al60OncSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/Remove-bg.ai_1731400670897.png?raw=true", "Al600shgSterois")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/gf/blob/main/static-assets-upload7018128357614146730.png?raw=true", "A6rsed0OnceSteroids")
-wait(0.8)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
-wait()
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Remove-bg.ai_1731404468896.png?raw=true", "A6ajsgsgsSteroids")
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-wait(1)
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
-
-end
-end)()
-
-workspace.Asitty.RushNew.Scream:Play()
-    workspace.Asitty.RushNew.FarStatic:Play()
-    workspace.Asitty.RushNew.FarScream:Play()
-game.workspace.Asitty.RushNew.Anchored = true
-
-local mom = {"rbxasset://gloop_custom/A60OnfSteroids.png", "rbxasset://gloop_custom/A60OnceSteroids.png", "rbxasset://gloop_custom/A60OnaSteroids.png", "rbxasset://gloop_custom/A60OnbSteroids.png", "rbxasset://gloop_custom/A60OncSteroids.png"}
-    -- UI Construction
-
-    local JumpscareGui = Instance.new("ScreenGui")
-    local Background = Instance.new("Frame")
-    local Face = Instance.new("ImageLabel")
-
-    JumpscareGui.Name = "JumpscareGui"
-    JumpscareGui.IgnoreGuiInset = true
-    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    Background.Name = "Background"
-    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    Background.BorderSizePixel = 0
-    Background.Size = UDim2.new(1, 0, 1, 0)
-    Background.ZIndex = 999
-    Background.BackgroundTransparency = 0.6
-
-    Face.Name = "Face"
-    Face.AnchorPoint = Vector2.new(0.5, 0.5)
-    Face.BackgroundTransparency = 1
-    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
-    Face.ResampleMode = Enum.ResamplerMode.Pixelated
-    Face.Size = UDim2.new(0, 0, 0, 0)
-    Face.Image = mom[math.random(1, #mom)]
-    Face.ImageColor3 = Color3.fromRGB(0, 0, 0)
-    Face.ImageTransparency = 0
-
-    Face.Parent = Background
-    Background.Parent = JumpscareGui
-
-    game.TweenService:Create(Face, TweenInfo.new(0.2), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
-    game.TweenService:Create(Face, TweenInfo.new(0.2), {Rotation = math.random(-10,10)}):Play()
-    task.wait(0.2)
-    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
-game.TweenService:Create(Background, TweenInfo.new(2.6), {BackgroundTransparency = 1}):Play()
-    wait()
-    game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-60"
+    game.Workspace.MultiMonters.HumanoidRootPart.Anchored = false
     
-game.Lighting:Destroy()
-
-    local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-
-
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "Asaittya",
-		Asset = "rbxassetid://16138462624",
-		HeightOffset = 56
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 5
-		},
-		Shatter = true,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = false
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
-	},
-	Movement = {
-		Speed = 1,
-		Delay = math.random(5, 5),
-		Reversed = false
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Ambush",
-		Min = 8,
-		Max = 8,
-		Delay = 1
-	},
-	Damage = {
-		Enabled = true,
-		Range = 50,
-		Amount = 130
-	},
-	Crucifixion = {
-		Enabled = false,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Curious",
-		Hints = {"You die to A-60", "...", "...", "..."},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnSpawned", function()
-    print("Entity has spawned")
-    coroutine.wrap(function()
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
+    wait()
+    function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
 end
 
-while true do wait(0.0006)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/hcgc.png?raw=true", "A60OnfSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Workspace.Asaittya.RushNew.Main.Face.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-game.Workspace.Asaittya.RushNew.Main.Facetrail.Texture = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
+function CustomGitSound(soundlink, vol, filename)
+    local Souand = Instance.new("Sound")
+    Souand.SoundId = GitAud(soundlink, filename)
+    Souand.Parent = game.Workspace.MultiMonter
+    Souand.Looped = true
+    Souand.Volume = 4
+    Souand:Play()
 end
+
+CustomGitSound("https://github.com/huyhoanphuc/th/blob/main/lv_0_20241230200318.mp3?raw=true", 1, "A60jumpscare")
+
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+    local Mujumps = game.Workspace.MultiMonter
+    
+local Mujumhhhps = game.Workspace.MultiMonters
+    
+
+    local camera = Workspace.CurrentCamera
+    
+coroutine.wrap(function()
+    while Mujumhhhps do wait()
+    if game.Workspace.MultiMonters then
+        Mujumps:SetPrimaryPartCFrame(camera.CFrame * CFrame.new(0, -0.2, -6))
+end
+  end
 end)()
-
-  coroutine.wrap(function()
-    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-				Reboundcolor.Name = "Despawn"
-				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
-				game.Debris:AddItem(Reboundcolor,40)
-
-				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
-				local camera = workspace.CurrentCamera
-
-				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
-					camera.CFrame = camera.CFrame * cf
-				end)
-				camShake:Start()
-				camShake:ShakeOnce(5,45,0.1,20,2,2)
-   end)()
+    
+    game.workspace.MultiMonster.Head.BlackTrail.Texture = "rbxassetid://10587729749"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
+wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/crazy-za/main/README.mdhekk"))()
 end)
 
 entity:SetCallback("OnStartMoving", function()
-    game.workspace.Asitty.RushNew.Main.PointLight.Range = 23
-game.workspace.Asitty.RushNew.Main.PointLight.Brightness = 7
+    print("Entity has started moving")
+    game.Workspace.MultiMonters.HumanoidRootPart.Sound:Destroy()
+
+game.Workspace.MultiMonter.HumanoidRootPart.Sound:Stop()
+
+--NotHides    
+coroutine.wrap(function()
+
+while true do wait(0.2)
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10)
+
+wait(17)
+game.Workspace.MultiMonters:Destroy()
+
+game.Workspace.MultiMonter.Sound:Destroy()
+
+Workspace.Sound:Play()
+
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players.LocalPlayer.Character.Humanoid.MaxHealth = 0
+game.Players.LocalPlayer.Character.Humanoid:Destroy()
+
+game.Workspace.MultiMonter.HumanoidRootPart.Anchored = true
+
+wait(6.7)
+Workspace.Sound:Destroy()
+
+game.Workspace.MultiMonter.HumanoidRootPart.Sound:Play()
+end
+end)()
+
+--Hide 
+coroutine.wrap(function()
+while true do wait(0.2)
+local v = game.Players.LocalPlayer
+if v.Character:GetAttribute("Hiding") then
+game.Workspace.MultiMonters:Destroy()
+
+game.Workspace.MultiMonter.Sound:Destroy()
+
+game.Workspace.MultiMonter.HumanoidRootPart.Anchored = true
+
+game.Workspace.MultiMonter.HumanoidRootPart.Sound:Play()
+end
+end
+end)()
+
+--Hide 
+coroutine.wrap(function()
+while true do wait(0.2)
+local v = game.Players.LocalPlayer
+if v.Character:GetAttribute("Hiding") then
+game.Workspace.MultiMonters:Destroy()
+
+game.Workspace.MultiMonter.Sound:Destroy()
+
+game.Workspace.MultiMonter.HumanoidRootPart.Anchored = true
+
+game.Workspace.MultiMonter.HumanoidRootPart.Sound:Play()
+end
+end
+end)()
+
+    while true do wait(0.11)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://192267375"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://1972219024"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://1822114127"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://3413871766"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://3354536350"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://17865063"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://4749623118"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://1857893092"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://4508624823"
+wait(0.1)
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://6309704436"
+wait(0.1) 
+game.Workspace.MultiMonters.Head.Attachment.Image.Texture = "rbxassetid://10458678325"
+end
+
 end)
 
 entity:SetCallback("OnEnterRoom", function(room, firstTime)
@@ -1160,119 +926,15 @@ entity:SetCallback("OnDespawning", function()
 end)
 
 entity:SetCallback("OnDespawned", function()
-    local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,24)
-				Reboundcolor.Name = "Despawn"
-				Reboundcolor.TintColor = Color3.fromRGB(255, 0, 4) Reboundcolor.Saturation = -0.7 Reboundcolor.Contrast = 0.2
-				game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 255, 255),Saturation = 0, Contrast = 0}):Play()
-				game.Debris:AddItem(Reboundcolor,40)
-
-				local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
-				local camera = workspace.CurrentCamera
-
-				local camShake = cameraShaker.new(Enum.RenderPriority.Camera.Value, function(cf)
-					camera.CFrame = camera.CFrame * cf
-				end)
-				camShake:Start()
-				camShake:ShakeOnce(5,45,0.1,20,2,2)
-					local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = " Might Come Back...",
-    Desc = "Encounter And Survive The Rare Entity Called A-60",
-    Reason = "",
-    Image = "rbxasset://custom_gloop/A60OncdSteroids.png",
-})
-
-game.workspace.Asaittya:Destroy()
-wait()
-game.workspace.Asaitty:Destroy()
+    print("Entity has despawned")
 end)
 
 entity:SetCallback("OnDamagePlayer", function(newHealth)
 	if newHealth == 0 then
 		print("Entity has killed the player")
-		game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
-		firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to an enitity designated as A-60", "It can Appear at any moment, a loud scream will anounce its presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, "Blue")
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 7
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/Kotyara19k-Doorsspawner/Random-files/raw/main/A60JumpscareOld.mp3", 1, "asixtyScareOmg")
-
-function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face1.png?raw=true", "A60OnaSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face2.png?raw=true", "A60OnbSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face3.png?raw=true", "A60OncSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face4.png?raw=true", "A60OncdSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/Asity-face-Hardcore/blob/main/A-60 face5.png?raw=true", "A60OnceSteroids")
-wait(0.0001)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-wait(1)
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
-
-end
-end)()
-
 	else
-end
+		print("Entity has damaged the player")
+	end
 end)
 
 --[[
@@ -1288,8 +950,8 @@ end)
 
 ---====== Run entity ======---
 
-entity:Run() 
-end
+entity:Run()
+	end
 end)
 
 --[[
@@ -1305,7 +967,8 @@ end)
 
 ---====== Run entity ======---
 
-entity:Run() 
+entity:Run()
+end)()
 
 					end)()
 
@@ -1357,7 +1020,7 @@ local entity = spawner.Create({
 	Damage = {
 		Enabled = true,
 		Range = 30,
-		Amount = 100
+		Amount = 99
 	},
 	Crucifixion = {
 		Enabled = true,
@@ -1773,17 +1436,18 @@ entity:Run()
 if msg == '/200' or msg == '/a-200' or msg == '/a200' then
 					coroutine.wrap(function ()
 					
-					game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+					local Sex = game:GetObjects("rbxassetid://11514030098")[1]
+      Sex.Parent = Workspace
+                    
+                    if Sex then
 						local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
 
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-200 Has Spawner",true)
-wait()
 ---====== Create entity ======---
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "A-200",
-		Asset = "rbxassetid://11514030098",
+		Name = "Monster2",
+		Asset = "rbxassetid://12662671782",
 		HeightOffset = 0
 	},
 	Lights = {
@@ -1803,12 +1467,12 @@ local entity = spawner.Create({
 		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
 	},
 	Movement = {
-		Speed = 50,
-		Delay = math.random(3, 3),
+		Speed = 10,
+		Delay = math.random(0, 0),
 		Reversed = true
 	},
 	Rebounding = {
-		Enabled = true,
+		Enabled = false,
 		Type = "Ambush",
 		Min = 1,
 		Max = 1,
@@ -1816,7 +1480,200 @@ local entity = spawner.Create({
 	},
 	Damage = {
 		Enabled = true,
+		Range = 5,
+		Amount = 9999999999999999999
+	},
+	Crucifixion = {
+		Enabled = true,
 		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    
+    isspawned = true
+
+				spawn(function()
+
+					local modeler = workspace["monster2"]
+
+					local faces = modeler.monster2.BillboardGui:GetChildren()
+
+					while wait(Random.new():NextInteger(0.5,0.7)) and isspawned do
+
+						for i,v in pairs(faces) do
+
+							v.Visible = false
+
+						end
+
+						faces[math.random(1,#faces)].Visible = true
+
+					end
+
+				end)
+				
+				 function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+				game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_001.png?raw=true", "A6gaagshsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_002.png?raw=true", "A6uuuuugsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_003.png?raw=true", "A2999900OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_004.png?raw=true", "A6222gsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_005.png?raw=true", "A6gsf7770OueyueyteuueyenaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_006.png?raw=true", "A200OnaStaaaassssaeroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_007.png?raw=true", "A6gsf7770OnaSterkjsjjjjjjjoids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_008.png?raw=true", "A6gsf777hsfsgejgdgsjhgd0OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_009.png?raw=true", "A200OnaSthgsjgseroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_010.png?raw=true", "A6gsf7vsjgcs770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_011.png?raw=true", "A6gsf762762770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_012.png?raw=true", "A200OnaSteroi888ds")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_013.png?raw=true", "A6gsf7770Ona825753Steroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_015.png?raw=true", "A200OnaaadsjgdiaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_016.png?raw=true", "A6gsf7770xsgdsOnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_017.png?raw=true", "A6gsf7770OnhsgishgsaSteroids")
+wait(0.01)
+
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+    game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+    spawn(function()
+
+					repeat wait() until workspace["monster2"]
+
+					while isspawned do wait(math.random(1,5)) 
+
+						local s = workspace["monster2"].monster2["windy"..math.random(1,4)]
+
+						s.RollOffMinDistance = 10
+
+						s.RollOffMaxDistance = 500
+
+						s:Play()
+
+						print("Played "..workspace["monster2"].monster2["windy"..math.random(1,4)].Name)
+
+					end
+
+				end)
+
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    isspawned = false
+  
+   local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "The Monster2",
+		Asset = "rbxassetid://12662671782",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 1000000000000000000000000000000000000000000000000,
+		Delay = math.random(1, 1),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 5,
+		Max = 5,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 20000000000000000000000000000,
 		Amount = 9999999999999999999
 	},
 	Crucifixion = {
@@ -2159,6 +2016,197 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		--jumpscare sound
+coroutine.wrap(function()
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/lv_0_20241228203719.mp3?raw=true", 1, "a200acarejumpscareOmg")
+end)()
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+--jumpscare face1
+coroutine.wrap(function()
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+end)()
+
+--jumpscare face2
+coroutine.wrap(function()
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Scary5%20(1).png?raw=true", "A200nSteroidfscgiffgfsss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(4)
+    JumpscareGui:Destroy()
+    
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+
+local ReSt = game:GetService("ReplicatedStorage") 
+ ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-200"    
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+wait(1)
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+	else
+		print("Entity has damaged the player")
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+end
 					end)()
 
 				end							
@@ -2795,7 +2843,7 @@ local intro = shut:Clone()
 intro.Parent = game.Players.LocalPlayer.PlayerGui.MainUI
 intro.Name = "IntroTextPleaseThankYou"
 intro.Visible = true
-intro.Text = "Extreme Content Update Mode V5 618"
+intro.Text = "Extreme Content Update Mode V5 619"
 intro.TextTransparency = 0
 local underline = UDim2.new(1.1, 0, 0.015, 6)
 game.TweenService:Create(intro.Underline, TweenInfo.new(3), {Size = underline}):Play()
@@ -2811,6 +2859,1265 @@ wait(2)
 intro:Destroy()
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Loading Menu",true)
+
+--SpawnDreadty
+coroutine.wrap(function()
+wait(180)
+local Lighting = game:GetService("Lighting")
+Lighting.Ambient = Color3.new(0, 0, 0)
+Lighting.Brightness = 0.2
+Lighting.FogEnd = 60
+Lighting.FogStart = 5
+Lighting.FogColor = Color3.new(0, 0, 0)
+
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/testhshs/blob/main/DOORS%20UNUSED%20OST%20-%20Courtyard%20Entrance.mp3?raw=true", 1, "axvxufufhfgtcOmg")
+
+local Du = game:GetObjects("rbxassetid://96223289630255")[1]
+
+Du.Parent = Workspace
+
+wait()
+if Du then
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Dread",
+		Asset = "rbxassetid://16834807322",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 5
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = false
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 150,
+		Values = {1.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 150,
+		Delay = math.random(6, 6.5),
+		Reversed = false
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 2.5
+	},
+	Damage = {
+		Enabled = false,
+		Range = 20,
+		Amount = 0.001
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You die to Matcher", "...", "...", "..."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+   game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Desc.Text =" "
+   game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Title.Text =" "
+   
+   game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Voter.Text =" "
+
+game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Visible = true
+game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Text ="DreadTy!!!!!!"
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+    game.Workspace.Dread:Destroy()
+    wait(1)
+						  wait(0.2)
+						function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Souand = Instance.new("Sound")
+    Souand.SoundId = GitAud(soundlink, filename)
+    Souand.Parent = Workspace
+    Souand.Looped = true
+    Souand.Volume = 1.5
+    Souand:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/gf/blob/main/DOORS%20Roblox%20OST_%20The%20Figure%20Enraged.mp3?raw=true", 1, "DOORSRobloxOSTTheFigureEnraged")
+
+		--Dreadtyu
+coroutine.wrap(function()
+local Speed = 7
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local runService = game:GetService("RunService")
+local Debris = game:GetService("Debris")local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Dummy = game:GetObjects("rbxassetid://96223289630255")[1]
+local Wicked = game:GetObjects("rbxassetid://16834807322")[1]
+Dummy.Parent = workspace
+Wicked.Parent = workspace
+
+local primary_part = Wicked:FindFirstChildWhichIsA("BasePart") or Wicked:FindFirstChildWhichIsA("Part")
+
+Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, 1500)
+
+local function followPlayer()
+    local Direction = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).unit
+    Dummy.HumanoidRootPart.Velocity = Direction * Speed
+    Dummy.HumanoidRootPart.CFrame = CFrame.new(Dummy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
+end
+
+local event = runService.RenderStepped:Connect(function()
+if Wicked:IsDescendantOf(workspace) and Dummy:IsDescendantOf(workspace) and Dummy:FindFirstChild("HumanoidRootPart") and Dummy:FindFirstChild("Humanoid").Health > 0 then
+local Distance = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).magnitude
+
+if Distance <= math.huge then
+followPlayer()
+end
+
+Wicked:PivotTo(Dummy.HumanoidRootPart.CFrame)
+end
+end)
+
+local function canSeeTarget(target,size)
+					if killed == true then
+						return
+					end
+					local origin = Wicked.RushNew.Position
+					local direction = (target.HumanoidRootPart.Position - Wicked.RushNew.Position).unit * size
+					local ray = Ray.new(origin, direction)
+
+					local hit, pos = workspace:FindPartOnRay(ray, Wicked.RushNew)
+
+
+					if hit then
+						if hit:IsDescendantOf(target) then
+							killed = true
+							return true
+						end
+					else
+						return false
+					end
+				end
+				
+--notHiding
+coroutine.wrap(function()
+				spawn(function()
+					while Wicked ~= nil do wait(0.2)
+						local v = game.Players.LocalPlayer
+						local parent = script.Parent
+						if not v.Character:GetAttribute("Hiding") then
+							if canSeeTarget(v.Character,10) then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+event:Disconnect()
+
+Workspace.Dread:Destroy()
+
+				game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+				
+          end
+     end
+end
+end)				
+end)()
+
+--Hiding
+coroutine.wrap(function()
+while Wicked  do wait(0.2)
+						local v = game.Players.LocalPlayer
+						
+if v.Character:GetAttribute("Hiding") then
+	wait()
+event:Disconnect()
+
+wait(5)
+Workspace.Dread:Destroy()
+wait(1)						
+if v.Character:GetAttribute("Hiding") then							
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000)
+								end
+						  wait()
+						
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/Dread%20666"))()
+
+end
+end
+end)()
+
+end)()
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(61, 4, 4)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 150, 0, 150)
+    Face.Image = "rbxassetid://10914798333"
+
+    Background.Parent = JumpscareGui
+    Face.Parent = Background
+local scare = Instance.new("Sound")
+scare.Parent = JumpscareGui
+scare.Name = "MyEarsBurn"
+scare.SoundId = "rbxassetid://5567523008"
+scare.PlaybackSpeed = 1.3
+scare.Volume = 3
+
+local shift = Instance.new("PitchShiftSoundEffect")
+shift.Octave = 0.61
+shift.Parent = scare
+
+local distort = Instance.new("DistortionSoundEffect")
+distort.Parent = scare
+distort.Level = 0.75
+
+local eq = Instance.new("EqualizerSoundEffect")
+eq.HighGain = 10
+eq.MidGain = 10
+eq.LowGain = 3.7
+eq.Parent = scare
+    
+        task.spawn(function()
+            while JumpscareGui.Parent do
+                Background.BackgroundColor3 = Color3.fromRGB(61, 4, 4)
+                task.wait(math.random(25, 100) / 1000)
+                Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                task.wait(math.random(25, 100) / 1000)
+            end
+        end)
+
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {Size = UDim2.new(0, 1850, 0, 1050), ImageTransparency = 0}):Play()
+    scare:Play()
+    task.wait(0.7)
+    JumpscareGui:Destroy()
+	else
+		print("Entity has damaged the player")
+		 	game.Workspace.Dread:Destroy()
+						  wait(0.2)
+						function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Souand = Instance.new("Sound")
+    Souand.SoundId = GitAud(soundlink, filename)
+    Souand.Parent = Workspace
+    Souand.Looped = true
+    Souand.Volume = 1.5
+    Souand:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/gf/blob/main/DOORS%20Roblox%20OST_%20The%20Figure%20Enraged.mp3?raw=true", 1, "DOORSRobloxOSTTheFigureEnraged")
+
+		--Dread
+coroutine.wrap(function()
+local Speed = 7
+
+local Workspace = game:GetService("Workspace")
+local Players = game:GetService("Players")
+local runService = game:GetService("RunService")
+local Debris = game:GetService("Debris")local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+
+local Dummy = game:GetObjects("rbxassetid://96223289630255")[1]
+local Wicked = game:GetObjects("rbxassetid://16834807322")[1]
+Dummy.Parent = workspace
+Wicked.Parent = workspace
+
+local primary_part = Wicked:FindFirstChildWhichIsA("BasePart") or Wicked:FindFirstChildWhichIsA("Part")
+
+Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, 1500)
+
+local function followPlayer()
+    local Direction = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).unit
+    Dummy.HumanoidRootPart.Velocity = Direction * Speed
+    Dummy.HumanoidRootPart.CFrame = CFrame.new(Dummy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
+end
+
+local event = runService.RenderStepped:Connect(function()
+if Wicked:IsDescendantOf(workspace) and Dummy:IsDescendantOf(workspace) and Dummy:FindFirstChild("HumanoidRootPart") and Dummy:FindFirstChild("Humanoid").Health > 0 then
+local Distance = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).magnitude
+
+if Distance <= math.huge then
+followPlayer()
+end
+
+Wicked:PivotTo(Dummy.HumanoidRootPart.CFrame)
+end
+end)
+
+local function canSeeTarget(target,size)
+					if killed == true then
+						return
+					end
+					local origin = Wicked.RushNew.Position
+					local direction = (target.HumanoidRootPart.Position - Wicked.RushNew.Position).unit * size
+					local ray = Ray.new(origin, direction)
+
+					local hit, pos = workspace:FindPartOnRay(ray, Wicked.RushNew)
+
+
+					if hit then
+						if hit:IsDescendantOf(target) then
+							killed = true
+							return true
+						end
+					else
+						return false
+					end
+				end
+				
+--notHiding
+coroutine.wrap(function()
+				spawn(function()
+					while Wicked ~= nil do wait(0.2)
+						local v = game.Players.LocalPlayer
+						local parent = script.Parent
+						if not v.Character:GetAttribute("Hiding") then
+							if canSeeTarget(v.Character,10) then
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
+event:Disconnect()
+
+Workspace.Dread:Destroy()
+
+				game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
+				
+          end
+     end
+end
+end)				
+end)()
+
+--Hiding
+coroutine.wrap(function()
+while Wicked  do wait(0.2)
+						local v = game.Players.LocalPlayer
+						
+if v.Character:GetAttribute("Hiding") then
+	wait()
+event:Disconnect()
+
+wait(5)
+Workspace.Dread:Destroy()
+wait(1)						
+if v.Character:GetAttribute("Hiding") then							
+								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000)
+								end
+						  wait()
+						
+loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/gf/refs/heads/main/Dread%20666"))()
+
+end
+end
+end)()
+
+end)()
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+end
+end)()
+
+--unspawndread
+coroutine.wrap(function()
+while true do wait()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+game.Workspace.Dread:Destroy()
+end
+end)()
+
+--A200
+coroutine.wrap(function()
+wait(300)
+local Sex = game:GetObjects("rbxassetid://11514030098")[1]
+      Sex.Parent = Workspace
+                    
+                    if Sex then
+						local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Monster2",
+		Asset = "rbxassetid://12662671782",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 10,
+		Delay = math.random(0, 0),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 5,
+		Amount = 9999999999999999999
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    
+    isspawned = true
+
+				spawn(function()
+
+					local modeler = workspace["monster2"]
+
+					local faces = modeler.monster2.BillboardGui:GetChildren()
+
+					while wait(Random.new():NextInteger(0.5,0.7)) and isspawned do
+
+						for i,v in pairs(faces) do
+
+							v.Visible = false
+
+						end
+
+						faces[math.random(1,#faces)].Visible = true
+
+					end
+
+				end)
+				
+				 function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+				game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_001.png?raw=true", "A6gaagshsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_002.png?raw=true", "A6uuuuugsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_003.png?raw=true", "A2999900OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_004.png?raw=true", "A6222gsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_005.png?raw=true", "A6gsf7770OueyueyteuueyenaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_006.png?raw=true", "A200OnaStaaaassssaeroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_007.png?raw=true", "A6gsf7770OnaSterkjsjjjjjjjoids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_008.png?raw=true", "A6gsf777hsfsgejgdgsjhgd0OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_009.png?raw=true", "A200OnaSthgsjgseroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_010.png?raw=true", "A6gsf7vsjgcs770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_011.png?raw=true", "A6gsf762762770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_012.png?raw=true", "A200OnaSteroi888ds")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_013.png?raw=true", "A6gsf7770Ona825753Steroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_015.png?raw=true", "A200OnaaadsjgdiaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_016.png?raw=true", "A6gsf7770xsgdsOnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_017.png?raw=true", "A6gsf7770OnhsgishgsaSteroids")
+wait(0.01)
+
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+    game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+    spawn(function()
+
+					repeat wait() until workspace["monster2"]
+
+					while isspawned do wait(math.random(1,5)) 
+
+						local s = workspace["monster2"].monster2["windy"..math.random(1,4)]
+
+						s.RollOffMinDistance = 10
+
+						s.RollOffMaxDistance = 500
+
+						s:Play()
+
+						print("Played "..workspace["monster2"].monster2["windy"..math.random(1,4)].Name)
+
+					end
+
+				end)
+
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    isspawned = false
+  
+   local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "The Monster2",
+		Asset = "rbxassetid://12662671782",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 1
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = true,
+		Range = 100,
+		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
+	},
+	Movement = {
+		Speed = 1000000000000000000000000000000000000000000000000,
+		Delay = math.random(1, 1),
+		Reversed = true
+	},
+	Rebounding = {
+		Enabled = true,
+		Type = "Ambush",
+		Min = 5,
+		Max = 5,
+		Delay = 0
+	},
+	Damage = {
+		Enabled = true,
+		Range = 20000000000000000000000000000,
+		Amount = 9999999999999999999
+	},
+	Crucifixion = {
+		Enabled = true,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"You died to death...", "so hide every.."},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+    
+    isspawned = true
+
+				spawn(function()
+
+					local modeler = workspace["monster2"]
+
+					local faces = modeler.monster2.BillboardGui:GetChildren()
+
+					while wait(Random.new():NextInteger(0.5,0.7)) and isspawned do
+
+						for i,v in pairs(faces) do
+
+							v.Visible = false
+
+						end
+
+						faces[math.random(1,#faces)].Visible = true
+
+					end
+
+				end)
+				
+				 function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+				game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_001.png?raw=true", "A6gaagshsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_002.png?raw=true", "A6uuuuugsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_003.png?raw=true", "A2999900OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_004.png?raw=true", "A6222gsf7770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_005.png?raw=true", "A6gsf7770OueyueyteuueyenaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_006.png?raw=true", "A200OnaStaaaassssaeroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_007.png?raw=true", "A6gsf7770OnaSterkjsjjjjjjjoids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_008.png?raw=true", "A6gsf777hsfsgejgdgsjhgd0OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_009.png?raw=true", "A200OnaSthgsjgseroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_010.png?raw=true", "A6gsf7vsjgcs770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_011.png?raw=true", "A6gsf762762770OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_012.png?raw=true", "A200OnaSteroi888ds")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_013.png?raw=true", "A6gsf7770Ona825753Steroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_015.png?raw=true", "A200OnaaadsjgdiaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_016.png?raw=true", "A6gsf7770xsgdsOnaSteroids")
+wait(0.01)
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_017.png?raw=true", "A6gsf7770OnhsgishgsaSteroids")
+wait(0.01)
+
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+    game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
+    spawn(function()
+
+					repeat wait() until workspace["monster2"]
+
+					while isspawned do wait(math.random(1,5)) 
+
+						local s = workspace["monster2"].monster2["windy"..math.random(1,4)]
+
+						s.RollOffMinDistance = 10
+
+						s.RollOffMaxDistance = 500
+
+						s:Play()
+
+						print("Played "..workspace["monster2"].monster2["windy"..math.random(1,4)].Name)
+
+					end
+
+				end)
+
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+    isspawned = false
+
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		--jumpscare sound
+coroutine.wrap(function()
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/lv_0_20241228203719.mp3?raw=true", 1, "a200acarejumpscareOmg")
+end)()
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+--jumpscare face1
+coroutine.wrap(function()
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+end)()
+
+--jumpscare face2
+coroutine.wrap(function()
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Scary5%20(1).png?raw=true", "A200nSteroidfscgiffgfsss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(4)
+    JumpscareGui:Destroy()
+    
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+
+local ReSt = game:GetService("ReplicatedStorage") 
+ ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-200"    
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+wait(1)
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+	else
+		print("Entity has damaged the player")
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+		--jumpscare sound
+coroutine.wrap(function()
+		function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local Sound = Instance.new("Sound")
+    Sound.SoundId = GitAud(soundlink, filename)
+    Sound.Parent = workspace
+    Sound.Volume = 3
+    Sound:Play()
+end
+
+CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/lv_0_20241228203719.mp3?raw=true", 1, "a200acarejumpscareOmg")
+end)()
+
+function GitPNG(GithubImg, ImageName)
+    local url = GithubImg
+    if not isfile(ImageName .. ".png") then
+        local success, response = pcall(function()
+            return game:HttpGet(url)
+        end)
+
+        if success then
+            writefile(ImageName .. ".png", response)
+        else
+            error(": " .. response)
+        end
+    end
+    return (getcustomasset or getsynasset)(ImageName .. ".png")
+end
+
+--jumpscare face1
+coroutine.wrap(function()
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
+end)()
+
+--jumpscare face2
+coroutine.wrap(function()
+
+    local JumpscareGui = Instance.new("ScreenGui")
+    local Background = Instance.new("Frame")
+    local Face = Instance.new("ImageLabel")
+
+    JumpscareGui.Name = "JumpscareGui"
+    JumpscareGui.IgnoreGuiInset = true
+    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    Background.Name = "Background"
+    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+    Background.BorderSizePixel = 0
+    Background.Size = UDim2.new(1, 0, 1, 0)
+    Background.ZIndex = 999
+    Background.BackgroundTransparency = 0.6
+
+    Face.Name = "Face"
+    Face.AnchorPoint = Vector2.new(0.5, 0.5)
+    Face.BackgroundTransparency = 1
+    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Face.ResampleMode = Enum.ResamplerMode.Pixelated
+    Face.Size = UDim2.new(0, 0, 0, 0)
+    Face.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Scary5%20(1).png?raw=true", "A200nSteroidfscgiffgfsss")
+    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
+    Face.ImageTransparency = 0
+
+    Face.Parent = Background
+    Background.Parent = JumpscareGui
+
+    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
+    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
+    task.wait(0.2)
+    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
+    task.wait(4)
+    JumpscareGui:Destroy()
+    
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
+
+local ReSt = game:GetService("ReplicatedStorage") 
+ ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-200"    
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+wait(1)
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+--Dies
+coroutine.wrap(function()
+while true do wait()
+game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
+end
+end)()
+
+	else
+		print("Entity has damaged the player")
+	end
+end)
+
+--[[
+
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+end
+end)()
 
 --Crucifix
 coroutine.wrap(function()
@@ -3294,234 +4601,11 @@ horrorSound.Looped = true
 --Play the sound
 horrorSound:Play()
 
---A200
+--Stop
 coroutine.wrap(function()
-wait(2600)
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-						local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Yuzixser-Script/Function/main/Vynixus_SpawnV2.lua"))()
-
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("A-200 Has Spawner",true)
-wait()
----====== Create entity ======---
-
-local entity = spawner.Create({
-	Entity = {
-		Name = "A-200",
-		Asset = "rbxassetid://11514030098",
-		HeightOffset = 0
-	},
-	Lights = {
-		Flicker = {
-			Enabled = false,
-			Duration = 1
-		},
-		Shatter = false,
-		Repair = false
-	},
-	Earthquake = {
-		Enabled = true
-	},
-	CameraShake = {
-		Enabled = true,
-		Range = 100,
-		Values = {3.5, 20, 0.1, 1} -- Magnitude, Roughness, FadeIn, FadeOut
-	},
-	Movement = {
-		Speed = 50,
-		Delay = math.random(3, 3),
-		Reversed = true
-	},
-	Rebounding = {
-		Enabled = true,
-		Type = "Ambush",
-		Min = 1,
-		Max = 1,
-		Delay = 0
-	},
-	Damage = {
-		Enabled = true,
-		Range = 40,
-		Amount = 9999999999999999999
-	},
-	Crucifixion = {
-		Enabled = true,
-		Range = 40,
-		Resist = false,
-		Break = true
-	},
-	Death = {
-		Type = "Guiding",
-		Hints = {"You died to death...", "so hide every.."},
-		Cause = ""
-	}
-})
-
----====== Debug entity ======---
-
-entity:SetCallback("OnSpawned", function()
-    print("Entity has spawned")
-    
-    isspawned = true
-
-				spawn(function()
-
-					local modeler = workspace["monster2"]
-
-					local faces = modeler.monster2.BillboardGui:GetChildren()
-
-					while wait(Random.new():NextInteger(0.5,0.7)) and isspawned do
-
-						for i,v in pairs(faces) do
-
-							v.Visible = false
-
-						end
-
-						faces[math.random(1,#faces)].Visible = true
-
-					end
-
-				end)
-				
-				 function GitPNG(GithubImg, ImageName)
-    local url = GithubImg
-    if not isfile(ImageName .. ".png") then
-        local success, response = pcall(function()
-            return game:HttpGet(url)
-        end)
-
-        if success then
-            writefile(ImageName .. ".png", response)
-        else
-            error(": " .. response)
-        end
-    end
-    return (getcustomasset or getsynasset)(ImageName .. ".png")
-end
-
-				game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_001.png?raw=true", "A6gaagshsf7770OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_002.png?raw=true", "A6uuuuugsf7770OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_003.png?raw=true", "A2999900OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_004.png?raw=true", "A6222gsf7770OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_005.png?raw=true", "A6gsf7770OueyueyteuueyenaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_006.png?raw=true", "A200OnaStaaaassssaeroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_007.png?raw=true", "A6gsf7770OnaSterkjsjjjjjjjoids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_008.png?raw=true", "A6gsf777hsfsgejgdgsjhgd0OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_009.png?raw=true", "A200OnaSthgsjgseroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_010.png?raw=true", "A6gsf7vsjgcs770OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_011.png?raw=true", "A6gsf762762770OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_012.png?raw=true", "A200OnaSteroi888ds")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_013.png?raw=true", "A6gsf7770Ona825753Steroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_015.png?raw=true", "A200OnaaadsjgdiaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_016.png?raw=true", "A6gsf7770xsgdsOnaSteroids")
-wait(0.01)
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_017.png?raw=true", "A6gsf7770OnhsgishgsaSteroids")
-wait(0.01)
-
-end)
-
-entity:SetCallback("OnStartMoving", function()
-    print("Entity has started moving")
-    game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
-    spawn(function()
-
-					repeat wait() until workspace["monster2"]
-
-					while isspawned do wait(math.random(1,5)) 
-
-						local s = workspace["monster2"].monster2["windy"..math.random(1,4)]
-
-						s.RollOffMinDistance = 10
-
-						s.RollOffMaxDistance = 500
-
-						s:Play()
-
-						print("Played "..workspace["monster2"].monster2["windy"..math.random(1,4)].Name)
-
-					end
-
-				end)
-
-end)
-
-entity:SetCallback("OnEnterRoom", function(room, firstTime)
-    if firstTime == true then
-        print("Entity has entered room: ".. room.Name.. " for the first time")
-    else
-        print("Entity has entered room: ".. room.Name.. " again")
-    end
-end)
-
-entity:SetCallback("OnLookAt", function(lineOfSight)
-	if lineOfSight == true then
-		print("Player is looking at entity")
-	else
-		print("Player view is obstructed by something")
-	end
-end)
-
-entity:SetCallback("OnRebounding", function(startOfRebound)
-    if startOfRebound == true then
-        print("Entity has started rebounding")
-	else
-        print("Entity has finished rebounding")
-	end
-end)
-
-entity:SetCallback("OnDespawning", function()
-    print("Entity is despawning")
-    isspawned = false
-
-end)
-
-entity:SetCallback("OnDespawned", function()
-    print("Entity has despawned")
-end)
-
-entity:SetCallback("OnDamagePlayer", function(newHealth)
-	if newHealth == 0 then
-		print("Entity has killed the player")
-		--jumpscare sound
-coroutine.wrap(function()
-		function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Sound = Instance.new("Sound")
-    Sound.SoundId = GitAud(soundlink, filename)
-    Sound.Parent = workspace
-    Sound.Volume = 3
-    Sound:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/lv_0_20241228203719.mp3?raw=true", 1, "a200acarejumpscareOmg")
-end)()
+while true do wait()
+if Workspace["Monster2"] then
+workspace["Monster2"]:Destroy()
 
 function GitPNG(GithubImg, ImageName)
     local url = GithubImg
@@ -3539,152 +4623,22 @@ function GitPNG(GithubImg, ImageName)
     return (getcustomasset or getsynasset)(ImageName .. ".png")
 end
 
---jumpscare face1
-coroutine.wrap(function()
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_014.png?raw=true", "A6gsf7770982662OnaSteroids")
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = true
-end)()
 
---jumpscare face2
-coroutine.wrap(function()
+game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Image = GitPNG("https://github.com/huyhoanphuc/imager/blob/main/lv_0_20241228203719_000.png?raw=true", "A200OnalolSteroids")
 
-    local JumpscareGui = Instance.new("ScreenGui")
-    local Background = Instance.new("Frame")
-    local Face = Instance.new("ImageLabel")
-
-    JumpscareGui.Name = "JumpscareGui"
-    JumpscareGui.IgnoreGuiInset = true
-    JumpscareGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    JumpscareGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-    Background.Name = "Background"
-    Background.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    Background.BorderSizePixel = 0
-    Background.Size = UDim2.new(1, 0, 1, 0)
-    Background.ZIndex = 999
-    Background.BackgroundTransparency = 0.6
-
-    Face.Name = "Face"
-    Face.AnchorPoint = Vector2.new(0.5, 0.5)
-    Face.BackgroundTransparency = 1
-    Face.Position = UDim2.new(0.5, 0, 0.5, 0)
-    Face.ResampleMode = Enum.ResamplerMode.Pixelated
-    Face.Size = UDim2.new(0, 0, 0, 0)
-    Face.Image = GitPNG("https://github.com/huyhoanphuc/crazy-za/blob/main/Scary5%20(1).png?raw=true", "A200nSteroidfscgiffgfsss")
-    Face.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    Face.ImageTransparency = 0
-
-    Face.Parent = Background
-    Background.Parent = JumpscareGui
-
-    game.TweenService:Create(Face, TweenInfo.new(1), {Size = UDim2.new(0, 850, 0, 850), ImageTransparency = 0}):Play()
-    game.TweenService:Create(Face, TweenInfo.new(1), {Rotation = math.random(-10,10)}):Play()
-    task.wait(0.2)
-    game.TweenService:Create(Face, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
-game.TweenService:Create(Background, TweenInfo.new(10), {BackgroundTransparency = 1}):Play()
-    task.wait(4)
-    JumpscareGui:Destroy()
-    
-game.Players.LocalPlayer.PlayerGui.MainUI.Drip.Visible = false
-
-local ReSt = game:GetService("ReplicatedStorage") 
- ReSt.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "A-200"    
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-wait(1)
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):Destroy()
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+ 
+---====== Display achievement ======---
+achievementGiver({
+    Title = "The Happy Scribble",
+    Desc = "You Can Hide Me",
+    Reason = "I WILL BE BACK IN THE NEXT SECOND, BE CAREFUL",
+    Image = "rbxasset://custom_gloop/A200OnalolSteroids.png"
+})
 
 end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
 end
 end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
---Dies
-coroutine.wrap(function()
-while true do wait()
-game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000000000000)
-end
-end)()
-
-	else
-		print("Entity has damaged the player")
-	end
-end)
-
---[[
-
-DEVELOPER NOTE:
-By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
-
-entity:SetCallback("CrucifixionOverwrite", function()
-    print("Custom crucifixion callback")
-end)
-
-]]--
-
----====== Run entity ======---
-
-entity:Run()
-end)()
-
 
 --Shocker
 coroutine.wrap(function()
@@ -4952,6 +5906,21 @@ end)
 entity:Run()
 end)()
 
+--GummyFlashling
+coroutine.wrap(function()
+if not game:IsLoaded() then
+  game.Loaded:Wait()
+end
+if game.Players.LocalPlayer:GetAttribute("DataLoaded") == false then
+  repeat task.wait() until game.Players.LocalPlayer:GetAttribute("DataLoaded") == true
+end
+
+local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+local playerpos = char.HumanoidRootPart.Position
+
+repeat workspace["Gummy Flashlight"].Handle.Position = playerpos task.wait() until not workspace:FindFirstChild("Gummy Flashlight")
+end)()
+
 --Aml
 coroutine.wrap(function()
 while true do wait(329)
@@ -5568,7 +6537,7 @@ local runService = game:GetService("RunService")
 
 local lockOn = workspace.Ripper.RushNew
 
-local event = runService.RenderStepped:Connect(function()
+local event = RunService.RenderStepped:Connect(function()
 Camera.CFrame = CFrame.lookAt(Camera.CFrame.Position, lockOn.Position)
 end)
 
