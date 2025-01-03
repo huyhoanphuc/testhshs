@@ -2862,7 +2862,7 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("
 
 --SpawnDreadty
 coroutine.wrap(function()
-wait(180)
+wait(60)
 if not (workspace.CurrentRooms:FindFirstChild("2")) then
 
 local Lighting = game:GetService("Lighting")
@@ -2907,7 +2907,7 @@ local entity = spawner.Create({
 	Entity = {
 		Name = "DreadTy",
 		Asset = "rbxassetid://16834807322",
-		HeightOffset = 0
+		HeightOffset = 34
 	},
 	Lights = {
 		Flicker = {
@@ -3152,7 +3152,7 @@ Wicked.Parent = workspace
 
 local primary_part = Wicked:FindFirstChildWhichIsA("BasePart") or Wicked:FindFirstChildWhichIsA("Part")
 
-Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, 1500)
+Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, 2350)
 
 local function followPlayer()
     local Direction = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).unit
@@ -3237,188 +3237,8 @@ end
 end
 end)()
 
---Dreada
-coroutine.wrap(function()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-
-Workspace.Sound:Destroy()
-wait()
-Workspace.Sound:Destroy()
-
-wait(1)
-game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Visible = false
-
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local Souand = Instance.new("Sound")
-    Souand.SoundId = GitAud(soundlink, filename)
-    Souand.Parent = Workspace
-    Souand.Looped = true
-    Souand.Volume = 1
-    Souand:Play()
-end
-
-CustomGitSound("https://github.com/huyhoanphuc/ygf/blob/main/videoplayback (10)_001.mp3?raw=true", 1, "DOORSRsjhhshgshgOSTTheFigureEnraged")
-
-local Lighting = game:GetService("Lighting")
-Lighting.Ambient = Color3.new(0, 0, 0)
-Lighting.Brightness = 0.2
-Lighting.FogEnd = 50
-Lighting.FogStart = 5
-Lighting.FogColor = Color3.new(0, 0, 0)
-
---Delete Dreadty phase old
-coroutine.wrap(function()
-if workspace.Dread then
-workspace.Dread:Destroy()
-end
 end)()
 
---Delete Dreadty phase old
-coroutine.wrap(function()
-if workspace.Dread then
-workspace.Dread:Destroy()
-end
-end)()
-
---Delete Dreadty phase old
-coroutine.wrap(function()
-if workspace.Dread then
-workspace.Dread:Destroy()
-end
-end)()
-
-wait(1)
-game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Visible = true
-game.Players.localPlayer.PlayerGui.MainUI.MainFrame.GlitchCaption.Text ="DreadTy!!!!!!! Phase 2"
-
-local Speed = 18
-
-local Workspace = game:GetService("Workspace")
-local Players = game:GetService("Players")
-local runService = game:GetService("RunService")
-local Debris = game:GetService("Debris")local Player = Players.LocalPlayer
-local Character = Player.Character or Player.CharacterAdded:Wait()
-
-local Dummy = game:GetObjects("rbxassetid://96223289630255")[1]
-local Wickeda = game:GetObjects("rbxassetid://16834807322")[1]
-Dummy.Parent = workspace
-Wickeda.Parent = workspace
-
-local primary_part = Wickeda:FindFirstChildWhichIsA("BasePart") or Wickeda:FindFirstChildWhichIsA("Part")
-
-Dummy.HumanoidRootPart.CFrame = Character.HumanoidRootPart.CFrame + Vector3.new(12, 0, 1500)
-
-local function followPlayer()
-    local Direction = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).unit
-    Dummy.HumanoidRootPart.Velocity = Direction * Speed
-    Dummy.HumanoidRootPart.CFrame = CFrame.new(Dummy.HumanoidRootPart.Position, Character.HumanoidRootPart.Position)
-end
-
-local event = runService.RenderStepped:Connect(function()
-if Wickeda:IsDescendantOf(workspace) and Dummy:IsDescendantOf(workspace) and Dummy:FindFirstChild("HumanoidRootPart") and Dummy:FindFirstChild("Humanoid").Health > 0 then
-local Distance = (Character.HumanoidRootPart.Position - Dummy.HumanoidRootPart.Position).magnitude
-
-if Distance <= math.huge then
-followPlayer()
-end
-
-Wickeda:PivotTo(Dummy.HumanoidRootPart.CFrame)
-end
-end)
-
-local function canSeeTarget(target,size)
-					if killed == true then
-						return
-					end
-					local origin = Wickeda.RushNew.Position
-					local direction = (target.HumanoidRootPart.Position - Wickeda.RushNew.Position).unit * size
-					local ray = Ray.new(origin, direction)
-
-					local hit, pos = workspace:FindPartOnRay(ray, Wickeda.RushNew)
-
-
-					if hit then
-						if hit:IsDescendantOf(target) then
-							killed = true
-							return true
-						end
-					else
-						return false
-					end
-				end
-				
---notHiding
-coroutine.wrap(function()
-				spawn(function()
-					while Wickeda ~= nil do wait(0.2)
-						local v = game.Players.LocalPlayer
-						local parent = script.Parent
-						if not v.Character:GetAttribute("Hiding") then
-							if canSeeTarget(v.Character,10) then
-								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(100)
-event:Disconnect()
-
-Workspace.Dread:Destroy()
-
-				game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Dread"
-				
-          end
-     end
-end
-end)				
-end)()
-
---Hiding
-coroutine.wrap(function()
-while Wickeda  do wait(0.2)
-						local v = game.Players.LocalPlayer
-						
-if v.Character:GetAttribute("Hiding") then
-	wait()
-event:Disconnect()
-
-wait(5)
-Workspace.Dread:Destroy()
-wait(1)						
-if v.Character:GetAttribute("Hiding") then							
-								v.Character:FindFirstChildWhichIsA("Humanoid"):TakeDamage(10000)
-								end
-						  wait()
-						
-loadstring(game:HttpGet("https://raw.githubusercontent.com/huyhoanphuc/ygf/refs/heads/main/Dreadty%20Phase%202"))()
-
-end
-end
-end)()
-
-end)()
-
-end)()
 end)
 
 entity:SetCallback("OnEnterRoom", function(room, firstTime)
